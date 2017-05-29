@@ -6,17 +6,7 @@
 package es;
 
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.md;
-import com.jgoodies.looks.plastic.theme.AbstractSkyTheme;
-import com.jgoodies.looks.plastic.theme.DarkStar;
-import com.jgoodies.looks.plastic.theme.DesertBlue;
-import com.jgoodies.looks.plastic.theme.ExperienceGreen;
 import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
-import com.jgoodies.looks.plastic.theme.LightGray;
-import com.jgoodies.looks.plastic.theme.Silver;
-import com.jgoodies.looks.plastic.theme.SkyKrupp;
-import java.awt.Color;
-import java.awt.SystemColor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
