@@ -72,6 +72,11 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Login:");
 
         jButton1.setText("Acessar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,32 +133,40 @@ public class Login extends javax.swing.JFrame {
         //DesertGreen()
         //Silver()
         //ExperienceRoyale()
-        try 
-        {
-        PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
         try {
-        UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
-        } catch (InstantiationException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedLookAndFeelException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
+            try {
+                UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
+            } catch (InstantiationException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (IllegalAccessException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (UnsupportedLookAndFeelException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         } catch (ClassNotFoundException ex) {
-        ex.printStackTrace();
+            ex.printStackTrace();
         }
         SwingUtilities.updateComponentTreeUI(this);
-      
+
 
     }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        TelaInicio TI = new TelaInicio();
+
+        TI.setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
