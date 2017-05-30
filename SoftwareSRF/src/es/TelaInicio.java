@@ -16,7 +16,7 @@ public class TelaInicio extends javax.swing.JFrame {
      */
     public TelaInicio() {
         initComponents();
-        //this.setExtendedState(MAXIMIZED_BOTH); tela cheia
+        this.setExtendedState(MAXIMIZED_BOTH); //tela cheia
     }
 
     /**
