@@ -20,7 +20,6 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
 
-        //this.setExtendedState(MAXIMIZED_BOTH); Iniciar Maximizado
     }
 
     /**

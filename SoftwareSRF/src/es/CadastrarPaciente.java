@@ -1,5 +1,7 @@
 package es;
 
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +19,8 @@ public class CadastrarPaciente extends javax.swing.JFrame {
      */
     public CadastrarPaciente() {
         initComponents();
+        setLocationRelativeTo(null);
+        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -36,7 +40,6 @@ public class CadastrarPaciente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
-        setResizable(false);
 
         jTabbedPane1.addTab("Neuropediátrico", jTabbedPane3);
 

@@ -5,6 +5,8 @@
  */
 package es;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author flavi
@@ -16,7 +18,9 @@ public class TelaInicio extends javax.swing.JFrame {
      */
     public TelaInicio() {
         initComponents();
-        this.setExtendedState(MAXIMIZED_BOTH); //tela cheia
+        setLocationRelativeTo(null);
+        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -46,7 +50,6 @@ public class TelaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
-        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -152,8 +155,8 @@ public class TelaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-            CadastrarPaciente CP = new CadastrarPaciente();
-            CP.setVisible(true);
+        CadastrarPaciente CP = new CadastrarPaciente();
+        CP.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
