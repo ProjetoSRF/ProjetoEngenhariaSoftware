@@ -22,7 +22,7 @@ public class TelaInicio extends javax.swing.JFrame {
      */
     public TelaInicio() {
         initComponents();
-        //setIconImage(new ImageIcon(getClass().getResource("/es/imagens/teste.jpg")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomt.png")).getImage());
         setLocationRelativeTo(null);
         //this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
 
