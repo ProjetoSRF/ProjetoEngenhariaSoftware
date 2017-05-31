@@ -142,7 +142,7 @@ public class Login extends javax.swing.JFrame {
 
         TI.setVisible(true);
 
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -13,13 +13,15 @@ import javax.swing.JFrame;
  */
 public class TelaInicio extends javax.swing.JFrame {
 
+    private TelaInicio telaAnterior;
+    
     /**
      * Creates new form TelaInicio
      */
     public TelaInicio() {
         initComponents();
         setLocationRelativeTo(null);
-        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
+        //this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
 
     }
 
@@ -51,7 +53,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SRF");
-        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 36)); // NOI18N
         jLabel1.setText("Serviço de Reabilitação Fisica");
@@ -100,6 +102,11 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenu2.setText("Funcionário(a)");
 
         jMenuItem6.setText("Cadastrar");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem6);
 
         jMenuItem7.setText("Consultar");
@@ -192,6 +199,11 @@ public class TelaInicio extends javax.swing.JFrame {
         GRelatorio GR = new GRelatorio();
         GR.setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        this.setEnabled(false);
+        new CadastrarFuncionario(this).setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments

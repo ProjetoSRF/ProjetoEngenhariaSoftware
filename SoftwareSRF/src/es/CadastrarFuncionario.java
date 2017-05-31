@@ -17,11 +17,24 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
     /**
      * Creates new form CadastrarPaciente
      */
+    
+    private TelaInicio telaAnterior;
+
+    public CadastrarFuncionario(TelaInicio telaAnterior) {
+        //chamar o construtor padrão        
+        this();
+        this.telaAnterior = telaAnterior;
+
+    }
+    
+    
     public CadastrarFuncionario() {
         initComponents();
         setLocationRelativeTo(null);
         //this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
     }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,7 +65,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Funcionário");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
@@ -76,6 +89,11 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico(a)", "Fisioterapeuta", "Secretário(a)" }));
 
         jButton4.setText("Voltar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Cadastrar");
 
@@ -158,6 +176,12 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.dispose();
+        telaAnterior.setEnabled(true);
+        telaAnterior.show();
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
