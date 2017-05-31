@@ -39,6 +39,7 @@ public class CadastrarPaciente extends javax.swing.JFrame {
         jTabbedPane4 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Paciente");
         setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jTabbedPane1.addTab("Neuropediátrico", jTabbedPane3);

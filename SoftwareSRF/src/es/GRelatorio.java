@@ -38,6 +38,7 @@ public class GRelatorio extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gerar Relatório");
         setResizable(false);
 
         jButton3.setText("Gerar Relatório");
