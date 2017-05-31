@@ -1,13 +1,11 @@
 package es;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -202,6 +200,11 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarActionPerformed
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
+        
+        SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy");
+	String a = s.format(calendarioJC.getDate());
+        
+        
         Conexao.Conectar();
         
         PreparedStatement ps = null;
@@ -212,7 +215,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
                     
             String sql = "INSERT INTO projetosrf.funcionario (doc_funcionario, nome, endereco, telefone, nascimento, id_func) "
                     + "VALUES ('"+cpfCT.getText()+"', '"+nomeCT.getText()+"', '"+ruaCT.getText()+complementoCT.getText()+"', "
-                    + " '"+dddCT.getText()+ telefoneCT.getText()+"', '1992-07-02', '1')";
+                    + " '"+dddCT.getText()+ telefoneCT.getText()+"', '"+a+"', '1')";
             
             ps = Conexao.con.prepareStatement(sql);
             ps.executeUpdate();
@@ -222,12 +225,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
                     System.out.println("Nao enviou");
         }
 
-            
-           
-            
-            
-        
-        
+          
         try {
             Conexao.con.close();
             System.out.println("Conexão Encerrada.");
