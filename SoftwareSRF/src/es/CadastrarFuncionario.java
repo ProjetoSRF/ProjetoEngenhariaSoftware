@@ -1,7 +1,6 @@
 package es;
 
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
