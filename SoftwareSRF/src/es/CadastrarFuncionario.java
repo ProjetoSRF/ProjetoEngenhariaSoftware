@@ -1,5 +1,6 @@
 package es;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /*
@@ -31,6 +32,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
     public CadastrarFuncionario() {
         initComponents();
         setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage());
         //this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
     }
 
@@ -65,7 +67,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Cadastro de Funcionário");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);

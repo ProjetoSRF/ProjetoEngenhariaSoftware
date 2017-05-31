@@ -1,5 +1,6 @@
 package es;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /*
@@ -20,7 +21,8 @@ public class CadastrarPaciente extends javax.swing.JFrame {
     public CadastrarPaciente() {
         initComponents();
         setLocationRelativeTo(null);
-        this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
+        setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage());
+        //this.setExtendedState(this.getExtendedState()|JFrame.MAXIMIZED_BOTH);
     }
 
     /**

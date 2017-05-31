@@ -5,6 +5,8 @@
  */
 package es;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author flavi
@@ -17,6 +19,7 @@ public class GRelatorio extends javax.swing.JFrame {
     public GRelatorio() {
         initComponents();
         setLocationRelativeTo(null);
+        setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage());
     }
 
     /**
