@@ -32,18 +32,18 @@ public class TelaInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null); //projela tela centralizada
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
         
-        //mudar design da tela
+        /*//mudar design da tela
         try {
-            PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
-            try {
-                UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
-            } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+        PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
+        try {
+        UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
+        } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         } catch (ClassNotFoundException ex) {
         }
-        SwingUtilities.updateComponentTreeUI(this);
+        SwingUtilities.updateComponentTreeUI(this);*/
 
     }
 
@@ -56,6 +56,7 @@ public class TelaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jdbInicio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -73,7 +74,17 @@ public class TelaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SRF");
-        setResizable(false);
+
+        javax.swing.GroupLayout jdbInicioLayout = new javax.swing.GroupLayout(jdbInicio);
+        jdbInicio.setLayout(jdbInicioLayout);
+        jdbInicioLayout.setHorizontalGroup(
+            jdbInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 589, Short.MAX_VALUE)
+        );
+        jdbInicioLayout.setVerticalGroup(
+            jdbInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("Paciente");
 
@@ -163,11 +174,11 @@ public class TelaInicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 575, Short.MAX_VALUE)
+            .addComponent(jdbInicio, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addComponent(jdbInicio)
         );
 
         pack();
@@ -191,7 +202,16 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
+        TesteCadastroFuncionario obj = new TesteCadastroFuncionario();
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {   
+            obj.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);   
+        } catch (java.beans.PropertyVetoException e) {} 
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
@@ -260,5 +280,6 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JDesktopPane jdbInicio;
     // End of variables declaration//GEN-END:variables
 }
