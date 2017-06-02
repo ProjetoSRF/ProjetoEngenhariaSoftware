@@ -60,6 +60,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         cadastrar = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
         setTitle("Cadastro");
 
         jScrollPane1.setBorder(null);
