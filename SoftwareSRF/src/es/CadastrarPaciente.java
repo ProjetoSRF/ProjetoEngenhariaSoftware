@@ -21,6 +21,16 @@ import javax.swing.UnsupportedLookAndFeelException;
  */
 public class CadastrarPaciente extends javax.swing.JFrame {
 
+    
+     private TelaInicio telaAnterior;
+
+    public CadastrarPaciente(TelaInicio telaAnterior) {
+        //chamar o construtor padrão        
+        this();
+        this.telaAnterior = telaAnterior;
+
+    }
+    
     /**
      * Creates new form CadastrarPaciente
      */
@@ -45,6 +55,7 @@ public class CadastrarPaciente extends javax.swing.JFrame {
         
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -60,7 +71,7 @@ public class CadastrarPaciente extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Paciente");
         setResizable(false);
 
