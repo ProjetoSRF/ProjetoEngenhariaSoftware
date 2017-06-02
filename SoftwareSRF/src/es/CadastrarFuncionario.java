@@ -105,18 +105,17 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabelNome, gridBagConstraints);
 
         LabelCPF.setText("CPF:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabelCPF, gridBagConstraints);
 
         LabelRua.setText("Rua:");
@@ -124,16 +123,16 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabelRua, gridBagConstraints);
 
         LabelCidade.setText("Cidade:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabelCidade, gridBagConstraints);
 
         LabelNascimento.setText("Nascimento:");
@@ -142,7 +141,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridy = 14;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(18, 30, 0, 0);
         getContentPane().add(LabelNascimento, gridBagConstraints);
 
         LabemComplemento.setText("Complemento:");
@@ -151,7 +150,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridy = 8;
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabemComplemento, gridBagConstraints);
 
         LabelTelefone.setText("Telefone:");
@@ -160,52 +159,52 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(17, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(17, 30, 0, 0);
         getContentPane().add(LabelTelefone, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 396;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 30);
         getContentPane().add(nomeCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 396;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 30);
         getContentPane().add(cpfCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 396;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 30);
         getContentPane().add(ruaCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 396;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 30);
         getContentPane().add(cidadeCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 8;
-        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.gridwidth = 11;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 396;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 20, 0, 30);
         getContentPane().add(complementoCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -218,11 +217,11 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridwidth = 6;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 350;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 6, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(12, 6, 0, 0);
         getContentPane().add(telefoneCT, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -231,7 +230,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 114;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 20, 0, 20);
+        gridBagConstraints.insets = new java.awt.Insets(18, 20, 0, 0);
         getContentPane().add(calendarioJC, gridBagConstraints);
 
         LabelFuncao.setText("Função:");
@@ -240,7 +239,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 4;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(25, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(36, 30, 0, 0);
         getContentPane().add(LabelFuncao, gridBagConstraints);
 
         funcaoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico(a)", "Fisioterapeuta", "Secretário(a)" }));
@@ -250,7 +249,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(20, 20, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(31, 20, 0, 0);
         getContentPane().add(funcaoCB, gridBagConstraints);
 
         voltar.setText("Voltar");
@@ -263,7 +262,7 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints.gridx = 9;
         gridBagConstraints.gridy = 16;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 146, 20, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 146, 31, 0);
         getContentPane().add(voltar, gridBagConstraints);
 
         cadastrar.setText("Cadastrar");
@@ -275,8 +274,9 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 12, 20, 20);
+        gridBagConstraints.insets = new java.awt.Insets(6, 12, 31, 0);
         getContentPane().add(cadastrar, gridBagConstraints);
 
         pack();
