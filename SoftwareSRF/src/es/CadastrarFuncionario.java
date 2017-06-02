@@ -1,13 +1,7 @@
 package es;
 
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.theme.DarkStar;
-import com.jgoodies.looks.plastic.theme.DesertBlue;
-import com.jgoodies.looks.plastic.theme.DesertBluer;
 import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
-import com.jgoodies.looks.plastic.theme.SkyBlue;
-import com.jgoodies.looks.plastic.theme.SkyGreen;
-import java.awt.GraphicsEnvironment;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
