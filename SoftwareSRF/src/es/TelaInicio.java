@@ -95,9 +95,9 @@ public class TelaInicio extends javax.swing.JFrame {
             .addGap(0, 373, Short.MAX_VALUE)
         );
 
-        horaLabel.setFont(new java.awt.Font("Sylfaen", 1, 14)); // NOI18N
+        horaLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
-        dataLabel.setFont(new java.awt.Font("Sylfaen", 1, 14)); // NOI18N
+        dataLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

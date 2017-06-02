@@ -188,14 +188,14 @@
         <Component class="javax.swing.JLabel" name="horaLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Sylfaen" size="14" style="1"/>
+              <Font name="Tahoma" size="12" style="1"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="dataLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Sylfaen" size="14" style="1"/>
+              <Font name="Tahoma" size="12" style="1"/>
             </Property>
           </Properties>
         </Component>
