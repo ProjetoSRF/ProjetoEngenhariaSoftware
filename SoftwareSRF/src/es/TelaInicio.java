@@ -221,8 +221,18 @@ public class TelaInicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.setEnabled(false);
-        new CadastrarPaciente(this).setVisible(true);
+        //this.setEnabled(false);
+        //new CadastrarPaciente(this).setVisible(true);
+        TesteCadastroPaciente obj = new TesteCadastroPaciente();
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {   
+            obj.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);   
+        } catch (java.beans.PropertyVetoException e) {}
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 

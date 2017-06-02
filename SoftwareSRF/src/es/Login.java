@@ -1,6 +1,9 @@
 package es;
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
+import com.jgoodies.looks.plastic.theme.DarkStar;
 import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
+import com.jgoodies.looks.plastic.theme.LightGray;
+import com.jgoodies.looks.plastic.theme.Silver;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -24,17 +27,17 @@ public class Login extends javax.swing.JFrame {
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
         
         //mudar design da tela
+        /*try {
+        PlasticLookAndFeel.setPlasticTheme(new DarkStar());
         try {
-            PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
-            try {
-                UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
-            } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
+        UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
+        } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         } catch (ClassNotFoundException ex) {
         }
-        SwingUtilities.updateComponentTreeUI(this);
+        SwingUtilities.updateComponentTreeUI(this);*/
 
     }
 
