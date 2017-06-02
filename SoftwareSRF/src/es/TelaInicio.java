@@ -5,14 +5,13 @@
  */
 package es;
 
-import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.ImageIcon;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.Timer;
 
 /**
  *
@@ -31,7 +30,7 @@ public class TelaInicio extends javax.swing.JFrame {
         
         setLocationRelativeTo(null); //projela tela centralizada
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
-        
+        this.setExtendedState(MAXIMIZED_BOTH);
         /*//mudar design da tela
         try {
         PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
@@ -44,7 +43,14 @@ public class TelaInicio extends javax.swing.JFrame {
         } catch (ClassNotFoundException ex) {
         }
         SwingUtilities.updateComponentTreeUI(this);*/
-
+        
+        
+        //DATA
+        Date dataSistema = new Date();
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        dataLabel.setText(formato.format(dataSistema));
+        Timer timer = new Timer (1000, new hora());
+        timer.start();
     }
 
     /**
@@ -57,6 +63,9 @@ public class TelaInicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jdbInicio = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
+        horaLabel = new javax.swing.JLabel();
+        dataLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -83,7 +92,30 @@ public class TelaInicio extends javax.swing.JFrame {
         );
         jdbInicioLayout.setVerticalGroup(
             jdbInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 373, Short.MAX_VALUE)
+        );
+
+        horaLabel.setFont(new java.awt.Font("Sylfaen", 1, 14)); // NOI18N
+
+        dataLabel.setFont(new java.awt.Font("Sylfaen", 1, 14)); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(horaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(dataLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(horaLabel)
+                    .addComponent(dataLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         jMenu1.setText("Paciente");
@@ -175,10 +207,14 @@ public class TelaInicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jdbInicio, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jdbInicio)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jdbInicio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -267,6 +303,8 @@ public class TelaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel dataLabel;
+    private javax.swing.JLabel horaLabel;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -281,6 +319,19 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane jdbInicio;
     // End of variables declaration//GEN-END:variables
+
+
+class hora implements ActionListener{
+    @Override
+    public void actionPerformed (ActionEvent e){
+        Calendar now = Calendar.getInstance();
+        horaLabel.setText(String.format("%1$tH:%1$tM:%1$tS", now));
+    }
+            
+    
+}
+
 }
