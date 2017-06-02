@@ -50,6 +50,9 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         SwingUtilities.updateComponentTreeUI(this);
         
         
+        pegarResolucao() 
+        
+        
         
         
     }
@@ -276,6 +279,13 @@ public class CadastrarFuncionario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void pegarResolucao() {
+        Toolkit t = Toolkit.getDefaultToolkit();
+        Dimension dimensao = t.getScreenSize();
+        this.setSize((dimensao.width + 5), (dimensao.height - 38));
+
+ }
+    
     private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
         this.dispose();
         telaAnterior.setEnabled(true);
