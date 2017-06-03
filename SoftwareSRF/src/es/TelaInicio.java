@@ -5,11 +5,17 @@
  */
 package es;
 
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
 
@@ -51,6 +57,8 @@ public class TelaInicio extends javax.swing.JFrame {
         dataLabel.setText(formato.format(dataSistema));
         Timer timer = new Timer (1000, new hora());
         timer.start();
+        
+        
     }
 
     /**
@@ -62,7 +70,17 @@ public class TelaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jdbInicio = new javax.swing.JDesktopPane();
+        jdbInicio = new javax.swing.JDesktopPane(){
+
+            Image image = new ImageIcon(getClass().getResource("/es/imagens/fundo2.jpg")).getImage();
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+            }
+
+        };
         jPanel1 = new javax.swing.JPanel();
         horaLabel = new javax.swing.JLabel();
         dataLabel = new javax.swing.JLabel();
@@ -83,6 +101,8 @@ public class TelaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SRF");
+
+        jdbInicio.setBorder(null);
 
         javax.swing.GroupLayout jdbInicioLayout = new javax.swing.GroupLayout(jdbInicio);
         jdbInicio.setLayout(jdbInicioLayout);
@@ -259,8 +279,12 @@ public class TelaInicio extends javax.swing.JFrame {
             //set o tamanho máximo dela, que depende da janela pai   
             obj.setMaximum(true);   
         } catch (java.beans.PropertyVetoException e) {} 
+        
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    
+    
+    
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
