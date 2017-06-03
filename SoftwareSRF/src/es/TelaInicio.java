@@ -5,19 +5,22 @@
  */
 package es;
 
+import com.jgoodies.looks.plastic.PlasticLookAndFeel;
+import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import javax.imageio.ImageIO;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -37,7 +40,8 @@ public class TelaInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null); //projela tela centralizada
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
         this.setExtendedState(MAXIMIZED_BOTH);
-        /*//mudar design da tela
+        
+        //mudar design da tela
         try {
         PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
         try {
@@ -48,7 +52,7 @@ public class TelaInicio extends javax.swing.JFrame {
         
         } catch (ClassNotFoundException ex) {
         }
-        SwingUtilities.updateComponentTreeUI(this);*/
+        SwingUtilities.updateComponentTreeUI(this);
         
         
         //DATA

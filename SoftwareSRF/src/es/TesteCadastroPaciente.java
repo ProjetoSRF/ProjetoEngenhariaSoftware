@@ -5,14 +5,7 @@
  */
 package es;
 
-import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -34,7 +27,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
         
         //mudar design da tela
-        try {
+        /*try {
         PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
         try {
         UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
@@ -44,7 +37,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         
         } catch (ClassNotFoundException ex) {
         }
-        SwingUtilities.updateComponentTreeUI(this);
+        SwingUtilities.updateComponentTreeUI(this);*/
         
         
     }

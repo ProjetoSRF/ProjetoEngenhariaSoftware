@@ -5,10 +5,7 @@
  */
 package es;
 
-import java.awt.ScrollPane;
-import javax.swing.JButton;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -26,7 +23,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     
     public TesteCadastroFuncionario() {
         initComponents();
-        
+        setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
         
     }
 
@@ -39,6 +36,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         painelBotoes = new javax.swing.JPanel();
         LabelNome = new javax.swing.JLabel();
@@ -102,44 +100,40 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelBotoesLayout.createSequentialGroup()
-                        .addComponent(LabelNascimento)
-                        .addGap(28, 28, 28)
-                        .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE))
-                    .addGroup(painelBotoesLayout.createSequentialGroup()
                         .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelTelefone)
                             .addComponent(LabelCidade))
-                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(432, 432, 432)
+                        .addComponent(cadastrar))
+                    .addGroup(painelBotoesLayout.createSequentialGroup()
+                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(painelBotoesLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cadastrar))
-                            .addGroup(painelBotoesLayout.createSequentialGroup()
-                                .addGap(45, 45, 45)
+                                .addComponent(LabelNascimento)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelBotoesLayout.createSequentialGroup()
                                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelCPF)
+                                    .addComponent(LabelRua)
+                                    .addComponent(LabelNome)
+                                    .addComponent(LabelFuncao))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelBotoesLayout.createSequentialGroup()
+                                .addComponent(LabemComplemento)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cidadeCT, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(nomeCT)
                                     .addGroup(painelBotoesLayout.createSequentialGroup()
                                         .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(telefoneCT))
-                                    .addComponent(cidadeCT)))))
-                    .addGroup(painelBotoesLayout.createSequentialGroup()
-                        .addComponent(LabemComplemento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(complementoCT))
-                    .addGroup(painelBotoesLayout.createSequentialGroup()
-                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelCPF)
-                            .addComponent(LabelRua)
-                            .addComponent(LabelNome)
-                            .addComponent(LabelFuncao))
-                        .addGap(57, 57, 57)
-                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelBotoesLayout.createSequentialGroup()
-                                .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(nomeCT)
-                            .addComponent(ruaCT)
-                            .addComponent(cpfCT))))
-                .addContainerGap())
+                                    .addComponent(cpfCT)
+                                    .addComponent(ruaCT)
+                                    .addComponent(complementoCT))))
+                        .addContainerGap())))
         );
         painelBotoesLayout.setVerticalGroup(
             painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,55 +142,61 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelFuncao))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelNome))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cpfCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelCPF))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ruaCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelRua))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(complementoCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabemComplemento))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cidadeCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelCidade))
-                .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelTelefone)
-                    .addComponent(telefoneCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelBotoesLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(LabelNome)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelCPF)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelRua)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabemComplemento)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelCidade)
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelTelefone))
+                    .addGroup(painelBotoesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nomeCT)
+                        .addGap(12, 12, 12)
+                        .addComponent(cpfCT)
+                        .addGap(12, 12, 12)
+                        .addComponent(ruaCT)
+                        .addGap(12, 12, 12)
+                        .addComponent(complementoCT)
+                        .addGap(12, 12, 12)
+                        .addComponent(cidadeCT)
+                        .addGap(12, 12, 12)
+                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(telefoneCT)
+                            .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(21, 21, 21)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelNascimento)
                     .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addComponent(cadastrar)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(79, 79, 79))
         );
 
         jScrollPane1.setViewportView(painelBotoes);
+
+        jTabbedPane1.addTab("Funcionário", jScrollPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+
+        jTabbedPane1.getAccessibleContext().setAccessibleName("funcionario");
+        jTabbedPane1.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -223,6 +223,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField dddCT;
     private javax.swing.JComboBox<String> funcaoCB;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField nomeCT;
     private javax.swing.JPanel painelBotoes;
     private javax.swing.JTextField ruaCT;
