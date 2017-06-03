@@ -5,6 +5,7 @@
  */
 package es;
 
+import funcoes.ValidaCPF;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,15 +17,10 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     /**
      * Creates new form TesteCadastroFuncionario
      */
-    
-    
-    
-    
-    
     public TesteCadastroFuncionario() {
         initComponents();
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
-        
+
     }
 
     /**
@@ -204,7 +200,8 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
-
+        boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
+        System.out.println(validacpf);
     }//GEN-LAST:event_cadastrarActionPerformed
 
 
