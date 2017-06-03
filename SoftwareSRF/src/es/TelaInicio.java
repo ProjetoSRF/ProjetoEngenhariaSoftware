@@ -11,6 +11,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -183,6 +184,8 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu2.setText("Funcionário(a)");
 
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/imagens/logomt16.png"))); // NOI18N
         jMenuItem6.setText("Cadastrar");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,16 +276,6 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        TesteCadastroFuncionario obj = new TesteCadastroFuncionario();
-        jdbInicio.add(obj);
-        obj.setVisible(true);
-        try {   
-            obj.setSelected(true);   
-            //diz que a janela interna é maximizável   
-            obj.setMaximizable(true);   
-            //set o tamanho máximo dela, que depende da janela pai   
-            obj.setMaximum(true);   
-        } catch (java.beans.PropertyVetoException e) {} 
         
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
@@ -299,8 +292,22 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        this.setEnabled(false);
-        new CadastrarFuncionario(this).setVisible(true);
+        TesteCadastroFuncionario obj = null;
+        try {
+            obj = new TesteCadastroFuncionario();
+        } catch (ParseException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {   
+            obj.setSelected(true);   
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);   
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);   
+        } catch (java.beans.PropertyVetoException e) {} 
+        
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
