@@ -51,7 +51,7 @@ public class Login extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane(){
 
-            Image image = new ImageIcon(getClass().getResource("/es/imagens/fundo2.jpg")).getImage();
+            Image image = new ImageIcon(getClass().getResource("/es/imagens/login.jpg")).getImage();
 
             @Override
             protected void paintComponent(Graphics g) {
