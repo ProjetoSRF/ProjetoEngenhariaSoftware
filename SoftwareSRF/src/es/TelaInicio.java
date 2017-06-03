@@ -145,6 +145,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu1.setText("Paciente");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/adduser.png"))); // NOI18N
         jMenuItem1.setText("Cadastrar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +186,7 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenu2.setText("Funcionário(a)");
 
         jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/imagens/logomt16.png"))); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/adduser.png"))); // NOI18N
         jMenuItem6.setText("Cadastrar");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
