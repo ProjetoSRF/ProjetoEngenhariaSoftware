@@ -6,7 +6,9 @@
 package es;
 
 import es.funcoes.ValidaCPF;
+import java.text.ParseException;
 import javax.swing.ImageIcon;
+import javax.swing.text.MaskFormatter;
 
 /**
  *
@@ -17,10 +19,11 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     /**
      * Creates new form TesteCadastroFuncionario
      */
-    public TesteCadastroFuncionario() {
+    public TesteCadastroFuncionario() throws ParseException {
         initComponents();
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
-
+        MaskFormatter maskData = new MaskFormatter("###########");
+        maskData.install(cpfCT);
     }
 
     /**
@@ -43,7 +46,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         LabemComplemento = new javax.swing.JLabel();
         LabelTelefone = new javax.swing.JLabel();
         nomeCT = new javax.swing.JTextField();
-        cpfCT = new javax.swing.JTextField();
         ruaCT = new javax.swing.JTextField();
         cidadeCT = new javax.swing.JTextField();
         complementoCT = new javax.swing.JTextField();
@@ -53,6 +55,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         LabelFuncao = new javax.swing.JLabel();
         funcaoCB = new javax.swing.JComboBox<>();
         cadastrar = new javax.swing.JButton();
+        cpfCT = new javax.swing.JFormattedTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -115,18 +118,18 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                                     .addComponent(LabelFuncao))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelBotoesLayout.createSequentialGroup()
-                                        .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(cidadeCT, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(nomeCT)
                                     .addGroup(painelBotoesLayout.createSequentialGroup()
                                         .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(telefoneCT))
-                                    .addComponent(cpfCT)
                                     .addComponent(ruaCT)
-                                    .addComponent(complementoCT))))
+                                    .addComponent(complementoCT)
+                                    .addGroup(painelBotoesLayout.createSequentialGroup()
+                                        .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(cpfCT))))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -157,9 +160,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                     .addGroup(painelBotoesLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nomeCT)
-                        .addGap(12, 12, 12)
-                        .addComponent(cpfCT)
-                        .addGap(12, 12, 12)
+                        .addGap(13, 13, 13)
+                        .addComponent(cpfCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ruaCT)
                         .addGap(12, 12, 12)
                         .addComponent(complementoCT)
@@ -218,7 +221,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JCalendar calendarioJC;
     private javax.swing.JTextField cidadeCT;
     private javax.swing.JTextField complementoCT;
-    private javax.swing.JTextField cpfCT;
+    private javax.swing.JFormattedTextField cpfCT;
     private javax.swing.JTextField dddCT;
     private javax.swing.JComboBox<String> funcaoCB;
     private javax.swing.JScrollPane jScrollPane1;

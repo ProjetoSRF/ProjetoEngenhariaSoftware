@@ -97,10 +97,6 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="funcaoCB" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              </Group>
                                               <Component id="cidadeCT" alignment="1" max="32767" attributes="0"/>
                                               <Component id="nomeCT" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
@@ -108,9 +104,13 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="telefoneCT" max="32767" attributes="0"/>
                                               </Group>
-                                              <Component id="cpfCT" alignment="0" max="32767" attributes="0"/>
                                               <Component id="ruaCT" alignment="0" max="32767" attributes="0"/>
                                               <Component id="complementoCT" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="funcaoCB" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="cpfCT" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -151,9 +151,9 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="nomeCT" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                  <Component id="cpfCT" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                  <Component id="cpfCT" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="ruaCT" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                   <Component id="complementoCT" max="32767" attributes="0"/>
@@ -216,8 +216,6 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="nomeCT">
                 </Component>
-                <Component class="javax.swing.JTextField" name="cpfCT">
-                </Component>
                 <Component class="javax.swing.JTextField" name="ruaCT">
                 </Component>
                 <Component class="javax.swing.JTextField" name="cidadeCT">
@@ -256,6 +254,8 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarActionPerformed"/>
                   </Events>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="cpfCT">
                 </Component>
               </SubComponents>
             </Container>
