@@ -5,7 +5,7 @@
  */
 package es;
 
-import funcoes.ValidaCPF;
+import es.funcoes.ValidaCPF;
 import javax.swing.ImageIcon;
 
 /**

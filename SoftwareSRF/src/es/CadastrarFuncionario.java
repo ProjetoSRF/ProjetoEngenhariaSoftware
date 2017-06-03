@@ -1,6 +1,6 @@
 package es;
 
-import funcoes.Conexao;
+import es.funcoes.Conexao;
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
 import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
 import java.sql.PreparedStatement;
