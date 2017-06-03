@@ -56,11 +56,13 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         funcaoCB = new javax.swing.JComboBox<>();
         cadastrar = new javax.swing.JButton();
         cpfCT = new javax.swing.JFormattedTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
+        setResizable(true);
         setTitle("Cadastro de Funcionário");
 
         jScrollPane1.setBorder(null);
@@ -90,6 +92,8 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                 cadastrarActionPerformed(evt);
             }
         });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout painelBotoesLayout = new javax.swing.GroupLayout(painelBotoes);
         painelBotoes.setLayout(painelBotoesLayout);
@@ -130,6 +134,8 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                                         .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(cpfCT))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -145,14 +151,19 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(LabelFuncao))
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelBotoesLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(LabelNome)
-                        .addGap(18, 18, 18)
-                        .addComponent(LabelCPF)
-                        .addGap(18, 18, 18)
-                        .addComponent(LabelRua)
-                        .addGap(18, 18, 18)
-                        .addComponent(LabemComplemento)
+                        .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelBotoesLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(LabelNome)
+                                .addGap(18, 18, 18)
+                                .addComponent(LabelCPF)
+                                .addGap(18, 18, 18)
+                                .addComponent(LabelRua)
+                                .addGap(18, 18, 18)
+                                .addComponent(LabemComplemento))
+                            .addGroup(painelBotoesLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(LabelCidade)
                         .addGap(18, 18, 18)
@@ -224,6 +235,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JFormattedTextField cpfCT;
     private javax.swing.JTextField dddCT;
     private javax.swing.JComboBox<String> funcaoCB;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField nomeCT;
