@@ -55,6 +55,34 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
         buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
+        buttonGroup7 = new javax.swing.ButtonGroup();
+        buttonGroup8 = new javax.swing.ButtonGroup();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        buttonGroup11 = new javax.swing.ButtonGroup();
+        buttonGroup12 = new javax.swing.ButtonGroup();
+        buttonGroup13 = new javax.swing.ButtonGroup();
+        buttonGroup14 = new javax.swing.ButtonGroup();
+        buttonGroup15 = new javax.swing.ButtonGroup();
+        buttonGroup16 = new javax.swing.ButtonGroup();
+        buttonGroup17 = new javax.swing.ButtonGroup();
+        buttonGroup18 = new javax.swing.ButtonGroup();
+        buttonGroup19 = new javax.swing.ButtonGroup();
+        buttonGroup20 = new javax.swing.ButtonGroup();
+        buttonGroup21 = new javax.swing.ButtonGroup();
+        buttonGroup22 = new javax.swing.ButtonGroup();
+        buttonGroup23 = new javax.swing.ButtonGroup();
+        buttonGroup24 = new javax.swing.ButtonGroup();
+        buttonGroup25 = new javax.swing.ButtonGroup();
+        buttonGroup26 = new javax.swing.ButtonGroup();
+        buttonGroup27 = new javax.swing.ButtonGroup();
+        buttonGroup28 = new javax.swing.ButtonGroup();
+        buttonGroup29 = new javax.swing.ButtonGroup();
+        buttonGroup30 = new javax.swing.ButtonGroup();
+        buttonGroup31 = new javax.swing.ButtonGroup();
+        buttonGroup32 = new javax.swing.ButtonGroup();
         jTabbedPane = new javax.swing.JTabbedPane();
         jScrollPaneNeuropediatrico = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
@@ -66,15 +94,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
         TextMunicipio6 = new javax.swing.JTextField();
-        TextFone13 = new javax.swing.JTextField();
         jLabel143 = new javax.swing.JLabel();
-        TextFone14 = new javax.swing.JTextField();
         jLabel144 = new javax.swing.JLabel();
         jTextField37 = new javax.swing.JTextField();
         jLabel145 = new javax.swing.JLabel();
         jTextField38 = new javax.swing.JTextField();
         jLabel146 = new javax.swing.JLabel();
-        TextCep6 = new javax.swing.JTextField();
         jLabel147 = new javax.swing.JLabel();
         jLabel148 = new javax.swing.JLabel();
         jTextField39 = new javax.swing.JTextField();
@@ -96,9 +121,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel157 = new javax.swing.JLabel();
         jTextField87 = new javax.swing.JTextField();
         jLabel158 = new javax.swing.JLabel();
-        jTextField88 = new javax.swing.JTextField();
         jLabel159 = new javax.swing.JLabel();
-        jTextField89 = new javax.swing.JTextField();
         jLabel160 = new javax.swing.JLabel();
         jTextField90 = new javax.swing.JTextField();
         jLabel161 = new javax.swing.JLabel();
@@ -312,6 +335,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
         ButtonCadastrarPaciente = new javax.swing.JButton();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jFormattedTextField4 = new javax.swing.JFormattedTextField();
+        jFormattedTextField5 = new javax.swing.JFormattedTextField();
         jScrollPaneNeurologico = new javax.swing.JScrollPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel83 = new javax.swing.JLabel();
@@ -666,36 +693,52 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel56.setText("Aparelho Audição:");
 
+        buttonGroup5.add(jRadioButton16);
         jRadioButton16.setText("Sim");
 
+        buttonGroup5.add(jRadioButton17);
         jRadioButton17.setText("Não");
 
+        buttonGroup6.add(jRadioButton18);
         jRadioButton18.setText("Sim");
 
+        buttonGroup6.add(jRadioButton19);
         jRadioButton19.setText("Não");
 
+        buttonGroup7.add(jRadioButton20);
         jRadioButton20.setText("Não");
 
+        buttonGroup7.add(jRadioButton21);
         jRadioButton21.setText("Sim");
 
+        buttonGroup8.add(jRadioButton22);
         jRadioButton22.setText("Sim");
 
+        buttonGroup9.add(jRadioButton23);
         jRadioButton23.setText("Sim");
 
+        buttonGroup10.add(jRadioButton24);
         jRadioButton24.setText("Sim");
 
+        buttonGroup11.add(jRadioButton25);
         jRadioButton25.setText("Sim");
 
+        buttonGroup12.add(jRadioButton26);
         jRadioButton26.setText("Sim");
 
+        buttonGroup8.add(jRadioButton27);
         jRadioButton27.setText("Não");
 
+        buttonGroup9.add(jRadioButton28);
         jRadioButton28.setText("Não");
 
+        buttonGroup10.add(jRadioButton29);
         jRadioButton29.setText("Não");
 
+        buttonGroup11.add(jRadioButton30);
         jRadioButton30.setText("Não");
 
+        buttonGroup12.add(jRadioButton31);
         jRadioButton31.setText("Não");
 
         jLabel57.setText("OBS:");
@@ -714,26 +757,35 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel64.setText("Alimenta-se Sozinho:");
 
+        buttonGroup13.add(jRadioButton32);
         jRadioButton32.setText("Sim");
 
+        buttonGroup13.add(jRadioButton33);
         jRadioButton33.setText("Não");
 
+        buttonGroup14.add(jRadioButton34);
         jRadioButton34.setText("Sim");
 
+        buttonGroup15.add(jRadioButton35);
         jRadioButton35.setText("Sim");
 
+        buttonGroup16.add(jRadioButton36);
         jRadioButton36.setText("Sim");
 
+        buttonGroup16.add(jRadioButton39);
         jRadioButton39.setText("Não");
 
+        buttonGroup15.add(jRadioButton40);
         jRadioButton40.setText("Não");
 
+        buttonGroup14.add(jRadioButton41);
         jRadioButton41.setText("Não");
 
         jLabel65.setText("Higiene:");
 
         jLabel66.setText("Bucal:");
 
+        buttonGroup17.add(jRadioButton37);
         jRadioButton37.setText("Sim");
         jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -741,10 +793,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup17.add(jRadioButton38);
         jRadioButton38.setText("Não");
 
         jLabel67.setText("Controle de Esfincteres:");
 
+        buttonGroup18.add(jRadioButton42);
         jRadioButton42.setText("Sim");
         jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -752,6 +806,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup18.add(jRadioButton43);
         jRadioButton43.setText("Não");
 
         jLabel68.setText("OBS:");
@@ -760,6 +815,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel70.setText("Dor:");
 
+        buttonGroup19.add(jRadioButton44);
         jRadioButton44.setText("Não");
         jRadioButton44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -767,6 +823,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup19.add(jRadioButton45);
         jRadioButton45.setText("Sim");
         jRadioButton45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -778,6 +835,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel72.setText("Edema:");
 
+        buttonGroup20.add(jRadioButton46);
         jRadioButton46.setText("Não");
         jRadioButton46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -785,6 +843,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup20.add(jRadioButton47);
         jRadioButton47.setText("Sim");
         jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -798,6 +857,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel75.setText("Controle Cervical:");
 
+        buttonGroup21.add(jRadioButton48);
         jRadioButton48.setText("Não");
         jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -805,6 +865,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup21.add(jRadioButton49);
         jRadioButton49.setText("Sim");
         jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -814,6 +875,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel76.setText("Controle de Tronco:");
 
+        buttonGroup22.add(jRadioButton50);
         jRadioButton50.setText("Não");
         jRadioButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -821,6 +883,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup22.add(jRadioButton51);
         jRadioButton51.setText("Sim");
         jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -830,6 +893,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel77.setText("Controle de Membros:");
 
+        buttonGroup23.add(jRadioButton52);
         jRadioButton52.setText("Não");
         jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -837,6 +901,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup23.add(jRadioButton53);
         jRadioButton53.setText("Sim");
         jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -848,6 +913,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel79.setText("Consegue rolar no leito:");
 
+        buttonGroup24.add(jRadioButton54);
         jRadioButton54.setText("Não");
         jRadioButton54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -855,6 +921,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup24.add(jRadioButton55);
         jRadioButton55.setText("Sim");
         jRadioButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -864,6 +931,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel80.setText("Capacidade de engatinhar:");
 
+        buttonGroup25.add(jRadioButton56);
         jRadioButton56.setText("Não");
         jRadioButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -871,6 +939,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup25.add(jRadioButton57);
         jRadioButton57.setText("Sim");
         jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -922,6 +991,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel124.setText("Reflexo de para-quedas:");
 
+        buttonGroup26.add(jRadioButton60);
         jRadioButton60.setText("Positivo");
         jRadioButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -929,6 +999,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup26.add(jRadioButton61);
         jRadioButton61.setText("Negativo");
         jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -936,6 +1007,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup27.add(jRadioButton62);
         jRadioButton62.setText("Positivo");
         jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -943,6 +1015,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup27.add(jRadioButton63);
         jRadioButton63.setText("Negativo");
         jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -950,6 +1023,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup28.add(jRadioButton64);
         jRadioButton64.setText("Presente");
         jRadioButton64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -957,8 +1031,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup28.add(jRadioButton65);
         jRadioButton65.setText("Ausente");
 
+        buttonGroup29.add(jRadioButton66);
         jRadioButton66.setText("Presente");
         jRadioButton66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -966,10 +1042,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup29.add(jRadioButton67);
         jRadioButton67.setText("Ausente");
 
+        buttonGroup31.add(jRadioButton68);
         jRadioButton68.setText("Ausente");
 
+        buttonGroup30.add(jRadioButton69);
         jRadioButton69.setText("Presente");
         jRadioButton69.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1083,6 +1162,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel131.setText("Index-index:");
 
+        buttonGroup31.add(jRadioButton86);
         jRadioButton86.setText("Presente");
         jRadioButton86.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1090,10 +1170,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup30.add(jRadioButton87);
         jRadioButton87.setText("Ausente");
 
         jLabel132.setText("Disdiadocinesia:");
 
+        buttonGroup32.add(jRadioButton88);
         jRadioButton88.setText("Presente");
         jRadioButton88.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1101,6 +1183,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        buttonGroup32.add(jRadioButton89);
         jRadioButton89.setText("Ausente");
 
         jLabel133.setText("Inspeção Física:");
@@ -1115,6 +1198,23 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 ButtonCadastrarPacienteActionPerformed(evt);
             }
         });
+
+        try {
+            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField2ActionPerformed(evt);
+            }
+        });
+
+        try {
+            jFormattedTextField5.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1219,15 +1319,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addGap(23, 23, 23)
                                         .addComponent(jLabel147)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(TextCep6, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(TextBairro6, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TextEnd6, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TextNome6)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                        .addComponent(TextFone13, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(TextFone14, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
                                         .addComponent(jLabel146)
                                         .addGap(18, 18, 18)
                                         .addComponent(jTextField38))))
@@ -1278,8 +1376,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField84)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel160)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField90))
@@ -1295,8 +1393,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                 .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addComponent(jLabel158)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12)
@@ -1502,10 +1600,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                                 .addGap(140, 140, 140))))))))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel117)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton58))
                                     .addComponent(jLabel21)
                                     .addComponent(jLabel65)
                                     .addComponent(jLabel69)
@@ -1520,80 +1614,80 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                             .addComponent(jLabel122)
                                             .addComponent(jLabel123)
                                             .addComponent(jLabel124)
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jLabel126)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton70))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel127)
-                                                    .addComponent(jLabel128)
-                                                    .addComponent(jLabel129))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jRadioButton79)
-                                                    .addComponent(jRadioButton78)
-                                                    .addComponent(jRadioButton74)))
                                             .addComponent(jLabel131)
-                                            .addComponent(jLabel132)))
+                                            .addComponent(jLabel132)
+                                            .addComponent(jLabel126)
+                                            .addComponent(jLabel127)
+                                            .addComponent(jLabel128)
+                                            .addComponent(jLabel129)))
                                     .addComponent(jLabel125)
-                                    .addComponent(jLabel130))
-                                .addGap(111, 111, 111)
+                                    .addComponent(jLabel130)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addComponent(jLabel117)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRadioButton58)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRadioButton59)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton59)
-                                        .addGap(18, 18, 18)
                                         .addComponent(jLabel118)
-                                        .addGap(18, 18, 18)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField14))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRadioButton70)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton62)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jRadioButton63))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton64)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jRadioButton65))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton66)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jRadioButton67))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton69)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jRadioButton87))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton60)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jRadioButton61))
+                                                .addGap(3, 3, 3)
+                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton79)
+                                                    .addComponent(jRadioButton78)
+                                                    .addComponent(jRadioButton74))))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jRadioButton71)
                                                     .addComponent(jRadioButton75)
                                                     .addComponent(jRadioButton80)
                                                     .addComponent(jRadioButton81))
-                                                .addGap(26, 26, 26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jRadioButton72)
                                                     .addComponent(jRadioButton76)
                                                     .addComponent(jRadioButton82)
                                                     .addComponent(jRadioButton83))
-                                                .addGap(40, 40, 40)
+                                                .addGap(54, 54, 54)
                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jRadioButton85)
                                                     .addComponent(jRadioButton84)
                                                     .addComponent(jRadioButton77)
                                                     .addComponent(jRadioButton73)))
                                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton86)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton68))
+                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton62)
+                                                    .addComponent(jRadioButton64)
+                                                    .addComponent(jRadioButton66)
+                                                    .addComponent(jRadioButton69)
+                                                    .addComponent(jRadioButton60))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton63)
+                                                    .addComponent(jRadioButton61)
+                                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                                        .addGap(1, 1, 1)
+                                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jRadioButton65)
+                                                            .addComponent(jRadioButton67)
+                                                            .addComponent(jRadioButton87)))))
                                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton88)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jRadioButton89)))
+                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton86)
+                                                    .addComponent(jRadioButton88))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton68)
+                                                    .addComponent(jRadioButton89))))
                                         .addGap(0, 0, Short.MAX_VALUE)))))
                         .addGap(33, 33, 33))))
         );
@@ -1617,14 +1711,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel142)
                     .addComponent(TextMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel147)
-                    .addComponent(TextCep6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel143)
-                    .addComponent(TextFone13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TextFone14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel146)
-                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1666,13 +1759,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel157)
                     .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel158)
-                    .addComponent(jTextField88, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
-                    .addComponent(jTextField89, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel160)
-                    .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel161)
@@ -1838,7 +1931,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                             .addComponent(jLabel61)
                             .addComponent(jLabel60))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jRadioButton34)
                             .addComponent(jRadioButton41))
                         .addGap(18, 18, 18)
@@ -1937,78 +2030,90 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel118)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel119)
-                    .addComponent(jLabel120)
-                    .addComponent(jRadioButton60)
-                    .addComponent(jRadioButton61))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel121)
-                    .addComponent(jRadioButton62)
-                    .addComponent(jRadioButton63))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel122)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton64)
-                        .addComponent(jRadioButton65)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel123)
-                    .addComponent(jRadioButton66)
-                    .addComponent(jRadioButton67))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel124)
-                    .addComponent(jRadioButton69)
-                    .addComponent(jRadioButton87))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel125)
-                    .addComponent(jLabel126)
-                    .addComponent(jRadioButton70)
-                    .addComponent(jRadioButton71)
-                    .addComponent(jRadioButton72)
-                    .addComponent(jRadioButton73))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel127)
-                    .addComponent(jRadioButton74)
-                    .addComponent(jRadioButton75)
-                    .addComponent(jRadioButton76)
-                    .addComponent(jRadioButton77))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel128)
-                    .addComponent(jRadioButton78)
-                    .addComponent(jRadioButton80)
-                    .addComponent(jRadioButton82)
-                    .addComponent(jRadioButton84))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel129)
-                    .addComponent(jRadioButton79)
-                    .addComponent(jRadioButton81)
-                    .addComponent(jRadioButton83)
-                    .addComponent(jRadioButton85))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel130)
-                    .addComponent(jLabel131)
-                    .addComponent(jRadioButton86)
-                    .addComponent(jRadioButton68))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel132)
-                    .addComponent(jRadioButton88)
-                    .addComponent(jRadioButton89))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel133)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(ButtonCadastrarPaciente)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel119)
+                            .addComponent(jLabel120)
+                            .addComponent(jRadioButton60))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel121)
+                            .addComponent(jRadioButton62))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel122)
+                            .addComponent(jRadioButton64))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel123)
+                            .addComponent(jRadioButton66))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel124)
+                            .addComponent(jRadioButton69))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel125)
+                                    .addComponent(jLabel126)
+                                    .addComponent(jRadioButton71)
+                                    .addComponent(jRadioButton72)
+                                    .addComponent(jRadioButton73))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel127)
+                                    .addComponent(jRadioButton75)
+                                    .addComponent(jRadioButton76)
+                                    .addComponent(jRadioButton77))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel128)
+                                    .addComponent(jRadioButton80)
+                                    .addComponent(jRadioButton82)
+                                    .addComponent(jRadioButton84))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel129)
+                                    .addComponent(jRadioButton81)
+                                    .addComponent(jRadioButton83)
+                                    .addComponent(jRadioButton85))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel130)
+                                    .addComponent(jLabel131)
+                                    .addComponent(jRadioButton86)
+                                    .addComponent(jRadioButton68))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel132)
+                                    .addComponent(jRadioButton88)
+                                    .addComponent(jRadioButton89))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel133)
+                                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(ButtonCadastrarPaciente))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jRadioButton70)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton74)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton78)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton79))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jRadioButton61)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton63)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton65)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton67)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton87)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -2640,7 +2745,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1299, Short.MAX_VALUE)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 3465, Short.MAX_VALUE)
         );
 
         pack();
@@ -2846,6 +2951,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
 
+    private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonCadastrarPaciente;
@@ -2857,13 +2966,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField TextBairro6;
     private javax.swing.JTextField TextCep2;
     private javax.swing.JTextField TextCep4;
-    private javax.swing.JTextField TextCep6;
     private javax.swing.JTextField TextEnd2;
     private javax.swing.JTextField TextEnd4;
     private javax.swing.JTextField TextEnd6;
     private javax.swing.JTextField TextFone10;
-    private javax.swing.JTextField TextFone13;
-    private javax.swing.JTextField TextFone14;
     private javax.swing.JTextField TextFone5;
     private javax.swing.JTextField TextFone6;
     private javax.swing.JTextField TextFone9;
@@ -2874,9 +2980,37 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField TextNome4;
     private javax.swing.JTextField TextNome6;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
+    private javax.swing.ButtonGroup buttonGroup11;
+    private javax.swing.ButtonGroup buttonGroup12;
+    private javax.swing.ButtonGroup buttonGroup13;
+    private javax.swing.ButtonGroup buttonGroup14;
+    private javax.swing.ButtonGroup buttonGroup15;
+    private javax.swing.ButtonGroup buttonGroup16;
+    private javax.swing.ButtonGroup buttonGroup17;
+    private javax.swing.ButtonGroup buttonGroup18;
+    private javax.swing.ButtonGroup buttonGroup19;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup20;
+    private javax.swing.ButtonGroup buttonGroup21;
+    private javax.swing.ButtonGroup buttonGroup22;
+    private javax.swing.ButtonGroup buttonGroup23;
+    private javax.swing.ButtonGroup buttonGroup24;
+    private javax.swing.ButtonGroup buttonGroup25;
+    private javax.swing.ButtonGroup buttonGroup26;
+    private javax.swing.ButtonGroup buttonGroup27;
+    private javax.swing.ButtonGroup buttonGroup28;
+    private javax.swing.ButtonGroup buttonGroup29;
     private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup30;
+    private javax.swing.ButtonGroup buttonGroup31;
+    private javax.swing.ButtonGroup buttonGroup32;
     private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.ButtonGroup buttonGroup7;
+    private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
@@ -2896,6 +3030,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JDateChooser jDateChooser4;
     private com.toedter.calendar.JDateChooser jDateChooser7;
     private com.toedter.calendar.JDateChooser jDateChooser8;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JFormattedTextField jFormattedTextField4;
+    private javax.swing.JFormattedTextField jFormattedTextField5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -3222,8 +3360,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField85;
     private javax.swing.JTextField jTextField86;
     private javax.swing.JTextField jTextField87;
-    private javax.swing.JTextField jTextField88;
-    private javax.swing.JTextField jTextField89;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextField90;
     private javax.swing.JTextField jTextField91;
