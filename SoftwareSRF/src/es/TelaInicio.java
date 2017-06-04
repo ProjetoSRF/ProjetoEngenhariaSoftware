@@ -5,8 +5,6 @@
  */
 package es;
 
-import com.jgoodies.looks.plastic.PlasticLookAndFeel;
-import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -18,10 +16,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -30,40 +25,25 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class TelaInicio extends javax.swing.JFrame {
 
     private TelaInicio telaAnterior;
-    
 
     /**
      * Creates new form TelaInicio
      */
     public TelaInicio() {
         initComponents();
-        
+
         setLocationRelativeTo(null); //projela tela centralizada
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
         this.setExtendedState(MAXIMIZED_BOTH);
         
-        //mudar design da tela
-        try {
-        PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
-        try {
-        UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
-        } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        } catch (ClassNotFoundException ex) {
-        }
-        SwingUtilities.updateComponentTreeUI(this);
-        
-        
+
         //DATA
         Date dataSistema = new Date();
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         dataLabel.setText(formato.format(dataSistema));
-        Timer timer = new Timer (1000, new hora());
+        Timer timer = new Timer(1000, new hora());
         timer.start();
-        
-        
+
     }
 
     /**
@@ -163,9 +143,11 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem3.setText("Editar");
         jMenu1.add(jMenuItem3);
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/remove.png"))); // NOI18N
         jMenuItem4.setText("Remover");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,9 +187,11 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem7);
 
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem8.setText("Editar");
         jMenu2.add(jMenuItem8);
 
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/remove.png"))); // NOI18N
         jMenuItem9.setText("Remover");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,14 +240,15 @@ public class TelaInicio extends javax.swing.JFrame {
         TesteCadastroPaciente obj = new TesteCadastroPaciente();
         jdbInicio.add(obj);
         obj.setVisible(true);
-        try {   
-            obj.setSelected(true);   
+        try {
+            obj.setSelected(true);
             //diz que a janela interna é maximizável   
-            obj.setMaximizable(true);   
+            obj.setMaximizable(true);
             //set o tamanho máximo dela, que depende da janela pai   
-            obj.setMaximum(true);   
-        } catch (java.beans.PropertyVetoException e) {}
-        
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -279,12 +264,10 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        
+
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
-    
-    
-    
+
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
@@ -303,43 +286,22 @@ public class TelaInicio extends javax.swing.JFrame {
         }
         jdbInicio.add(obj);
         obj.setVisible(true);
-        try {   
-            obj.setSelected(true);   
+        try {
+            obj.setSelected(true);
             //diz que a janela interna é maximizável   
-            obj.setMaximizable(true);   
+            obj.setMaximizable(true);
             //set o tamanho máximo dela, que depende da janela pai   
-            obj.setMaximum(true);   
-        } catch (java.beans.PropertyVetoException e) {} 
-        
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -371,15 +333,14 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jdbInicio;
     // End of variables declaration//GEN-END:variables
 
+    class hora implements ActionListener {
 
-class hora implements ActionListener{
-    @Override
-    public void actionPerformed (ActionEvent e){
-        Calendar now = Calendar.getInstance();
-        horaLabel.setText(String.format("%1$tH:%1$tM:%1$tS", now));
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Calendar now = Calendar.getInstance();
+            horaLabel.setText(String.format("%1$tH:%1$tM:%1$tS", now));
+        }
+
     }
-            
-    
-}
 
 }
