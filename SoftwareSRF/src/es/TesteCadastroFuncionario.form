@@ -31,7 +31,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="1" max="32767" attributes="0"/>
+          <Component id="jTabbedPane1" alignment="1" pref="700" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -72,17 +72,8 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="LabelNascimento" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="calendarioJC" pref="561" max="32767" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="LabelCPF" min="-2" max="-2" attributes="0"/>
@@ -105,11 +96,6 @@
                                       </Group>
                                       <Component id="ruaCT1" max="32767" attributes="0"/>
                                       <Component id="nomeCT" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="dddCT1" min="-2" pref="36" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="telefoneCT" max="32767" attributes="0"/>
-                                      </Group>
                                       <Component id="cpfCT" max="32767" attributes="0"/>
                                       <Component id="ruaCT" alignment="0" max="32767" attributes="0"/>
                                       <Component id="cidadeCT" alignment="1" max="32767" attributes="0"/>
@@ -117,17 +103,28 @@
                                           <Component id="funcaoCB" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="telefoneCT" min="-2" pref="155" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="LabelNascimento" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="calendarioJC" pref="315" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="funcaoCB" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="LabelFuncao" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -165,19 +162,17 @@
                               <Component id="LabelCidade" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="telefoneCT" alignment="3" max="32767" attributes="0"/>
-                              <Component id="LabelTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="dddCT1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="LabelTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="telefoneCT" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelNascimento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="calendarioJC" min="-2" pref="162" max="-2" attributes="0"/>
-                              <Component id="LabelNascimento" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -228,8 +223,6 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="dddCT">
                 </Component>
-                <Component class="javax.swing.JTextField" name="telefoneCT">
-                </Component>
                 <Component class="com.toedter.calendar.JCalendar" name="calendarioJC">
                 </Component>
                 <Component class="javax.swing.JLabel" name="LabelFuncao">
@@ -240,11 +233,7 @@
                 <Component class="javax.swing.JComboBox" name="funcaoCB">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="3">
-                        <StringItem index="0" value="M&#xe9;dico(a)"/>
-                        <StringItem index="1" value="Fisioterapeuta"/>
-                        <StringItem index="2" value="Secret&#xe1;rio(a)"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -273,7 +262,7 @@
                     <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="dddCT1">
+                <Component class="javax.swing.JFormattedTextField" name="telefoneCT">
                 </Component>
               </SubComponents>
             </Container>

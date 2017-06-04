@@ -5,7 +5,11 @@
  */
 package es;
 
+import es.funcoes.Conexao;
 import es.funcoes.ValidaCPF;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.ParseException;
 import javax.swing.ImageIcon;
 import javax.swing.text.MaskFormatter;
@@ -19,11 +23,28 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     /**
      * Creates new form TesteCadastroFuncionario
      */
-    public TesteCadastroFuncionario() throws ParseException {
+    public TesteCadastroFuncionario() throws ParseException, SQLException {
         initComponents();
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
+        
         MaskFormatter maskData = new MaskFormatter("###########");
         maskData.install(cpfCT);
+        maskData = new MaskFormatter("(##)####-#####");
+        maskData.install(telefoneCT);
+       
+        
+        
+        Conexao.Conectar();
+        String sql = "select descricao from projetosrf.funcao";
+        PreparedStatement ps = Conexao.con.prepareStatement(sql);
+        ps.executeQuery();
+        ResultSet rs = ps.getResultSet();
+        while (rs.next()){
+            funcaoCB.addItem(rs.getString("descricao"));
+        }
+        funcaoCB.updateUI();
+        
+        
         
         
     }
@@ -52,7 +73,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         cidadeCT = new javax.swing.JTextField();
         complementoCT = new javax.swing.JTextField();
         dddCT = new javax.swing.JTextField();
-        telefoneCT = new javax.swing.JTextField();
         calendarioJC = new com.toedter.calendar.JCalendar();
         LabelFuncao = new javax.swing.JLabel();
         funcaoCB = new javax.swing.JComboBox<>();
@@ -61,7 +81,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         LabelRua1 = new javax.swing.JLabel();
         ruaCT1 = new javax.swing.JTextField();
         LabelRua2 = new javax.swing.JLabel();
-        dddCT1 = new javax.swing.JTextField();
+        telefoneCT = new javax.swing.JFormattedTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -89,8 +109,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
 
         LabelFuncao.setText("Função:");
 
-        funcaoCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Médico(a)", "Fisioterapeuta", "Secretário(a)" }));
-
         cadastrar.setText("Cadastrar");
         cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,15 +125,8 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         painelBotoesLayout.setHorizontalGroup(
             painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(cadastrar))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
-                        .addComponent(LabelNascimento)
-                        .addGap(18, 18, 18)
-                        .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE))
                     .addGroup(painelBotoesLayout.createSequentialGroup()
                         .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelCPF)
@@ -136,22 +147,27 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                                 .addComponent(complementoCT))
                             .addComponent(ruaCT1)
                             .addComponent(nomeCT)
-                            .addGroup(painelBotoesLayout.createSequentialGroup()
-                                .addComponent(dddCT1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(telefoneCT))
                             .addComponent(cpfCT)
                             .addComponent(ruaCT)
                             .addComponent(cidadeCT, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(painelBotoesLayout.createSequentialGroup()
                                 .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(painelBotoesLayout.createSequentialGroup()
+                                .addComponent(telefoneCT, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(LabelNascimento)
+                                .addGap(18, 18, 18)
+                                .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cadastrar)))
                 .addGap(30, 30, 30))
         );
         painelBotoesLayout.setVerticalGroup(
             painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(30, 30, 30)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(funcaoCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelFuncao))
@@ -182,17 +198,15 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(cidadeCT)
                     .addComponent(LabelCidade))
                 .addGap(12, 12, 12)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telefoneCT)
-                    .addComponent(LabelTelefone)
-                    .addComponent(dddCT1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelNascimento))
-                .addGap(20, 20, 20)
+                    .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(LabelTelefone)
+                        .addComponent(telefoneCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelNascimento))
+                    .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(cadastrar)
-                .addContainerGap())
+                .addGap(73, 73, 73))
         );
 
         jScrollPane1.setViewportView(painelBotoes);
@@ -203,7 +217,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -239,7 +253,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField complementoCT;
     private javax.swing.JFormattedTextField cpfCT;
     private javax.swing.JTextField dddCT;
-    private javax.swing.JTextField dddCT1;
     private javax.swing.JComboBox<String> funcaoCB;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -247,6 +260,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JPanel painelBotoes;
     private javax.swing.JTextField ruaCT;
     private javax.swing.JTextField ruaCT1;
-    private javax.swing.JTextField telefoneCT;
+    private javax.swing.JFormattedTextField telefoneCT;
     // End of variables declaration//GEN-END:variables
 }
