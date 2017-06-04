@@ -9,6 +9,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -279,11 +280,15 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         TesteCadastroFuncionario obj = null;
+        
         try {
             obj = new TesteCadastroFuncionario();
         } catch (ParseException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         jdbInicio.add(obj);
         obj.setVisible(true);
         try {

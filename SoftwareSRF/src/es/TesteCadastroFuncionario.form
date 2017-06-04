@@ -82,19 +82,19 @@
                                       <Component id="LabelFuncao" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="LabelCidade" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="LabelTelefone" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelRua1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelRua2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LabelBairro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LabelNumero" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="dddCT" min="-2" pref="89" max="-2" attributes="0"/>
+                                          <Component id="numeroCT" min="-2" pref="89" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Component id="LabemComplemento" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="complementoCT" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="ruaCT1" max="32767" attributes="0"/>
+                                      <Component id="bairroCT" max="32767" attributes="0"/>
                                       <Component id="nomeCT" max="32767" attributes="0"/>
                                       <Component id="cpfCT" max="32767" attributes="0"/>
                                       <Component id="ruaCT" alignment="0" max="32767" attributes="0"/>
@@ -150,13 +150,13 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="LabemComplemento" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="complementoCT" alignment="3" max="32767" attributes="0"/>
-                              <Component id="LabelRua2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="dddCT" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="numeroCT" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="LabelRua1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ruaCT1" alignment="3" max="32767" attributes="0"/>
+                              <Component id="LabelBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="bairroCT" alignment="3" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -173,9 +173,9 @@
                               <Component id="calendarioJC" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="cadastrar" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="cancelar" linkSize="4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cadastrar" linkSize="4" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
@@ -226,7 +226,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="complementoCT">
                 </Component>
-                <Component class="javax.swing.JTextField" name="dddCT">
+                <Component class="javax.swing.JTextField" name="numeroCT">
                 </Component>
                 <Component class="com.toedter.calendar.JCalendar" name="calendarioJC">
                 </Component>
@@ -255,14 +255,14 @@
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="cpfCT">
                 </Component>
-                <Component class="javax.swing.JLabel" name="LabelRua1">
+                <Component class="javax.swing.JLabel" name="LabelBairro">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Bairro:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="ruaCT1">
+                <Component class="javax.swing.JTextField" name="bairroCT">
                 </Component>
-                <Component class="javax.swing.JLabel" name="LabelRua2">
+                <Component class="javax.swing.JLabel" name="LabelNumero">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
                   </Properties>

@@ -11,7 +11,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
 
 /**
@@ -26,12 +29,11 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     public TesteCadastroFuncionario() throws ParseException, SQLException {
         initComponents();
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
-        
+
         MaskFormatter maskData = new MaskFormatter("###########");
         maskData.install(cpfCT);
-        maskData = new MaskFormatter("(##)####-#####");
+        maskData = new MaskFormatter("(##)#####-####");
         maskData.install(telefoneCT);
-       
         
         
         Conexao.Conectar();
@@ -39,14 +41,11 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         PreparedStatement ps = Conexao.con.prepareStatement(sql);
         ps.executeQuery();
         ResultSet rs = ps.getResultSet();
-        while (rs.next()){
+        while (rs.next()) {
             funcaoCB.addItem(rs.getString("descricao"));
         }
         funcaoCB.updateUI();
-        
-        
-        
-        
+
     }
 
     /**
@@ -72,15 +71,15 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         ruaCT = new javax.swing.JTextField();
         cidadeCT = new javax.swing.JTextField();
         complementoCT = new javax.swing.JTextField();
-        dddCT = new javax.swing.JTextField();
+        numeroCT = new javax.swing.JTextField();
         calendarioJC = new com.toedter.calendar.JCalendar();
         LabelFuncao = new javax.swing.JLabel();
         funcaoCB = new javax.swing.JComboBox<>();
         cadastrar = new javax.swing.JButton();
         cpfCT = new javax.swing.JFormattedTextField();
-        LabelRua1 = new javax.swing.JLabel();
-        ruaCT1 = new javax.swing.JTextField();
-        LabelRua2 = new javax.swing.JLabel();
+        LabelBairro = new javax.swing.JLabel();
+        bairroCT = new javax.swing.JTextField();
+        LabelNumero = new javax.swing.JLabel();
         telefoneCT = new javax.swing.JFormattedTextField();
         cancelar = new javax.swing.JButton();
 
@@ -117,9 +116,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
             }
         });
 
-        LabelRua1.setText("Bairro:");
+        LabelBairro.setText("Bairro:");
 
-        LabelRua2.setText("Número:");
+        LabelNumero.setText("Número:");
 
         cancelar.setText("Cancelar");
         cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -143,17 +142,17 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                             .addComponent(LabelFuncao)
                             .addComponent(LabelCidade)
                             .addComponent(LabelTelefone)
-                            .addComponent(LabelRua1)
-                            .addComponent(LabelRua2))
+                            .addComponent(LabelBairro)
+                            .addComponent(LabelNumero))
                         .addGap(27, 27, 27)
                         .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelBotoesLayout.createSequentialGroup()
-                                .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(numeroCT, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(LabemComplemento)
                                 .addGap(18, 18, 18)
                                 .addComponent(complementoCT))
-                            .addComponent(ruaCT1)
+                            .addComponent(bairroCT)
                             .addComponent(nomeCT)
                             .addComponent(cpfCT)
                             .addComponent(ruaCT)
@@ -200,12 +199,12 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabemComplemento)
                     .addComponent(complementoCT)
-                    .addComponent(LabelRua2)
-                    .addComponent(dddCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelNumero)
+                    .addComponent(numeroCT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelRua1)
-                    .addComponent(ruaCT1))
+                    .addComponent(LabelBairro)
+                    .addComponent(bairroCT))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cidadeCT)
@@ -218,9 +217,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                         .addComponent(LabelNascimento))
                     .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadastrar)
-                    .addComponent(cancelar))
+                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cancelar)
+                    .addComponent(cadastrar))
                 .addGap(73, 73, 73))
         );
 
@@ -248,8 +247,53 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
-        boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
-        System.out.println(validacpf);
+
+        if (nomeCT.getText().length() > 0 && cpfCT.getText().length() > 0 && ruaCT.getText().length() > 0 && numeroCT.getText().length() > 0
+                && complementoCT.getText().length() > 0 && bairroCT.getText().length() > 0 && cidadeCT.getText().length() > 0) {
+
+            boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
+            if (validacpf == false) {
+                JOptionPane.showMessageDialog(null, "CPF Inválido!");
+                return;
+            }
+            
+            /*Pattern pattern2 = Pattern.compile("([a-z]{2})[0-9]{4,5}-[0-9]{4}");
+            Matcher matchertel = pattern2.matcher(telefoneCT.getText());
+            if (matchertel.find()) {
+                JOptionPane.showMessageDialog(null, "Telefone Inválido!");
+                return;
+            }*/
+
+            Pattern pattern = Pattern.compile("[0-9]");
+            Matcher matcher = pattern.matcher(nomeCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo nome não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(ruaCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo rua não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(bairroCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo bairro não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(cidadeCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo cidade não pode conter números!");
+                return;
+            }
+
+            
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Há campos vazios!!");
+            return;
+        }
+
+
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
@@ -258,30 +302,33 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelBairro;
     private javax.swing.JLabel LabelCPF;
     private javax.swing.JLabel LabelCidade;
     private javax.swing.JLabel LabelFuncao;
     private javax.swing.JLabel LabelNascimento;
     private javax.swing.JLabel LabelNome;
+    private javax.swing.JLabel LabelNumero;
     private javax.swing.JLabel LabelRua;
-    private javax.swing.JLabel LabelRua1;
-    private javax.swing.JLabel LabelRua2;
     private javax.swing.JLabel LabelTelefone;
     private javax.swing.JLabel LabemComplemento;
+    private javax.swing.JTextField bairroCT;
     private javax.swing.JButton cadastrar;
     private com.toedter.calendar.JCalendar calendarioJC;
     private javax.swing.JButton cancelar;
     private javax.swing.JTextField cidadeCT;
     private javax.swing.JTextField complementoCT;
     private javax.swing.JFormattedTextField cpfCT;
-    private javax.swing.JTextField dddCT;
     private javax.swing.JComboBox<String> funcaoCB;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField nomeCT;
+    private javax.swing.JTextField numeroCT;
     private javax.swing.JPanel painelBotoes;
     private javax.swing.JTextField ruaCT;
-    private javax.swing.JTextField ruaCT1;
     private javax.swing.JFormattedTextField telefoneCT;
     // End of variables declaration//GEN-END:variables
+
+    
+
 }
