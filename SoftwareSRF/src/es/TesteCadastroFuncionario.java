@@ -82,6 +82,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         ruaCT1 = new javax.swing.JTextField();
         LabelRua2 = new javax.swing.JLabel();
         telefoneCT = new javax.swing.JFormattedTextField();
+        cancelar = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -119,6 +120,13 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         LabelRua1.setText("Bairro:");
 
         LabelRua2.setText("Número:");
+
+        cancelar.setText("Cancelar");
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelBotoesLayout = new javax.swing.GroupLayout(painelBotoes);
         painelBotoes.setLayout(painelBotoesLayout);
@@ -161,9 +169,14 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                                 .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(cadastrar)))
                 .addGap(30, 30, 30))
         );
+
+        painelBotoesLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cadastrar, cancelar});
+
         painelBotoesLayout.setVerticalGroup(
             painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelBotoesLayout.createSequentialGroup()
@@ -205,9 +218,13 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                         .addComponent(LabelNascimento))
                     .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(cadastrar)
+                .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cadastrar)
+                    .addComponent(cancelar))
                 .addGap(73, 73, 73))
         );
+
+        painelBotoesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cadastrar, cancelar});
 
         jScrollPane1.setViewportView(painelBotoes);
 
@@ -235,6 +252,10 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         System.out.println(validacpf);
     }//GEN-LAST:event_cadastrarActionPerformed
 
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
+        dispose();
+    }//GEN-LAST:event_cancelarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelCPF;
@@ -249,6 +270,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel LabemComplemento;
     private javax.swing.JButton cadastrar;
     private com.toedter.calendar.JCalendar calendarioJC;
+    private javax.swing.JButton cancelar;
     private javax.swing.JTextField cidadeCT;
     private javax.swing.JTextField complementoCT;
     private javax.swing.JFormattedTextField cpfCT;

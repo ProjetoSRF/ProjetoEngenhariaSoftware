@@ -114,7 +114,9 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cancelar" linkSize="3" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="cadastrar" linkSize="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -171,7 +173,10 @@
                               <Component id="calendarioJC" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="cadastrar" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cadastrar" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cancelar" linkSize="4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -263,6 +268,14 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="telefoneCT">
+                </Component>
+                <Component class="javax.swing.JButton" name="cancelar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Cancelar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
