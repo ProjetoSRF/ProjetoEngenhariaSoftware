@@ -46,6 +46,16 @@ public class TelaInicio extends javax.swing.JFrame {
         timer.start();
 
     }
+    
+    class hora implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Calendar now = Calendar.getInstance();
+            horaLabel.setText(String.format("%1$tH:%1$tM:%1$tS", now));
+        }
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -337,15 +347,4 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane jdbInicio;
     // End of variables declaration//GEN-END:variables
-
-    class hora implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            Calendar now = Calendar.getInstance();
-            horaLabel.setText(String.format("%1$tH:%1$tM:%1$tS", now));
-        }
-
-    }
-
 }
