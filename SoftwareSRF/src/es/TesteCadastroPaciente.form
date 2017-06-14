@@ -4815,20 +4815,24 @@
                               <Component id="jTextField77" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel263" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton191" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton192" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel265" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField78" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel263" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton191" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton192" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField78" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel266" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jRadioButton193" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel268" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField79" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton194" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel266" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel268" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField79" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jRadioButton194" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">

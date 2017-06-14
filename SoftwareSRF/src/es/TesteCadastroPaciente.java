@@ -5,6 +5,13 @@
  */
 package es;
 
+import es.funcoes.Conexao;
+import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.concurrent.TimeUnit;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,16 +23,11 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     /**
      * Creates new form TesteCadastroFuncionario
      */
-    
-    
-    
-    
-    
-    public TesteCadastroPaciente() {
+    public TesteCadastroPaciente() throws ParseException, SQLException, InterruptedException, InterruptedException, IOException {
         initComponents();
-        
+
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
-        
+
         //mudar design da tela
         /*try {
         PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
@@ -38,8 +40,17 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (ClassNotFoundException ex) {
         }
         SwingUtilities.updateComponentTreeUI(this);*/
-        
-        
+        Conexao.Conectar();
+        String sql = "select nome from projetosrf.paciente";
+        PreparedStatement ps = Conexao.con.prepareStatement(sql);
+        ps.executeQuery();
+        ResultSet rs = ps.getResultSet();
+
+        while (rs.next()) {
+            TextNome6.setText(rs.getString("nome"));
+            
+        }
+
     }
 
     /**
@@ -4348,19 +4359,21 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel262)
                     .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel263)
-                    .addComponent(jRadioButton191)
-                    .addComponent(jRadioButton192)
-                    .addComponent(jLabel265)
-                    .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel265, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel263)
+                        .addComponent(jRadioButton191)
+                        .addComponent(jRadioButton192)
+                        .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel266)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButton193)
-                    .addComponent(jLabel268)
-                    .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton194))
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel266)
+                        .addComponent(jLabel268)
+                        .addComponent(jTextField79, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jRadioButton194)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel269)
@@ -4584,7 +4597,46 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jRadioButton88ActionPerformed
 
     private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
-        // TODO add your handling code here:
+        //  if (TempoGestacao.getText().length() > 0 && PreNatal.getText().length() > 0 ) {
+
+        //boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
+        //if (validacpf == false) {
+        //  JOptionPane.showMessageDialog(null, "CPF Inválido!");
+        //return;
+        //}
+        /*Pattern pattern2 = Pattern.compile("([a-z]{2})[0-9]{4,5}-[0-9]{4}");
+            Matcher matchertel = pattern2.matcher(telefoneCT.getText());
+            if (matchertel.find()) {
+                JOptionPane.showMessageDialog(null, "Telefone Inválido!");
+                return;
+            }*/
+ /*
+            Pattern pattern = Pattern.compile("[0-9]");
+            Matcher matcher = pattern.matcher(nomeCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo nome não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(ruaCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo rua não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(bairroCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo bairro não pode conter números!");
+                return;
+            }
+            matcher = pattern.matcher(cidadeCT.getText());
+            if (matcher.find()) {
+                JOptionPane.showMessageDialog(null, "Campo cidade não pode conter números!");
+                return;
+            }*/
+        //} else {
+        //  JOptionPane.showMessageDialog(null, "Há campos vazios!!");
+        //return;
+        //}
+
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
 
     private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed

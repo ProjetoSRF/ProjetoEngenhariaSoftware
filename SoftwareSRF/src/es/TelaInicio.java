@@ -248,7 +248,14 @@ public class TelaInicio extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         //this.setEnabled(false);
         //new CadastrarPaciente(this).setVisible(true);
-        TesteCadastroPaciente obj = new TesteCadastroPaciente();
+        TesteCadastroPaciente obj = null;
+        try {
+            obj = new TesteCadastroPaciente();
+        } catch (ParseException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
         jdbInicio.add(obj);
         obj.setVisible(true);
         try {
