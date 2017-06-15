@@ -9,6 +9,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -254,6 +255,10 @@ public class TelaInicio extends javax.swing.JFrame {
         } catch (ParseException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         jdbInicio.add(obj);
