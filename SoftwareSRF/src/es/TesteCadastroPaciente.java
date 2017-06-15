@@ -11,7 +11,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
-import java.util.concurrent.TimeUnit;
 import javax.swing.ImageIcon;
 
 /**
@@ -28,18 +27,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
-        //mudar design da tela
-        /*try {
-        PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
-        try {
-        UIManager.setLookAndFeel("com.jgoodies.looks.plastic.Plastic3DLookAndFeel");
-        } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
-        } catch (ClassNotFoundException ex) {
-        }
-        SwingUtilities.updateComponentTreeUI(this);*/
         Conexao.Conectar();
         String sql = "select nome from projetosrf.paciente";
         PreparedStatement ps = Conexao.con.prepareStatement(sql);
