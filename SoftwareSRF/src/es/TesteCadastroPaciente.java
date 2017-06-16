@@ -5,12 +5,16 @@
  */
 package es;
 
+import static com.jgoodies.c.b.h.m;
 import es.funcoes.Conexao;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ButtonModel;
 import javax.swing.ImageIcon;
 
 /**
@@ -27,7 +31,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
-        
         Conexao.Conectar();
         String sql = "select nome from projetosrf.paciente";
         PreparedStatement ps = Conexao.con.prepareStatement(sql);
@@ -35,8 +38,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         ResultSet rs = ps.getResultSet();
 
         while (rs.next()) {
-            TextNome6.setText(rs.getString("nome"));
-            
+            textnome.setText(rs.getString("nome"));
+
         }
 
     }
@@ -86,58 +89,58 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jScrollPaneNeuropediatrico = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel139 = new javax.swing.JLabel();
-        TextNome6 = new javax.swing.JTextField();
+        textnome = new javax.swing.JTextField();
         jLabel140 = new javax.swing.JLabel();
-        TextEnd6 = new javax.swing.JTextField();
-        TextBairro6 = new javax.swing.JTextField();
+        textend = new javax.swing.JTextField();
+        textbairro = new javax.swing.JTextField();
         jLabel141 = new javax.swing.JLabel();
         jLabel142 = new javax.swing.JLabel();
-        TextMunicipio6 = new javax.swing.JTextField();
+        textcidade = new javax.swing.JTextField();
         jLabel143 = new javax.swing.JLabel();
         jLabel144 = new javax.swing.JLabel();
-        jTextField37 = new javax.swing.JTextField();
+        textidade = new javax.swing.JTextField();
         jLabel145 = new javax.swing.JLabel();
-        jTextField38 = new javax.swing.JTextField();
+        textescolaridade = new javax.swing.JTextField();
         jLabel146 = new javax.swing.JLabel();
         jLabel147 = new javax.swing.JLabel();
         jLabel148 = new javax.swing.JLabel();
-        jTextField39 = new javax.swing.JTextField();
+        textprofissao = new javax.swing.JTextField();
         jLabel149 = new javax.swing.JLabel();
         jLabel150 = new javax.swing.JLabel();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
+        radiofeminino = new javax.swing.JRadioButton();
+        radiomasculino = new javax.swing.JRadioButton();
         jLabel151 = new javax.swing.JLabel();
         jLabel152 = new javax.swing.JLabel();
-        jTextField82 = new javax.swing.JTextField();
+        textaltura = new javax.swing.JTextField();
         jLabel153 = new javax.swing.JLabel();
-        jTextField83 = new javax.swing.JTextField();
+        textpeso = new javax.swing.JTextField();
         jLabel154 = new javax.swing.JLabel();
-        jTextField84 = new javax.swing.JTextField();
+        textmae = new javax.swing.JTextField();
         jLabel155 = new javax.swing.JLabel();
-        jTextField85 = new javax.swing.JTextField();
+        textresp = new javax.swing.JTextField();
         jLabel156 = new javax.swing.JLabel();
-        jTextField86 = new javax.swing.JTextField();
+        textgrau = new javax.swing.JTextField();
         jLabel157 = new javax.swing.JLabel();
-        jTextField87 = new javax.swing.JTextField();
+        textsus = new javax.swing.JTextField();
         jLabel158 = new javax.swing.JLabel();
         jLabel159 = new javax.swing.JLabel();
         jLabel160 = new javax.swing.JLabel();
-        jTextField90 = new javax.swing.JTextField();
+        textcn = new javax.swing.JTextField();
         jLabel161 = new javax.swing.JLabel();
-        jTextField91 = new javax.swing.JTextField();
+        textcid = new javax.swing.JTextField();
         jLabel162 = new javax.swing.JLabel();
-        jTextField92 = new javax.swing.JTextField();
+        textprontuario = new javax.swing.JTextField();
         jLabel163 = new javax.swing.JLabel();
         jLabel164 = new javax.swing.JLabel();
-        jTextField93 = new javax.swing.JTextField();
+        textavaliador = new javax.swing.JTextField();
         jLabel165 = new javax.swing.JLabel();
-        jDateChooser7 = new com.toedter.calendar.JDateChooser();
-        jDateChooser8 = new com.toedter.calendar.JDateChooser();
+        datenascimento = new com.toedter.calendar.JDateChooser();
+        dateavaliacao = new com.toedter.calendar.JDateChooser();
         jLabel166 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
+        estadocivil = new javax.swing.JComboBox<>();
+        corpele = new javax.swing.JComboBox<>();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
+        textdiagnostico = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -334,10 +337,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jScrollPane10 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
         ButtonCadastrarPaciente = new javax.swing.JButton();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
-        jFormattedTextField4 = new javax.swing.JFormattedTextField();
-        jFormattedTextField5 = new javax.swing.JFormattedTextField();
+        textfone = new javax.swing.JFormattedTextField();
+        textcpf = new javax.swing.JFormattedTextField();
+        textrg = new javax.swing.JFormattedTextField();
+        textcep = new javax.swing.JFormattedTextField();
+        jLabel264 = new javax.swing.JLabel();
+        textnum = new javax.swing.JTextField();
         jScrollPaneAmputado = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -730,13 +735,19 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel139.setText("Nome");
 
-        TextNome6.addActionListener(new java.awt.event.ActionListener() {
+        textnome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextNome6ActionPerformed(evt);
+                textnomeActionPerformed(evt);
             }
         });
 
         jLabel140.setText("Endereço:");
+
+        textend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textendActionPerformed(evt);
+            }
+        });
 
         jLabel141.setText("Bairro:");
 
@@ -758,22 +769,28 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel150.setText("Sexo:");
 
-        buttonGroup2.add(jRadioButton11);
-        jRadioButton11.setText("Feminino");
-        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(radiofeminino);
+        radiofeminino.setText("Feminino");
+        radiofeminino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton11ActionPerformed(evt);
+                radiofemininoActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton12);
-        jRadioButton12.setText("Masculino");
+        buttonGroup2.add(radiomasculino);
+        radiomasculino.setText("Masculino");
 
         jLabel151.setText("Cor da Pele:");
 
         jLabel152.setText("Altura:");
 
         jLabel153.setText("Peso:");
+
+        textpeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textpesoActionPerformed(evt);
+            }
+        });
 
         jLabel154.setText("Nome da Mãe:");
 
@@ -801,13 +818,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel166.setText("Avaliação:");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro(a)", "Casado(a)", "Separado(a)", "Viúvo(a)" }));
+        estadocivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro(a)", "Casado(a)", "Separado(a)", "Viúvo(a)" }));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Branca", "Parda", "Mulata", "Amarela" }));
+        corpele.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Branca", "Parda", "Mulata", "Amarela" }));
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane4.setViewportView(jTextArea4);
+        textdiagnostico.setColumns(20);
+        textdiagnostico.setRows(5);
+        jScrollPane4.setViewportView(textdiagnostico);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         jLabel1.setText("Avaliação Geral:");
@@ -1458,21 +1475,23 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         });
 
         try {
-            jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+            textfone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFormattedTextField2.addActionListener(new java.awt.event.ActionListener() {
+        textfone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextField2ActionPerformed(evt);
+                textfoneActionPerformed(evt);
             }
         });
 
         try {
-            jFormattedTextField5.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+            textcep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+
+        jLabel264.setText("Número:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1512,13 +1531,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(jLabel164)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField93))
+                                        .addComponent(textavaliador))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel165)
                                             .addComponent(jLabel166))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jDateChooser8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addComponent(dateavaliacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
@@ -1573,86 +1592,91 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(TextMunicipio6)
+                                        .addComponent(textcidade)
                                         .addGap(23, 23, 23)
                                         .addComponent(jLabel147)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(TextBairro6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextEnd6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextNome6)
+                                        .addComponent(textcep, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(textbairro, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textnome)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textfone, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel146)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField38))))
+                                        .addComponent(textescolaridade))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                        .addComponent(textend, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel264)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textnum))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel144)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(datenascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel145)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textidade, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel149)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(estadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel148)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField39))
+                                .addComponent(textprofissao))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel150)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton11)
+                                .addComponent(radiofeminino)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton12)
+                                .addComponent(radiomasculino)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel151)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(corpele, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel152)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField82, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textaltura, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel153)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField83))
+                                .addComponent(textpeso))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel155)
                                     .addComponent(jLabel156, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField85)
-                                    .addComponent(jTextField86)))
+                                    .addComponent(textresp)
+                                    .addComponent(textgrau)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addGap(86, 86, 86)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField84)
+                                    .addComponent(textmae)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel160)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField90))
+                                        .addComponent(textcn))
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField87)
-                                            .addComponent(jTextField91))
+                                            .addComponent(textsus)
+                                            .addComponent(textcid))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addComponent(jLabel162)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(textprontuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addComponent(jLabel158)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                .addComponent(textrg, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12)
@@ -1843,7 +1867,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addComponent(jLabel116)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jComboBox13, 0, 158, Short.MAX_VALUE)
+                                                                .addComponent(jComboBox13, 0, 174, Short.MAX_VALUE)
                                                                 .addGap(139, 139, 139))
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1955,94 +1979,96 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel139)
-                    .addComponent(TextNome6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textnome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel140)
-                    .addComponent(TextEnd6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textend, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel264)
+                    .addComponent(textnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel141)
-                    .addComponent(TextBairro6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textbairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel142)
-                    .addComponent(TextMunicipio6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textcidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel147)
-                    .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textcep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel143)
                     .addComponent(jLabel146)
-                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textescolaridade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textfone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel145)
-                        .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel144)
                         .addComponent(jLabel149)
-                        .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(estadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel148)
-                        .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textprofissao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(datenascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel150)
-                        .addComponent(jRadioButton11)
-                        .addComponent(jRadioButton12)
+                        .addComponent(radiofeminino)
+                        .addComponent(radiomasculino)
                         .addComponent(jLabel151)
-                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(corpele, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textaltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel153)
-                        .addComponent(jTextField83, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textpeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel152)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel154)
-                    .addComponent(jTextField84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textmae, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel155)
-                    .addComponent(jTextField85, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textresp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel156)
-                    .addComponent(jTextField86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textgrau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel157)
-                    .addComponent(jTextField87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textsus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel158)
-                    .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textrg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel159)
                     .addComponent(jLabel160)
-                    .addComponent(jTextField90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textcn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textcpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel161)
-                    .addComponent(jTextField91, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textcid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel162)
-                    .addComponent(jTextField92, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textprontuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel164)
-                            .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textavaliador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel165)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel166))
-                            .addComponent(jDateChooser8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(dateavaliacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel163)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
@@ -3397,7 +3423,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                 .addComponent(jLabel167)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE))
+                                                .addComponent(jTextField16))
                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                 .addComponent(jLabel170)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -3766,7 +3792,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                                         .addComponent(jLabel255)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField72, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)))
+                                        .addComponent(jTextField72, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -3832,7 +3858,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                             .addComponent(jRadioButton186)
                                             .addGap(18, 18, 18)
                                             .addComponent(jRadioButton187))
-                                        .addComponent(jTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)))
+                                        .addComponent(jTextField50, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)))
                                 .addComponent(jLabel241)
                                 .addComponent(jLabel250)
                                 .addGroup(jPanel6Layout.createSequentialGroup()
@@ -4404,13 +4430,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton7ActionPerformed
 
-    private void TextNome6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNome6ActionPerformed
+    private void textnomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TextNome6ActionPerformed
+    }//GEN-LAST:event_textnomeActionPerformed
 
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+    private void radiofemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiofemininoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
+    }//GEN-LAST:event_radiofemininoActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
@@ -4584,52 +4610,51 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton88ActionPerformed
 
-    private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
-        //  if (TempoGestacao.getText().length() > 0 && PreNatal.getText().length() > 0 ) {
+ 
+ 
 
-        //boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
-        //if (validacpf == false) {
-        //  JOptionPane.showMessageDialog(null, "CPF Inválido!");
-        //return;
-        //}
-        /*Pattern pattern2 = Pattern.compile("([a-z]{2})[0-9]{4,5}-[0-9]{4}");
-            Matcher matchertel = pattern2.matcher(telefoneCT.getText());
-            if (matchertel.find()) {
-                JOptionPane.showMessageDialog(null, "Telefone Inválido!");
-                return;
-            }*/
- /*
-            Pattern pattern = Pattern.compile("[0-9]");
-            Matcher matcher = pattern.matcher(nomeCT.getText());
-            if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo nome não pode conter números!");
-                return;
-            }
-            matcher = pattern.matcher(ruaCT.getText());
-            if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo rua não pode conter números!");
-                return;
-            }
-            matcher = pattern.matcher(bairroCT.getText());
-            if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo bairro não pode conter números!");
-                return;
-            }
-            matcher = pattern.matcher(cidadeCT.getText());
-            if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo cidade não pode conter números!");
-                return;
-            }*/
-        //} else {
-        //  JOptionPane.showMessageDialog(null, "Há campos vazios!!");
-        //return;
-        //}
+    private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
+        Conexao.Conectar();
+        String sql = "select nome from projetosrf.paciente";
+        PreparedStatement ps = null;
+        String sexo = null;
+        if(radiomasculino.isSelected()){
+            sexo = "masculino";
+      
+
+       }else if(radiofeminino.isSelected()){
+           sexo = "feminino";
+       }
+              
+
+       
+        sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,complemento,bairro,cidade,cep,telefone,escolaridade,profissao,estadocivil,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador) VALUES ('textnome.getText()','textend.getText()','textnum.getText()','textbairro.getText()','textcidade.getText()','textcep.getText()','textfone.getText()','textescolaridade()','textidade.getText()','estadocivil.getSelectedItem()','textprofissao.getText()','sexo','corpelegetSelectedItem()','textaltura.getText()','textpeso.getText()','textmae.getText','textresp.getText()','textgrau.getText()','textsus.getText()','textrg.getText()','textcpf.getText()','textcid.getText()','textprontuario.getText()','textdiagnostico.getText()','textavaliador.getText()')";
+        try {
+            ps = Conexao.con.prepareStatement(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+
+            ps.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("oi");
+
 
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
 
-    private void jFormattedTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField2ActionPerformed
+    private void textfoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jFormattedTextField2ActionPerformed
+    }//GEN-LAST:event_textfoneActionPerformed
 
     private void jRadioButton174ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton174ActionPerformed
         // TODO add your handling code here:
@@ -4643,6 +4668,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton176ActionPerformed
 
+    private void textpesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textpesoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textpesoActionPerformed
+
+    private void textendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textendActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textendActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonCadastrarPaciente;
@@ -4651,22 +4684,18 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextArea TextAreaHFisio;
     private javax.swing.JTextField TextBairro2;
     private javax.swing.JTextField TextBairro4;
-    private javax.swing.JTextField TextBairro6;
     private javax.swing.JTextField TextCep2;
     private javax.swing.JTextField TextCep4;
     private javax.swing.JTextField TextEnd2;
     private javax.swing.JTextField TextEnd4;
-    private javax.swing.JTextField TextEnd6;
     private javax.swing.JTextField TextFone10;
     private javax.swing.JTextField TextFone5;
     private javax.swing.JTextField TextFone6;
     private javax.swing.JTextField TextFone9;
     private javax.swing.JTextField TextMunicipio2;
     private javax.swing.JTextField TextMunicipio4;
-    private javax.swing.JTextField TextMunicipio6;
     private javax.swing.JTextField TextNome2;
     private javax.swing.JTextField TextNome4;
-    private javax.swing.JTextField TextNome6;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup10;
     private javax.swing.ButtonGroup buttonGroup11;
@@ -4699,6 +4728,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.JComboBox<String> corpele;
+    private com.toedter.calendar.JDateChooser dateavaliacao;
+    private com.toedter.calendar.JDateChooser datenascimento;
+    private javax.swing.JComboBox<String> estadocivil;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
@@ -4711,19 +4744,11 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooser3;
     private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser7;
-    private com.toedter.calendar.JDateChooser jDateChooser8;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
-    private javax.swing.JFormattedTextField jFormattedTextField4;
-    private javax.swing.JFormattedTextField jFormattedTextField5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4907,6 +4932,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel261;
     private javax.swing.JLabel jLabel262;
     private javax.swing.JLabel jLabel263;
+    private javax.swing.JLabel jLabel264;
     private javax.swing.JLabel jLabel265;
     private javax.swing.JLabel jLabel266;
     private javax.swing.JLabel jLabel268;
@@ -5006,7 +5032,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton107;
     private javax.swing.JRadioButton jRadioButton108;
     private javax.swing.JRadioButton jRadioButton109;
-    private javax.swing.JRadioButton jRadioButton11;
     private javax.swing.JRadioButton jRadioButton110;
     private javax.swing.JRadioButton jRadioButton111;
     private javax.swing.JRadioButton jRadioButton112;
@@ -5017,7 +5042,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton117;
     private javax.swing.JRadioButton jRadioButton118;
     private javax.swing.JRadioButton jRadioButton119;
-    private javax.swing.JRadioButton jRadioButton12;
     private javax.swing.JRadioButton jRadioButton120;
     private javax.swing.JRadioButton jRadioButton121;
     private javax.swing.JRadioButton jRadioButton122;
@@ -5217,7 +5241,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextArea jTextArea13;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextArea jTextArea7;
@@ -5253,9 +5276,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
@@ -5301,16 +5321,31 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField82;
-    private javax.swing.JTextField jTextField83;
-    private javax.swing.JTextField jTextField84;
-    private javax.swing.JTextField jTextField85;
-    private javax.swing.JTextField jTextField86;
-    private javax.swing.JTextField jTextField87;
     private javax.swing.JTextField jTextField9;
-    private javax.swing.JTextField jTextField90;
-    private javax.swing.JTextField jTextField91;
-    private javax.swing.JTextField jTextField92;
-    private javax.swing.JTextField jTextField93;
+    private javax.swing.JRadioButton radiofeminino;
+    private javax.swing.JRadioButton radiomasculino;
+    private javax.swing.JTextField textaltura;
+    private javax.swing.JTextField textavaliador;
+    private javax.swing.JTextField textbairro;
+    private javax.swing.JFormattedTextField textcep;
+    private javax.swing.JTextField textcid;
+    private javax.swing.JTextField textcidade;
+    private javax.swing.JTextField textcn;
+    private javax.swing.JFormattedTextField textcpf;
+    private javax.swing.JTextArea textdiagnostico;
+    private javax.swing.JTextField textend;
+    private javax.swing.JTextField textescolaridade;
+    private javax.swing.JFormattedTextField textfone;
+    private javax.swing.JTextField textgrau;
+    private javax.swing.JTextField textidade;
+    private javax.swing.JTextField textmae;
+    private javax.swing.JTextField textnome;
+    private javax.swing.JTextField textnum;
+    private javax.swing.JTextField textpeso;
+    private javax.swing.JTextField textprofissao;
+    private javax.swing.JTextField textprontuario;
+    private javax.swing.JTextField textresp;
+    private javax.swing.JFormattedTextField textrg;
+    private javax.swing.JTextField textsus;
     // End of variables declaration//GEN-END:variables
 }
