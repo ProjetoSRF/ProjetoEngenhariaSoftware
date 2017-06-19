@@ -735,19 +735,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel139.setText("Nome");
 
-        textnome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textnomeActionPerformed(evt);
-            }
-        });
-
         jLabel140.setText("Endereço:");
-
-        textend.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textendActionPerformed(evt);
-            }
-        });
 
         jLabel141.setText("Bairro:");
 
@@ -1479,11 +1467,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        textfone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfoneActionPerformed(evt);
-            }
-        });
 
         try {
             textcep.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
@@ -1867,14 +1850,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addComponent(jLabel116)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jComboBox13, 0, 174, Short.MAX_VALUE)
+                                                                .addComponent(jComboBox13, 0, 175, Short.MAX_VALUE)
                                                                 .addGap(139, 139, 139))
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel115)
                                                                         .addGap(18, 18, 18)
-                                                                        .addComponent(jComboBox12, 0, 158, Short.MAX_VALUE))
+                                                                        .addComponent(jComboBox12, 0, 177, Short.MAX_VALUE))
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel114)
                                                                         .addGap(8, 8, 8)
@@ -2398,7 +2381,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                         .addComponent(jRadioButton67)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton87)))
-                .addContainerGap(711, Short.MAX_VALUE))
+                .addContainerGap(633, Short.MAX_VALUE))
         );
 
         jScrollPaneNeuropediatrico.setViewportView(jPanel4);
@@ -4408,7 +4391,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 3678, Short.MAX_VALUE)
         );
 
         pack();
@@ -4429,10 +4412,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton7ActionPerformed
-
-    private void textnomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textnomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textnomeActionPerformed
 
     private void radiofemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiofemininoActionPerformed
         // TODO add your handling code here:
@@ -4610,51 +4589,35 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton88ActionPerformed
 
- 
- 
 
     private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
-        Conexao.Conectar();
-        String sql = "select nome from projetosrf.paciente";
-        PreparedStatement ps = null;
+
         String sexo = null;
-        if(radiomasculino.isSelected()){
+        if (radiomasculino.isSelected()) {
             sexo = "masculino";
-      
 
-       }else if(radiofeminino.isSelected()){
-           sexo = "feminino";
-       }
-              
+        } else if (radiofeminino.isSelected()) {
+            sexo = "feminino";
+        }
 
-       
-        sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,complemento,bairro,cidade,cep,telefone,escolaridade,profissao,estadocivil,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador) VALUES ('textnome.getText()','textend.getText()','textnum.getText()','textbairro.getText()','textcidade.getText()','textcep.getText()','textfone.getText()','textescolaridade()','textidade.getText()','estadocivil.getSelectedItem()','textprofissao.getText()','sexo','corpelegetSelectedItem()','textaltura.getText()','textpeso.getText()','textmae.getText','textresp.getText()','textgrau.getText()','textsus.getText()','textrg.getText()','textcpf.getText()','textcid.getText()','textprontuario.getText()','textdiagnostico.getText()','textavaliador.getText()')";
+        
+        String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador) "
+                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "')";
+
+        PreparedStatement ps;
         try {
             ps = Conexao.con.prepareStatement(sql);
-        } catch (SQLException ex) {
-            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        try {
             ps.executeUpdate();
-        } catch (SQLException ex) {
-            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        try {
-
             ps.close();
         } catch (SQLException ex) {
             Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+
         System.out.println("oi");
 
 
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
-
-    private void textfoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textfoneActionPerformed
 
     private void jRadioButton174ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton174ActionPerformed
         // TODO add your handling code here:
@@ -4671,10 +4634,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private void textpesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textpesoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textpesoActionPerformed
-
-    private void textendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textendActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textendActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
