@@ -343,6 +343,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcep = new javax.swing.JFormattedTextField();
         jLabel264 = new javax.swing.JLabel();
         textnum = new javax.swing.JTextField();
+        jLabel271 = new javax.swing.JLabel();
+        textcomplemento = new javax.swing.JTextField();
         jScrollPaneAmputado = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -403,6 +405,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jComboBox2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel270 = new javax.swing.JLabel();
+        jTextField38 = new javax.swing.JTextField();
+        jLabel272 = new javax.swing.JLabel();
+        jTextField80 = new javax.swing.JTextField();
         jScrollPaneNeurologico = new javax.swing.JScrollPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel83 = new javax.swing.JLabel();
@@ -722,6 +728,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel269 = new javax.swing.JLabel();
         jRadioButton195 = new javax.swing.JRadioButton();
         jRadioButton196 = new javax.swing.JRadioButton();
+        jLabel267 = new javax.swing.JLabel();
+        jTextField37 = new javax.swing.JTextField();
+        jLabel273 = new javax.swing.JLabel();
+        jTextField81 = new javax.swing.JTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -759,11 +769,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup2.add(radiofeminino);
         radiofeminino.setText("Feminino");
-        radiofeminino.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radiofemininoActionPerformed(evt);
-            }
-        });
 
         buttonGroup2.add(radiomasculino);
         radiomasculino.setText("Masculino");
@@ -773,12 +778,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel152.setText("Altura:");
 
         jLabel153.setText("Peso:");
-
-        textpeso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textpesoActionPerformed(evt);
-            }
-        });
 
         jLabel154.setText("Nome da Mãe:");
 
@@ -823,11 +822,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup3.add(jRadioButton1);
         jRadioButton1.setText("Sim");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
 
         buttonGroup3.add(jRadioButton2);
         jRadioButton2.setText("Não");
@@ -840,19 +834,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup1.add(jRadioButton5);
         jRadioButton5.setText("Não");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
-            }
-        });
 
         buttonGroup1.add(jRadioButton6);
         jRadioButton6.setText("Sim");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
-            }
-        });
 
         jLabel7.setText("Quais?");
 
@@ -871,11 +855,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup4.add(jRadioButton10);
         jRadioButton10.setText("Sim");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
-            }
-        });
 
         jLabel10.setText("Quais?");
 
@@ -915,18 +894,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel17.setText("Tônus:");
 
         jRadioButton13.setText("Normal");
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
-            }
-        });
 
         jRadioButton14.setText("Hipotonia");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
-            }
-        });
 
         jRadioButton15.setText("Hipertonia");
 
@@ -1050,11 +1019,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup17.add(jRadioButton37);
         jRadioButton37.setText("Sim");
-        jRadioButton37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton37ActionPerformed(evt);
-            }
-        });
 
         buttonGroup17.add(jRadioButton38);
         jRadioButton38.setText("Não");
@@ -1063,11 +1027,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup18.add(jRadioButton42);
         jRadioButton42.setText("Sim");
-        jRadioButton42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton42ActionPerformed(evt);
-            }
-        });
 
         buttonGroup18.add(jRadioButton43);
         jRadioButton43.setText("Não");
@@ -1080,19 +1039,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup19.add(jRadioButton44);
         jRadioButton44.setText("Não");
-        jRadioButton44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton44ActionPerformed(evt);
-            }
-        });
 
         buttonGroup19.add(jRadioButton45);
         jRadioButton45.setText("Sim");
-        jRadioButton45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton45ActionPerformed(evt);
-            }
-        });
 
         jLabel71.setText("Onde ?");
 
@@ -1100,19 +1049,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup20.add(jRadioButton46);
         jRadioButton46.setText("Não");
-        jRadioButton46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton46ActionPerformed(evt);
-            }
-        });
 
         buttonGroup20.add(jRadioButton47);
         jRadioButton47.setText("Sim");
-        jRadioButton47.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton47ActionPerformed(evt);
-            }
-        });
 
         jLabel73.setText("Onde ?");
 
@@ -1122,55 +1061,25 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup21.add(jRadioButton48);
         jRadioButton48.setText("Não");
-        jRadioButton48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton48ActionPerformed(evt);
-            }
-        });
 
         buttonGroup21.add(jRadioButton49);
         jRadioButton49.setText("Sim");
-        jRadioButton49.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton49ActionPerformed(evt);
-            }
-        });
 
         jLabel76.setText("Controle de Tronco:");
 
         buttonGroup22.add(jRadioButton50);
         jRadioButton50.setText("Não");
-        jRadioButton50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton50ActionPerformed(evt);
-            }
-        });
 
         buttonGroup22.add(jRadioButton51);
         jRadioButton51.setText("Sim");
-        jRadioButton51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton51ActionPerformed(evt);
-            }
-        });
 
         jLabel77.setText("Controle de Membros:");
 
         buttonGroup23.add(jRadioButton52);
         jRadioButton52.setText("Não");
-        jRadioButton52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton52ActionPerformed(evt);
-            }
-        });
 
         buttonGroup23.add(jRadioButton53);
         jRadioButton53.setText("Sim");
-        jRadioButton53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton53ActionPerformed(evt);
-            }
-        });
 
         jLabel78.setText("Onde ?");
 
@@ -1178,37 +1087,17 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup24.add(jRadioButton54);
         jRadioButton54.setText("Não");
-        jRadioButton54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton54ActionPerformed(evt);
-            }
-        });
 
         buttonGroup24.add(jRadioButton55);
         jRadioButton55.setText("Sim");
-        jRadioButton55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton55ActionPerformed(evt);
-            }
-        });
 
         jLabel80.setText("Capacidade de engatinhar:");
 
         buttonGroup25.add(jRadioButton56);
         jRadioButton56.setText("Não");
-        jRadioButton56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton56ActionPerformed(evt);
-            }
-        });
 
         buttonGroup25.add(jRadioButton57);
         jRadioButton57.setText("Sim");
-        jRadioButton57.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton57ActionPerformed(evt);
-            }
-        });
 
         jLabel81.setText("Equilíbrio Estático:");
 
@@ -1256,54 +1145,24 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup26.add(jRadioButton60);
         jRadioButton60.setText("Positivo");
-        jRadioButton60.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton60ActionPerformed(evt);
-            }
-        });
 
         buttonGroup26.add(jRadioButton61);
         jRadioButton61.setText("Negativo");
-        jRadioButton61.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton61ActionPerformed(evt);
-            }
-        });
 
         buttonGroup27.add(jRadioButton62);
         jRadioButton62.setText("Positivo");
-        jRadioButton62.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton62ActionPerformed(evt);
-            }
-        });
 
         buttonGroup27.add(jRadioButton63);
         jRadioButton63.setText("Negativo");
-        jRadioButton63.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton63ActionPerformed(evt);
-            }
-        });
 
         buttonGroup28.add(jRadioButton64);
         jRadioButton64.setText("Presente");
-        jRadioButton64.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton64ActionPerformed(evt);
-            }
-        });
 
         buttonGroup28.add(jRadioButton65);
         jRadioButton65.setText("Ausente");
 
         buttonGroup29.add(jRadioButton66);
         jRadioButton66.setText("Presente");
-        jRadioButton66.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton66ActionPerformed(evt);
-            }
-        });
 
         buttonGroup29.add(jRadioButton67);
         jRadioButton67.setText("Ausente");
@@ -1313,11 +1172,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup30.add(jRadioButton69);
         jRadioButton69.setText("Presente");
-        jRadioButton69.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton69ActionPerformed(evt);
-            }
-        });
 
         jLabel125.setText("Reflexos Profundos:");
 
@@ -1326,50 +1180,20 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jRadioButton70.setText("Normal");
 
         jRadioButton71.setText("Arreflexia");
-        jRadioButton71.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton71ActionPerformed(evt);
-            }
-        });
 
         jRadioButton72.setText("Hiperreflexia");
-        jRadioButton72.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton72ActionPerformed(evt);
-            }
-        });
 
         jRadioButton73.setText("Não estável");
-        jRadioButton73.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton73ActionPerformed(evt);
-            }
-        });
 
         jLabel127.setText("Tricipital:");
 
         jRadioButton74.setText("Normal");
 
         jRadioButton75.setText("Arreflexia");
-        jRadioButton75.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton75ActionPerformed(evt);
-            }
-        });
 
         jRadioButton76.setText("Hiperreflexia");
-        jRadioButton76.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton76ActionPerformed(evt);
-            }
-        });
 
         jRadioButton77.setText("Não estável");
-        jRadioButton77.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton77ActionPerformed(evt);
-            }
-        });
 
         jLabel128.setText("Patelar:");
 
@@ -1380,46 +1204,16 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jRadioButton79.setText("Normal");
 
         jRadioButton80.setText("Arreflexia");
-        jRadioButton80.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton80ActionPerformed(evt);
-            }
-        });
 
         jRadioButton81.setText("Arreflexia");
-        jRadioButton81.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton81ActionPerformed(evt);
-            }
-        });
 
         jRadioButton82.setText("Hiperreflexia");
-        jRadioButton82.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton82ActionPerformed(evt);
-            }
-        });
 
         jRadioButton83.setText("Hiperreflexia");
-        jRadioButton83.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton83ActionPerformed(evt);
-            }
-        });
 
         jRadioButton84.setText("Não estável");
-        jRadioButton84.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton84ActionPerformed(evt);
-            }
-        });
 
         jRadioButton85.setText("Não estável");
-        jRadioButton85.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton85ActionPerformed(evt);
-            }
-        });
 
         jLabel130.setText("Coordenação:");
 
@@ -1427,11 +1221,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup31.add(jRadioButton86);
         jRadioButton86.setText("Presente");
-        jRadioButton86.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton86ActionPerformed(evt);
-            }
-        });
 
         buttonGroup30.add(jRadioButton87);
         jRadioButton87.setText("Ausente");
@@ -1440,11 +1229,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         buttonGroup32.add(jRadioButton88);
         jRadioButton88.setText("Presente");
-        jRadioButton88.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton88ActionPerformed(evt);
-            }
-        });
 
         buttonGroup32.add(jRadioButton89);
         jRadioButton89.setText("Ausente");
@@ -1475,6 +1259,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         }
 
         jLabel264.setText("Número:");
+
+        jLabel271.setText("Complemento:");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1580,7 +1366,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel147)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(textcep, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(textbairro, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(textnome)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                         .addComponent(textfone, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1593,7 +1378,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel264)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textnum))))
+                                        .addComponent(textnum))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                        .addComponent(textbairro, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel271)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(textcomplemento))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel144)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1850,14 +1641,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addComponent(jLabel116)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jComboBox13, 0, 175, Short.MAX_VALUE)
+                                                                .addComponent(jComboBox13, 0, 188, Short.MAX_VALUE)
                                                                 .addGap(139, 139, 139))
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel115)
                                                                         .addGap(18, 18, 18)
-                                                                        .addComponent(jComboBox12, 0, 177, Short.MAX_VALUE))
+                                                                        .addComponent(jComboBox12, 0, 190, Short.MAX_VALUE))
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel114)
                                                                         .addGap(8, 8, 8)
@@ -1972,7 +1763,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel141)
-                    .addComponent(textbairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textbairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel271)
+                    .addComponent(textcomplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel142)
@@ -2381,7 +2174,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                         .addComponent(jRadioButton67)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton87)))
-                .addContainerGap(633, Short.MAX_VALUE))
+                .addContainerGap(740, Short.MAX_VALUE))
         );
 
         jScrollPaneNeuropediatrico.setViewportView(jPanel4);
@@ -2391,12 +2184,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jScrollPaneAmputado.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jLabel28.setText("Nome");
-
-        TextNome2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextNome2ActionPerformed(evt);
-            }
-        });
 
         jLabel29.setText("Endereço:");
 
@@ -2421,11 +2208,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel39.setText("Sexo:");
 
         jRadioButton3.setText("Feminino");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
-            }
-        });
 
         jRadioButton4.setText("Masculino");
 
@@ -2468,6 +2250,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel270.setText("Complemento:");
+
+        jLabel272.setText("Número:");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -2514,7 +2300,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel49)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
+                                .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE))
                             .addComponent(jTextField26)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2579,8 +2365,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel36)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TextCep2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TextBairro2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextEnd2, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TextNome2)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
                                 .addComponent(TextFone5, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2589,7 +2373,21 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel35)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField20)))))
+                                .addComponent(jTextField20))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(TextEnd2, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                        .addComponent(TextBairro2, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel270)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField38)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel272)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextField80)))))))
                 .addGap(33, 33, 33))
         );
         jPanel5Layout.setVerticalGroup(
@@ -2602,11 +2400,15 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(TextEnd2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextEnd2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel272)
+                    .addComponent(jTextField80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(TextBairro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextBairro2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel270)
+                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
@@ -2700,12 +2502,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel83.setText("Nome");
 
-        TextNome4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextNome4ActionPerformed(evt);
-            }
-        });
-
         jLabel84.setText("Endereço:");
 
         jLabel85.setText("Bairro:");
@@ -2729,11 +2525,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel94.setText("Sexo:");
 
         jRadioButton7.setText("Feminino");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
-            }
-        });
 
         jRadioButton8.setText("Masculino");
 
@@ -3092,27 +2883,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel226.setText("Costuma ingerir bebida alcoolica?");
 
         jRadioButton174.setText("Sim");
-        jRadioButton174.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton174ActionPerformed(evt);
-            }
-        });
 
         jRadioButton175.setText("Não");
-        jRadioButton175.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton175ActionPerformed(evt);
-            }
-        });
 
         jLabel227.setText("Deixou de beber?");
 
         jRadioButton176.setText("Sim");
-        jRadioButton176.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton176ActionPerformed(evt);
-            }
-        });
 
         jRadioButton177.setText("Não");
 
@@ -3250,6 +3026,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jRadioButton196.setText("Ausente");
 
+        jLabel267.setText("Complemento:");
+
+        jLabel273.setText("Número:");
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -3316,8 +3096,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel91)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(TextCep4, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(TextBairro4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextEnd4, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(TextNome4)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                                         .addComponent(TextFone9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3326,7 +3104,21 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel90)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField23)))
+                                        .addComponent(jTextField23))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(TextEnd4, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                                                .addComponent(TextBairro4, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jLabel267)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField37)
+                                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                                .addComponent(jLabel273)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jTextField81)))))
                                 .addGap(10, 10, 10))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3467,15 +3259,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                         .addComponent(jRadioButton116)
                                                         .addGap(18, 18, 18)
                                                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                                                .addComponent(jRadioButton118)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jRadioButton124))
                                                             .addComponent(jRadioButton117)
-                                                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                                                .addComponent(jRadioButton119)
-                                                                .addGap(18, 18, 18)
-                                                                .addComponent(jRadioButton125))
                                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                                 .addComponent(jRadioButton120)
                                                                 .addGap(18, 18, 18)
@@ -3511,8 +3295,16 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                                 .addComponent(jRadioButton134)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(jRadioButton135)))))))
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                                                .addComponent(jRadioButton135))
+                                                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                                                .addComponent(jRadioButton118)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jRadioButton124))
+                                                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                                                .addComponent(jRadioButton119)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jRadioButton125)))))))
+                                        .addGap(0, 78, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                                 .addComponent(jLabel183)
                                 .addGap(84, 84, 84)
@@ -3882,11 +3674,15 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel84)
-                    .addComponent(TextEnd4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextEnd4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel273)
+                    .addComponent(jTextField81, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel85)
-                    .addComponent(TextBairro4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextBairro4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel267)
+                    .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel86)
@@ -4067,7 +3863,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel183)
                                     .addComponent(jLabel184))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel185)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel185)
+                                    .addComponent(jRadioButton119)
+                                    .addComponent(jRadioButton125))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel186, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4093,11 +3892,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addGap(1, 1, 1)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jRadioButton118)
-                                    .addComponent(jRadioButton124))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton119)
-                                    .addComponent(jRadioButton125))))
+                                    .addComponent(jRadioButton124))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel187)
@@ -4391,203 +4186,11 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 3678, Short.MAX_VALUE)
+            .addComponent(jTabbedPane)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void TextNome2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNome2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextNome2ActionPerformed
-
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void TextNome4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextNome4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextNome4ActionPerformed
-
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
-
-    private void radiofemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiofemininoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radiofemininoActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
-
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
-
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
-
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
-
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
-
-    private void jRadioButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton37ActionPerformed
-
-    private void jRadioButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton42ActionPerformed
-
-    private void jRadioButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton44ActionPerformed
-
-    private void jRadioButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton45ActionPerformed
-
-    private void jRadioButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton46ActionPerformed
-
-    private void jRadioButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton47ActionPerformed
-
-    private void jRadioButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton48ActionPerformed
-
-    private void jRadioButton49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton49ActionPerformed
-
-    private void jRadioButton50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton50ActionPerformed
-
-    private void jRadioButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton51ActionPerformed
-
-    private void jRadioButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton52ActionPerformed
-
-    private void jRadioButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton53ActionPerformed
-
-    private void jRadioButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton54ActionPerformed
-
-    private void jRadioButton55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton55ActionPerformed
-
-    private void jRadioButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton56ActionPerformed
-
-    private void jRadioButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton57ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton57ActionPerformed
-
-    private void jRadioButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton60ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton60ActionPerformed
-
-    private void jRadioButton61ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton61ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton61ActionPerformed
-
-    private void jRadioButton62ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton62ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton62ActionPerformed
-
-    private void jRadioButton63ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton63ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton63ActionPerformed
-
-    private void jRadioButton64ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton64ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton64ActionPerformed
-
-    private void jRadioButton66ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton66ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton66ActionPerformed
-
-    private void jRadioButton69ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton69ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton69ActionPerformed
-
-    private void jRadioButton71ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton71ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton71ActionPerformed
-
-    private void jRadioButton72ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton72ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton72ActionPerformed
-
-    private void jRadioButton73ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton73ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton73ActionPerformed
-
-    private void jRadioButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton75ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton75ActionPerformed
-
-    private void jRadioButton76ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton76ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton76ActionPerformed
-
-    private void jRadioButton77ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton77ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton77ActionPerformed
-
-    private void jRadioButton80ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton80ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton80ActionPerformed
-
-    private void jRadioButton81ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton81ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton81ActionPerformed
-
-    private void jRadioButton82ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton82ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton82ActionPerformed
-
-    private void jRadioButton83ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton83ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton83ActionPerformed
-
-    private void jRadioButton84ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton84ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton84ActionPerformed
-
-    private void jRadioButton85ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton85ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton85ActionPerformed
-
-    private void jRadioButton86ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton86ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton86ActionPerformed
-
-    private void jRadioButton88ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton88ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton88ActionPerformed
 
 
     private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
@@ -4601,8 +4204,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         }
 
         
-        String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador) "
-                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "')";
+        String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento) "
+                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','"+textcomplemento.getText()+"')";
 
         PreparedStatement ps;
         try {
@@ -4618,22 +4221,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
 
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
-
-    private void jRadioButton174ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton174ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton174ActionPerformed
-
-    private void jRadioButton175ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton175ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton175ActionPerformed
-
-    private void jRadioButton176ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton176ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton176ActionPerformed
-
-    private void textpesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textpesoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textpesoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -4894,9 +4481,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel264;
     private javax.swing.JLabel jLabel265;
     private javax.swing.JLabel jLabel266;
+    private javax.swing.JLabel jLabel267;
     private javax.swing.JLabel jLabel268;
     private javax.swing.JLabel jLabel269;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel270;
+    private javax.swing.JLabel jLabel271;
+    private javax.swing.JLabel jLabel272;
+    private javax.swing.JLabel jLabel273;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -5235,6 +4827,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField34;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
@@ -5280,6 +4874,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField78;
     private javax.swing.JTextField jTextField79;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField80;
+    private javax.swing.JTextField jTextField81;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JRadioButton radiofeminino;
     private javax.swing.JRadioButton radiomasculino;
@@ -5290,6 +4886,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField textcid;
     private javax.swing.JTextField textcidade;
     private javax.swing.JTextField textcn;
+    private javax.swing.JTextField textcomplemento;
     private javax.swing.JFormattedTextField textcpf;
     private javax.swing.JTextArea textdiagnostico;
     private javax.swing.JTextField textend;

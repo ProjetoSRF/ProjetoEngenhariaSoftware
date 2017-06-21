@@ -101,7 +101,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane" alignment="0" pref="3678" max="32767" attributes="0"/>
+          <Component id="jTabbedPane" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -258,7 +258,6 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="textcep" min="-2" pref="202" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="textbairro" alignment="0" max="32767" attributes="0"/>
                                               <Component id="textnome" alignment="1" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="textfone" min="-2" pref="237" max="-2" attributes="0"/>
@@ -273,6 +272,13 @@
                                                   <Component id="jLabel264" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="textnum" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="textbairro" min="-2" pref="431" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jLabel271" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="textcomplemento" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -591,7 +597,7 @@
                                                                       <Group type="102" attributes="0">
                                                                           <Component id="jLabel116" min="-2" max="-2" attributes="0"/>
                                                                           <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jComboBox13" pref="175" max="32767" attributes="0"/>
+                                                                          <Component id="jComboBox13" pref="188" max="32767" attributes="0"/>
                                                                           <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                                                                       </Group>
                                                                       <Group type="102" attributes="0">
@@ -599,7 +605,7 @@
                                                                               <Group type="102" alignment="0" attributes="0">
                                                                                   <Component id="jLabel115" min="-2" max="-2" attributes="0"/>
                                                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                                  <Component id="jComboBox12" pref="177" max="32767" attributes="0"/>
+                                                                                  <Component id="jComboBox12" pref="190" max="32767" attributes="0"/>
                                                                               </Group>
                                                                               <Group type="102" alignment="0" attributes="0">
                                                                                   <Component id="jLabel114" min="-2" max="-2" attributes="0"/>
@@ -758,6 +764,8 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel141" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="textbairro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel271" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="textcomplemento" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1259,7 +1267,7 @@
                                   <Component id="jRadioButton87" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="633" max="32767" attributes="0"/>
+                          <EmptySpace pref="740" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1346,9 +1354,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Feminino"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radiofemininoActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="radiomasculino">
                   <Properties>
@@ -1376,9 +1381,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="textpeso">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textpesoActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel154">
                   <Properties>
@@ -1537,9 +1539,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton2">
                   <Properties>
@@ -1573,9 +1572,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton5ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton6">
                   <Properties>
@@ -1584,9 +1580,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton6ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
@@ -1651,9 +1644,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton10ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel10">
                   <Properties>
@@ -1779,17 +1769,11 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Normal"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton13ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton14">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hipotonia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton14ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton15">
                   <Properties>
@@ -2131,9 +2115,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton37ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton38">
                   <Properties>
@@ -2155,9 +2136,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton42ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton43">
                   <Properties>
@@ -2191,9 +2169,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton44ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton45">
                   <Properties>
@@ -2202,9 +2177,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton45ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel71">
                   <Properties>
@@ -2225,9 +2197,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton46ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton47">
                   <Properties>
@@ -2236,9 +2205,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton47ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel73">
                   <Properties>
@@ -2264,9 +2230,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton48ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton49">
                   <Properties>
@@ -2275,9 +2238,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton49ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel76">
                   <Properties>
@@ -2291,9 +2251,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton50ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton51">
                   <Properties>
@@ -2302,9 +2259,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton51ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel77">
                   <Properties>
@@ -2318,9 +2272,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton52ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton53">
                   <Properties>
@@ -2329,9 +2280,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton53ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel78">
                   <Properties>
@@ -2352,9 +2300,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton54ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton55">
                   <Properties>
@@ -2363,9 +2308,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton55ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel80">
                   <Properties>
@@ -2379,9 +2321,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton56ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton57">
                   <Properties>
@@ -2390,9 +2329,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton57ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel81">
                   <Properties>
@@ -2558,9 +2494,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Positivo"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton60ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton61">
                   <Properties>
@@ -2569,9 +2502,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Negativo"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton61ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton62">
                   <Properties>
@@ -2580,9 +2510,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Positivo"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton62ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton63">
                   <Properties>
@@ -2591,9 +2518,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Negativo"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton63ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton64">
                   <Properties>
@@ -2602,9 +2526,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Presente"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton64ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton65">
                   <Properties>
@@ -2621,9 +2542,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Presente"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton66ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton67">
                   <Properties>
@@ -2648,9 +2566,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Presente"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton69ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel125">
                   <Properties>
@@ -2671,25 +2586,16 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Arreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton71ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton72">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hiperreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton72ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton73">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o est&#xe1;vel"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton73ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel127">
                   <Properties>
@@ -2705,25 +2611,16 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Arreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton75ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton76">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hiperreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton76ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton77">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o est&#xe1;vel"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton77ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel128">
                   <Properties>
@@ -2749,49 +2646,31 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Arreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton80ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton81">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Arreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton81ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton82">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hiperreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton82ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton83">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hiperreflexia"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton83ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton84">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o est&#xe1;vel"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton84ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton85">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o est&#xe1;vel"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton85ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel130">
                   <Properties>
@@ -2810,9 +2689,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Presente"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton86ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton87">
                   <Properties>
@@ -2834,9 +2710,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Presente"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton88ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton89">
                   <Properties>
@@ -2898,6 +2771,13 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="textnum">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel271">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Complemento:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="textcomplemento">
                 </Component>
               </SubComponents>
             </Container>
@@ -2973,7 +2853,7 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField32" pref="244" max="32767" attributes="0"/>
+                                          <Component id="jTextField32" pref="311" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jTextField26" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
@@ -3050,8 +2930,6 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="TextCep2" min="-2" pref="202" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="TextBairro2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="TextEnd2" alignment="0" max="32767" attributes="0"/>
                                       <Component id="TextNome2" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="TextFone5" min="-2" pref="46" max="-2" attributes="0"/>
@@ -3061,6 +2939,25 @@
                                           <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTextField20" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="TextEnd2" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="TextBairro2" min="-2" pref="429" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jLabel270" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTextField38" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel272" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="jTextField80" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
@@ -3081,11 +2978,15 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="TextEnd2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel272" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField80" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="TextBairro2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel270" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -3199,9 +3100,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="TextNome2">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextNome2ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel29">
                   <Properties>
@@ -3280,9 +3178,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Feminino"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton4">
                   <Properties>
@@ -3442,6 +3337,20 @@
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="jLabel270">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Complemento:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField38">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel272">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField80">
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -3534,8 +3443,6 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="TextCep4" min="-2" pref="202" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="TextBairro4" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="TextEnd4" alignment="0" max="32767" attributes="0"/>
                                               <Component id="TextNome4" alignment="1" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="TextFone9" min="-2" pref="46" max="-2" attributes="0"/>
@@ -3545,6 +3452,25 @@
                                                   <Component id="jLabel90" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="jTextField23" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="TextEnd4" alignment="0" max="32767" attributes="0"/>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="TextBairro4" min="-2" pref="432" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="jLabel267" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jTextField37" max="32767" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="jLabel273" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="jTextField81" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -3722,17 +3648,7 @@
                                                                   <Component id="jRadioButton116" min="-2" max="-2" attributes="0"/>
                                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                                      <Group type="102" attributes="0">
-                                                                          <Component id="jRadioButton118" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                          <Component id="jRadioButton124" min="-2" max="-2" attributes="0"/>
-                                                                      </Group>
                                                                       <Component id="jRadioButton117" min="-2" max="-2" attributes="0"/>
-                                                                      <Group type="102" alignment="0" attributes="0">
-                                                                          <Component id="jRadioButton119" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                          <Component id="jRadioButton125" min="-2" max="-2" attributes="0"/>
-                                                                      </Group>
                                                                       <Group type="102" alignment="0" attributes="0">
                                                                           <Component id="jRadioButton120" min="-2" max="-2" attributes="0"/>
                                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -3778,12 +3694,22 @@
                                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                           <Component id="jRadioButton135" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
+                                                                      <Group type="102" attributes="0">
+                                                                          <Component id="jRadioButton118" min="-2" max="-2" attributes="0"/>
+                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                                          <Component id="jRadioButton124" min="-2" max="-2" attributes="0"/>
+                                                                      </Group>
+                                                                      <Group type="102" alignment="0" attributes="0">
+                                                                          <Component id="jRadioButton119" min="-2" max="-2" attributes="0"/>
+                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                                          <Component id="jRadioButton125" min="-2" max="-2" attributes="0"/>
+                                                                      </Group>
                                                                   </Group>
                                                               </Group>
                                                           </Group>
                                                       </Group>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  <EmptySpace min="0" pref="78" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -4260,11 +4186,15 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel84" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="TextEnd4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel273" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField81" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="TextBairro4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel267" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField37" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -4481,7 +4411,11 @@
                                               <Component id="jLabel184" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jLabel185" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel185" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton119" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jRadioButton125" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel186" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
@@ -4514,11 +4448,6 @@
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jRadioButton118" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jRadioButton124" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jRadioButton119" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jRadioButton125" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -4864,9 +4793,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="TextNome4">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextNome4ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel84">
                   <Properties>
@@ -4945,9 +4871,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Feminino"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton7ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton8">
                   <Properties>
@@ -5943,17 +5866,11 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton174ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton175">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="N&#xe3;o"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton175ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel227">
                   <Properties>
@@ -5964,9 +5881,6 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Sim"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton176ActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButton177">
                   <Properties>
@@ -6376,6 +6290,20 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ausente"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel267">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Complemento:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField37">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel273">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="N&#xfa;mero:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField81">
                 </Component>
               </SubComponents>
             </Container>
