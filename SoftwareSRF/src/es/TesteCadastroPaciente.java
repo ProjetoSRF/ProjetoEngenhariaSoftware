@@ -5,16 +5,13 @@
  */
 package es;
 
-import static com.jgoodies.c.b.h.m;
 import es.funcoes.Conexao;
 import java.io.IOException;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ButtonModel;
 import javax.swing.ImageIcon;
 
 /**
@@ -32,15 +29,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
         Conexao.Conectar();
-        String sql = "select nome from projetosrf.paciente";
-        PreparedStatement ps = Conexao.con.prepareStatement(sql);
-        ps.executeQuery();
-        ResultSet rs = ps.getResultSet();
-
-        while (rs.next()) {
-            textnome.setText(rs.getString("nome"));
-
-        }
+        
 
     }
 
