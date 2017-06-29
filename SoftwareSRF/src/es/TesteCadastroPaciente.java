@@ -1,6 +1,5 @@
 package es;
 
-import com.toedter.calendar.JDateChooser;
 import es.funcoes.Conexao;
 import java.io.IOException;
 import java.sql.PreparedStatement;
@@ -16,10 +15,15 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TesteCadastroFuncionario
+     * @throws java.text.ParseException
      */
     public TesteCadastroPaciente() throws ParseException, SQLException, InterruptedException, InterruptedException, IOException {
         initComponents();
 
+        jScrollPaneNeurologico.getVerticalScrollBar().setUnitIncrement(20);
+        jScrollPaneNeuropediatrico.getVerticalScrollBar().setUnitIncrement(20);
+        jScrollPaneAmputado.getVerticalScrollBar().setUnitIncrement(20);
+        
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
         Conexao.Conectar();
@@ -3336,7 +3340,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel49)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE))
+                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
                                     .addComponent(jTextField26)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5140,7 +5144,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 3241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 5500, Short.MAX_VALUE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
