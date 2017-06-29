@@ -611,6 +611,56 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel340 = new javax.swing.JLabel();
         jComboBox71 = new javax.swing.JComboBox<>();
         jLabel341 = new javax.swing.JLabel();
+        jTextField93 = new javax.swing.JTextField();
+        jLabel342 = new javax.swing.JLabel();
+        jTextField94 = new javax.swing.JTextField();
+        jLabel343 = new javax.swing.JLabel();
+        jTextField95 = new javax.swing.JTextField();
+        jLabel344 = new javax.swing.JLabel();
+        jTextField96 = new javax.swing.JTextField();
+        jLabel345 = new javax.swing.JLabel();
+        jTextField97 = new javax.swing.JTextField();
+        jLabel346 = new javax.swing.JLabel();
+        jTextField98 = new javax.swing.JTextField();
+        jLabel347 = new javax.swing.JLabel();
+        jRadioButton200 = new javax.swing.JRadioButton();
+        jRadioButton201 = new javax.swing.JRadioButton();
+        jRadioButton202 = new javax.swing.JRadioButton();
+        jRadioButton203 = new javax.swing.JRadioButton();
+        jLabel348 = new javax.swing.JLabel();
+        jComboBox72 = new javax.swing.JComboBox<>();
+        jLabel349 = new javax.swing.JLabel();
+        jTextField99 = new javax.swing.JTextField();
+        jLabel350 = new javax.swing.JLabel();
+        jTextField100 = new javax.swing.JTextField();
+        jLabel351 = new javax.swing.JLabel();
+        jLabel352 = new javax.swing.JLabel();
+        jRadioButton204 = new javax.swing.JRadioButton();
+        jRadioButton205 = new javax.swing.JRadioButton();
+        jRadioButton206 = new javax.swing.JRadioButton();
+        jRadioButton207 = new javax.swing.JRadioButton();
+        jRadioButton208 = new javax.swing.JRadioButton();
+        jRadioButton209 = new javax.swing.JRadioButton();
+        jLabel353 = new javax.swing.JLabel();
+        jLabel354 = new javax.swing.JLabel();
+        jComboBox73 = new javax.swing.JComboBox<>();
+        jTextField101 = new javax.swing.JTextField();
+        jLabel355 = new javax.swing.JLabel();
+        jComboBox74 = new javax.swing.JComboBox<>();
+        jTextField102 = new javax.swing.JTextField();
+        jLabel356 = new javax.swing.JLabel();
+        jLabel357 = new javax.swing.JLabel();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        jTextArea16 = new javax.swing.JTextArea();
+        jLabel358 = new javax.swing.JLabel();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        jTextArea17 = new javax.swing.JTextArea();
+        jLabel359 = new javax.swing.JLabel();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        jTextArea18 = new javax.swing.JTextArea();
+        jLabel360 = new javax.swing.JLabel();
+        jTextField103 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jScrollPaneNeuropediatrico = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
         jLabel139 = new javax.swing.JLabel();
@@ -3264,6 +3314,87 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel341.setText("Pontos Dolorosos:");
 
+        jLabel342.setText("Onde?");
+
+        jLabel343.setText("Calosidade:");
+
+        jLabel344.setText("Onde?");
+
+        jLabel345.setText("Proeminência óssea:");
+
+        jLabel346.setText("Onde?");
+
+        jLabel347.setText("Coxim Gorduroso:");
+
+        jRadioButton200.setText("Pouco Revestimento");
+
+        jRadioButton201.setText("Ideal Compacto");
+
+        jRadioButton202.setText("Em demasia, sobra de massa muscular");
+
+        jRadioButton203.setText("Borda distal irregular");
+
+        jLabel348.setText("Pele do Coto:");
+
+        jComboBox72.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Úmida", "Seca", "Descamada" }));
+
+        jLabel349.setText("Cor:");
+
+        jLabel350.setText("Temperatura:");
+
+        jLabel351.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel351.setText("Circulação");
+
+        jLabel352.setText("Artérias Palpáveis:");
+
+        jRadioButton204.setText("Femoral");
+
+        jRadioButton205.setText("Poplítea");
+
+        jRadioButton206.setText("Pediosa Esquerda");
+
+        jRadioButton207.setText("Femoral");
+
+        jRadioButton208.setText("Poplítea");
+
+        jRadioButton209.setText("Pediosa Direita");
+
+        jLabel353.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel353.setText("Grau de Força Muscular");
+
+        jLabel354.setText("Membros Sadios:");
+
+        jComboBox73.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Grau I", "Grau II", "Grau III", "Grau IV", "Grau V" }));
+
+        jLabel355.setText("Membros Afetados:");
+
+        jComboBox74.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Grau I", "Grau II", "Grau III", "Grau IV", "Grau V" }));
+
+        jLabel356.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel356.setText("Amplitude de Movimentos (ADM)");
+
+        jLabel357.setText("Membros Sadios:");
+
+        jTextArea16.setColumns(20);
+        jTextArea16.setRows(5);
+        jScrollPane20.setViewportView(jTextArea16);
+
+        jLabel358.setText("Membros Afetados:");
+
+        jTextArea17.setColumns(20);
+        jTextArea17.setRows(5);
+        jScrollPane21.setViewportView(jTextArea17);
+
+        jLabel359.setText("Considerações Finais:");
+
+        jTextArea18.setColumns(20);
+        jTextArea18.setRows(5);
+        jScrollPane22.setViewportView(jTextArea18);
+
+        jLabel360.setText("Avaliador:");
+
+        jButton2.setText("Cadastrar");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -3323,14 +3454,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField29, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
+                                            .addComponent(jTextField29, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
                                             .addComponent(jTextField33))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel5Layout.createSequentialGroup()
                                                 .addComponent(jLabel51)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jTextField34, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel5Layout.createSequentialGroup()
                                                 .addComponent(jLabel47)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3340,7 +3471,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel49)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))
+                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE))
                                     .addComponent(jTextField26)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3465,43 +3596,159 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addComponent(jTextField91)))
                         .addGap(33, 33, 33))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel335)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton192)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton193)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel336)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(jRadioButton194)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jRadioButton195)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton196))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel337)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton197)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton198)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton199)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel343)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGap(338, 338, 338)
+                                        .addComponent(jLabel342)))
+                                .addGap(8, 8, 8)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField96)
+                                    .addComponent(jTextField94))))
+                        .addGap(6, 6, 6))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel336)
-                                .addGap(38, 38, 38)
-                                .addComponent(jRadioButton194)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton195)
+                                .addComponent(jLabel335)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton196))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel337)
+                                .addComponent(jRadioButton192)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton197)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton198)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton199))
+                                .addComponent(jRadioButton193))
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
                                         .addComponent(jLabel339)
                                         .addGap(18, 18, 18)
                                         .addComponent(jComboBox70, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jLabel338, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(jLabel338, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel341)
+                                            .addComponent(jLabel345)
+                                            .addComponent(jLabel347)
+                                            .addComponent(jLabel348))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField95)
+                                            .addComponent(jTextField93)
+                                            .addComponent(jTextField97)
+                                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                            .addComponent(jComboBox72, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(jRadioButton200, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                        .addGap(18, 18, 18)
+                                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jRadioButton201)
+                                                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                                                .addComponent(jLabel349)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(jTextField99, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton204)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton205)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton206))
+                                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                                        .addComponent(jRadioButton207)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton208)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jRadioButton209)))
+                                                .addGap(0, 0, Short.MAX_VALUE)))))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel340)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel346)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField98))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                                .addComponent(jLabel340)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jComboBox71, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel344)
+                                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton202)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton203)))
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanel5Layout.createSequentialGroup()
+                                        .addComponent(jLabel350)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextField100)))))
+                        .addContainerGap())
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel355)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBox74, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel351, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel352, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel353, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel354)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox71, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel341))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(jComboBox73, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField101)
+                            .addComponent(jTextField102))
+                        .addContainerGap())
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel356)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel357)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane20)))
+                        .addGap(6, 6, 6))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel358)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane21)
+                        .addContainerGap())
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel359)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane22)
+                        .addContainerGap())
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel360)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField103)
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3683,7 +3930,83 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jLabel340)
                     .addComponent(jComboBox71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel341)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel341)
+                    .addComponent(jTextField93, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel342)
+                    .addComponent(jTextField94, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel343)
+                    .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel344)
+                    .addComponent(jTextField96, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel345)
+                    .addComponent(jTextField97, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel346)
+                    .addComponent(jTextField98, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel347)
+                    .addComponent(jRadioButton200)
+                    .addComponent(jRadioButton201)
+                    .addComponent(jRadioButton202)
+                    .addComponent(jRadioButton203))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel348)
+                    .addComponent(jComboBox72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel349)
+                    .addComponent(jTextField99, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel350)
+                    .addComponent(jTextField100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel351)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel352)
+                    .addComponent(jRadioButton204)
+                    .addComponent(jRadioButton205)
+                    .addComponent(jRadioButton206))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton207)
+                    .addComponent(jRadioButton208)
+                    .addComponent(jRadioButton209))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel353)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel354)
+                    .addComponent(jComboBox73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel355)
+                    .addComponent(jComboBox74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel356)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel357)
+                    .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel358)
+                    .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel359)
+                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel360)
+                    .addComponent(jTextField103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jButton2)
                 .addContainerGap())
         );
 
@@ -4595,14 +4918,14 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addComponent(jLabel116)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jComboBox13, 0, 205, Short.MAX_VALUE)
+                                                                .addComponent(jComboBox13, 0, 229, Short.MAX_VALUE)
                                                                 .addGap(139, 139, 139))
                                                             .addGroup(jPanel4Layout.createSequentialGroup()
                                                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel115)
                                                                         .addGap(18, 18, 18)
-                                                                        .addComponent(jComboBox12, 0, 207, Short.MAX_VALUE))
+                                                                        .addComponent(jComboBox12, 0, 231, Short.MAX_VALUE))
                                                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                                                         .addComponent(jLabel114)
                                                                         .addGap(8, 8, 8)
@@ -5139,7 +5462,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1072, Short.MAX_VALUE)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1108, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5245,6 +5568,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JDateChooser datenascimento;
     private javax.swing.JComboBox<String> estadocivil;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox10;
     private javax.swing.JComboBox<String> jComboBox11;
@@ -5314,6 +5638,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JComboBox<String> jComboBox70;
     private javax.swing.JComboBox<String> jComboBox71;
+    private javax.swing.JComboBox<String> jComboBox72;
+    private javax.swing.JComboBox<String> jComboBox73;
+    private javax.swing.JComboBox<String> jComboBox74;
     private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JComboBox<String> jComboBox9;
     private com.toedter.calendar.JDateChooser jDateChooser1;
@@ -5590,8 +5917,27 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel340;
     private javax.swing.JLabel jLabel341;
+    private javax.swing.JLabel jLabel342;
+    private javax.swing.JLabel jLabel343;
+    private javax.swing.JLabel jLabel344;
+    private javax.swing.JLabel jLabel345;
+    private javax.swing.JLabel jLabel346;
+    private javax.swing.JLabel jLabel347;
+    private javax.swing.JLabel jLabel348;
+    private javax.swing.JLabel jLabel349;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel350;
+    private javax.swing.JLabel jLabel351;
+    private javax.swing.JLabel jLabel352;
+    private javax.swing.JLabel jLabel353;
+    private javax.swing.JLabel jLabel354;
+    private javax.swing.JLabel jLabel355;
+    private javax.swing.JLabel jLabel356;
+    private javax.swing.JLabel jLabel357;
+    private javax.swing.JLabel jLabel358;
+    private javax.swing.JLabel jLabel359;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel360;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -5777,6 +6123,16 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton jRadioButton199;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton200;
+    private javax.swing.JRadioButton jRadioButton201;
+    private javax.swing.JRadioButton jRadioButton202;
+    private javax.swing.JRadioButton jRadioButton203;
+    private javax.swing.JRadioButton jRadioButton204;
+    private javax.swing.JRadioButton jRadioButton205;
+    private javax.swing.JRadioButton jRadioButton206;
+    private javax.swing.JRadioButton jRadioButton207;
+    private javax.swing.JRadioButton jRadioButton208;
+    private javax.swing.JRadioButton jRadioButton209;
     private javax.swing.JRadioButton jRadioButton21;
     private javax.swing.JRadioButton jRadioButton22;
     private javax.swing.JRadioButton jRadioButton23;
@@ -5875,6 +6231,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane18;
     private javax.swing.JScrollPane jScrollPane19;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -5893,6 +6252,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextArea jTextArea13;
     private javax.swing.JTextArea jTextArea14;
     private javax.swing.JTextArea jTextArea15;
+    private javax.swing.JTextArea jTextArea16;
+    private javax.swing.JTextArea jTextArea17;
+    private javax.swing.JTextArea jTextArea18;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -5903,6 +6265,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextArea jTextArea9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField100;
+    private javax.swing.JTextField jTextField101;
+    private javax.swing.JTextField jTextField102;
+    private javax.swing.JTextField jTextField103;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
@@ -5993,6 +6359,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField90;
     private javax.swing.JTextField jTextField91;
     private javax.swing.JTextField jTextField92;
+    private javax.swing.JTextField jTextField93;
+    private javax.swing.JTextField jTextField94;
+    private javax.swing.JTextField jTextField95;
+    private javax.swing.JTextField jTextField96;
+    private javax.swing.JTextField jTextField97;
+    private javax.swing.JTextField jTextField98;
+    private javax.swing.JTextField jTextField99;
     private javax.swing.JRadioButton radiofeminino;
     private javax.swing.JRadioButton radiomasculino;
     private javax.swing.JTextField textaltura;
