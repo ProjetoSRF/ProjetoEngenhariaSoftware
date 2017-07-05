@@ -10,7 +10,13 @@ import es.funcoes.ValidaCPF;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
@@ -34,8 +40,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         maskData.install(cpfCT);
         maskData = new MaskFormatter("(##)#####-####");
         maskData.install(telefoneCT);
-        
-        
+
         Conexao.Conectar();
         String sql = "select descricao from projetosrf.funcao";
         PreparedStatement ps = Conexao.con.prepareStatement(sql);
@@ -82,6 +87,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         LabelNumero = new javax.swing.JLabel();
         telefoneCT = new javax.swing.JFormattedTextField();
         cancelar = new javax.swing.JButton();
+        Automatico = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -127,6 +133,13 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
             }
         });
 
+        Automatico.setText("Auto-Preencher");
+        Automatico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AutomaticoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painelBotoesLayout = new javax.swing.GroupLayout(painelBotoes);
         painelBotoes.setLayout(painelBotoesLayout);
         painelBotoesLayout.setHorizontalGroup(
@@ -165,9 +178,10 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(LabelNascimento)
                                 .addGap(18, 18, 18)
-                                .addComponent(calendarioJC, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelBotoesLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 315, Short.MAX_VALUE))))
+                    .addGroup(painelBotoesLayout.createSequentialGroup()
+                        .addComponent(Automatico)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(cadastrar)))
@@ -218,7 +232,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cancelar)
+                    .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cancelar)
+                        .addComponent(Automatico))
                     .addComponent(cadastrar))
                 .addGap(73, 73, 73))
         );
@@ -250,58 +266,144 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
 
         if (nomeCT.getText().length() > 0 && cpfCT.getText().length() > 0 && ruaCT.getText().length() > 0 && numeroCT.getText().length() > 0
                 && complementoCT.getText().length() > 0 && bairroCT.getText().length() > 0 && cidadeCT.getText().length() > 0) {
-
             boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
             if (validacpf == false) {
                 JOptionPane.showMessageDialog(null, "CPF Inválido!");
                 return;
             }
-            
-            /*Pattern pattern2 = Pattern.compile("([a-z]{2})[0-9]{4,5}-[0-9]{4}");
-            Matcher matchertel = pattern2.matcher(telefoneCT.getText());
-            if (matchertel.find()) {
-                JOptionPane.showMessageDialog(null, "Telefone Inválido!");
-                return;
-            }*/
 
-            Pattern pattern = Pattern.compile("[0-9]");
-            Matcher matcher = pattern.matcher(nomeCT.getText());
+            Pattern pattern = Pattern.compile("\\([0-9]{2}?\\)[0-9]{5}?\\-[0-9]{4}?");
+            Matcher matcher = pattern.matcher(telefoneCT.getText());
             if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo nome não pode conter números!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelTelefone.getText() + " inválido!");
                 return;
             }
+
+            pattern = Pattern.compile("[0-9]{1,6}");
+            matcher = pattern.matcher(numeroCT.getText());
+            if (matcher.find()) {
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelNumero.getText() + " inválido!");
+                return;
+            }
+
+            pattern = Pattern.compile("[a-z]");
+            matcher = pattern.matcher(nomeCT.getText());
+            if (matcher.find()) {
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelNome.getText() + " inválido!");
+                return;
+            }
+
             matcher = pattern.matcher(ruaCT.getText());
             if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo rua não pode conter números!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelRua.getText() + " inválido!");
                 return;
             }
+
             matcher = pattern.matcher(bairroCT.getText());
             if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo bairro não pode conter números!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelBairro.getText() + " inválido!");
                 return;
             }
+
             matcher = pattern.matcher(cidadeCT.getText());
             if (matcher.find()) {
-                JOptionPane.showMessageDialog(null, "Campo cidade não pode conter números!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Campo " + LabelCidade.getText() + " inválido!");
                 return;
             }
 
-            
+            SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+            String Data = formatador.format(calendarioJC.getDate());
+
+            String sql = "INSERT INTO `funcionario`(`cpf`, `id_func`, `nome`, `endereco`, `numerocasa`, `complemento`, `bairro`, `cidade`, `telefone`, `nascimento`) "
+                    + "VALUES ('" + cpfCT.getText() + "','" + funcaoCB.getSelectedIndex() + 1 + "','" + nomeCT.getText() + "','" + ruaCT.getText() + "','" + numeroCT.getText() + "','" + complementoCT.getText() + "','" + bairroCT.getText() + "','" + cidadeCT.getText() + "','" + telefoneCT.getText() + "','" + Data + "')";
+
+            PreparedStatement ps;
+            try {
+                ps = Conexao.con.prepareStatement(sql);
+                ps.executeUpdate();
+                ps.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         } else {
-            JOptionPane.showMessageDialog(null, "Há campos vazios!!");
+            JOptionPane.showMessageDialog(null, "Há campos vazios!");
             return;
         }
-
-
+        JOptionPane.showMessageDialog(null, "Funcionário" + nomeCT.getText() + " Cadastrado com sucesso!");
+        dispose();
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         dispose();
     }//GEN-LAST:event_cancelarActionPerformed
 
+    private void AutomaticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutomaticoActionPerformed
+        nomeCT.setText("Teobaldo");
+        cpfCT.setText(geraCPF());
+        ruaCT.setText("presidente vargas");
+        numeroCT.setText("2850");
+        complementoCT.setText("casa");
+        cidadeCT.setText("Bagé");
+        bairroCT.setText("Centro");
+        telefoneCT.setText("53999999999");
+        
+        String data= "02/07/1990";
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); 
+        Date date = null; 
+        try {
+            date = (java.util.Date)formatter.parse(data);
+        } catch (ParseException ex) {
+            Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        calendarioJC.setDate(date);
+        
+    }//GEN-LAST:event_AutomaticoActionPerformed
+
+    private static String calcDigVerif(String num) {
+        Integer primDig, segDig;
+        int soma = 0, peso = 10;
+        for (int i = 0; i < num.length(); i++) {
+            soma += Integer.parseInt(num.substring(i, i + 1)) * peso--;
+        }
+        if (soma % 11 == 0 | soma % 11 == 1) {
+            primDig = new Integer(0);
+        } else {
+            primDig = new Integer(11 - (soma % 11));
+        }
+        soma = 0;
+        peso = 11;
+        for (int i = 0; i < num.length(); i++) {
+            soma += Integer.parseInt(num.substring(i, i + 1)) * peso--;
+        }
+        soma += primDig.intValue() * 2;
+        if (soma % 11 == 0 | soma % 11 == 1) {
+            segDig = new Integer(0);
+        } else {
+            segDig = new Integer(11 - (soma % 11));
+        }
+        return primDig.toString() + segDig.toString();
+    }
+
+    public static String geraCPF() {
+        String iniciais = "";
+        Integer numero;
+        for (int i = 0; i < 9; i++) {
+            numero = new Integer((int) (Math.random() * 10));
+            iniciais += numero.toString();
+        }
+        return iniciais + calcDigVerif(iniciais);
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Automatico;
     private javax.swing.JLabel LabelBairro;
     private javax.swing.JLabel LabelCPF;
     private javax.swing.JLabel LabelCidade;
@@ -328,7 +430,5 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JTextField ruaCT;
     private javax.swing.JFormattedTextField telefoneCT;
     // End of variables declaration//GEN-END:variables
-
-    
 
 }
