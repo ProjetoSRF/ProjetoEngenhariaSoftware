@@ -173,7 +173,6 @@ public class Login extends javax.swing.JFrame {
         boolean resposta = consultar(jTextField1.getText(), valor);
         if (resposta == true) {
             new TelaInicio().setVisible(true);
-
             dispose();
         } else {
             JOptionPane.showMessageDialog(this, "Acesso Negado\n");
@@ -185,10 +184,8 @@ public class Login extends javax.swing.JFrame {
     public boolean consultar(String login, String senha) {
         boolean autenticado = false;
         String sql;
-        
         Conexao.Conectar();
         try {
-
             sql = "SELECT username, password FROM login WHERE username=? and password=?";
             PreparedStatement ps;
             ps = Conexao.con.prepareStatement(sql);

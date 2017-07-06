@@ -10,6 +10,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import static java.lang.Compiler.command;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -45,6 +46,14 @@ public class TelaInicio extends javax.swing.JFrame {
         dataLabel.setText(formato.format(dataSistema));
         Timer timer = new Timer(1000, new hora());
         timer.start();
+        
+        
+        /*try {
+        Runtime.getRuntime().exec("\"C:\\Users\\jeansb\\Documents\\MEGA\\Engenharia de software\\Banco de Dados\\BACKUPBD\\backup.bat\"");
+        } catch (IOException ex) {
+        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        
 
     }
     

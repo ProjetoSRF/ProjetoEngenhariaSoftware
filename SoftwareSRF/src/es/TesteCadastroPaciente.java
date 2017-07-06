@@ -4985,6 +4985,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         }
 
         System.out.println("oi");
+        
+        
 
 
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed

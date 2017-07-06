@@ -337,7 +337,9 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Há campos vazios!");
             return;
         }
+        
         JOptionPane.showMessageDialog(null, "Funcionário" + nomeCT.getText() + " Cadastrado com sucesso!");
+        
         dispose();
     }//GEN-LAST:event_CadastrarActionPerformed
 
