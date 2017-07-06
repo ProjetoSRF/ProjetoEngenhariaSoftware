@@ -5,7 +5,6 @@ import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
 import es.funcoes.Conexao;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
