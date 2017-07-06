@@ -15,6 +15,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form TesteCadastroFuncionario
+     *
      * @throws java.text.ParseException
      */
     public TesteCadastroPaciente() throws ParseException, SQLException, InterruptedException, InterruptedException, IOException {
@@ -23,11 +24,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jScrollPaneNeurologico.getVerticalScrollBar().setUnitIncrement(20);
         jScrollPaneNeuropediatrico.getVerticalScrollBar().setUnitIncrement(20);
         jScrollPaneAmputado.getVerticalScrollBar().setUnitIncrement(20);
-        
+
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
         Conexao.Conectar();
-        
 
     }
 
@@ -4967,14 +4967,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         }
         Date datanascimento = datenascimento.getDate();
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
-        String novaData = formatador.format(datanascimento); 
+        String novaData = formatador.format(datanascimento);
         Date dataAva = dateavaliacao.getDate();
         SimpleDateFormat formatador2 = new SimpleDateFormat("dd/MM/yyyy");
-        String dataA = formatador2.format(dataAva); 
- 
-        
+        String dataA = formatador2.format(dataAva);
+
         String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
-                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','"+textcomplemento.getText()+"','"+textcn.getText()+"','"+novaData+"','"+dataA+"')";
+                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','" + textcomplemento.getText() + "','" + textcn.getText() + "','" + novaData + "','" + dataA + "')";
 
         PreparedStatement ps;
         try {
@@ -4984,7 +4983,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
 
         System.out.println("oi");
 
@@ -4992,7 +4990,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

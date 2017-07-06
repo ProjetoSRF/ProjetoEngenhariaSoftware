@@ -137,6 +137,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu1.setText("Paciente");
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/adduser.png"))); // NOI18N
         jMenuItem1.setText("Cadastrar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +147,7 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/lupa.png"))); // NOI18N
         jMenuItem2.setText("Consultar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -155,10 +157,12 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem2);
 
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem3.setText("Editar");
         jMenu1.add(jMenuItem3);
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/remove.png"))); // NOI18N
         jMenuItem4.setText("Remover");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -168,6 +172,7 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem4);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setText("Acompanhamento");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,7 +185,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu2.setText("Funcionário(a)");
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/adduser.png"))); // NOI18N
         jMenuItem6.setText("Cadastrar");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -190,6 +195,7 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem6);
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/lupa.png"))); // NOI18N
         jMenuItem7.setText("Consultar");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -199,10 +205,12 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem7);
 
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F8, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem8.setText("Editar");
         jMenu2.add(jMenuItem8);
 
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F9, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/remove.png"))); // NOI18N
         jMenuItem9.setText("Remover");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
@@ -216,6 +224,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu3.setText("Gerar Relatório");
 
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F10, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem10.setText("Gerar");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -2,11 +2,17 @@ package es;
 
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
 import com.jgoodies.looks.plastic.theme.ExperienceRoyale;
+import es.funcoes.Conexao;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -28,18 +34,19 @@ public class Login extends javax.swing.JFrame {
 
         //mudar design da tela
         try {
-        PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
-        try {
-        UIManager.setLookAndFeel("com.jgoodies.looks.windows.WindowsLookAndFeel");
-        } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            PlasticLookAndFeel.setPlasticTheme(new ExperienceRoyale());
+            try {
+                UIManager.setLookAndFeel("com.jgoodies.looks.windows.WindowsLookAndFeel");
+            } catch (InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         } catch (ClassNotFoundException ex) {
         }
         SwingUtilities.updateComponentTreeUI(this);
 
-      
+        getRootPane().setDefaultButton(Acessar);
+
     }
 
     /**
@@ -67,7 +74,7 @@ public class Login extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Acessar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -82,10 +89,10 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Usuário:");
 
-        jButton1.setText("Acessar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Acessar.setText("Acessar");
+        Acessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                AcessarActionPerformed(evt);
             }
         });
 
@@ -94,7 +101,7 @@ public class Login extends javax.swing.JFrame {
         jDesktopPane1.setLayer(jPasswordField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(Acessar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -103,7 +110,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(257, 257, 257)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Acessar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -138,7 +145,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
-                .addComponent(jButton1)
+                .addComponent(Acessar)
                 .addGap(83, 83, 83))
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDesktopPane1Layout.createSequentialGroup()
@@ -161,12 +168,47 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void AcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AcessarActionPerformed
 
-        new TelaInicio().setVisible(true);
+        String valor = new String(jPasswordField1.getPassword());
+        boolean resposta = consultar(jTextField1.getText(), valor);
+        if (resposta == true) {
+            new TelaInicio().setVisible(true);
 
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Acesso Negado\n");
+            return;
+        }
+        
+    }//GEN-LAST:event_AcessarActionPerformed
+
+    public boolean consultar(String login, String senha) {
+        boolean autenticado = false;
+        String sql;
+        
+        Conexao.Conectar();
+        try {
+
+            sql = "SELECT username, password FROM login WHERE username=? and password=?";
+            PreparedStatement ps;
+            ps = Conexao.con.prepareStatement(sql);
+            ps.setString(1, login);
+            ps.setString(2, senha);
+            ResultSet rs;
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                autenticado = true;
+            } else {
+                ps.close();
+                return autenticado;
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this, ex);
+        }
+        return autenticado;
+    }
+
 
     /**
      * @param args the command line arguments
@@ -185,7 +227,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Acessar;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

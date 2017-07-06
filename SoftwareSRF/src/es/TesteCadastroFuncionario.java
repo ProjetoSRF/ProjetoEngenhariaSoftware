@@ -50,6 +50,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
             funcaoCB.addItem(rs.getString("descricao"));
         }
         funcaoCB.updateUI();
+        getRootPane().setDefaultButton(Cadastrar);
 
     }
 
@@ -80,7 +81,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         calendarioJC = new com.toedter.calendar.JCalendar();
         LabelFuncao = new javax.swing.JLabel();
         funcaoCB = new javax.swing.JComboBox<>();
-        cadastrar = new javax.swing.JButton();
+        Cadastrar = new javax.swing.JButton();
         cpfCT = new javax.swing.JFormattedTextField();
         LabelBairro = new javax.swing.JLabel();
         bairroCT = new javax.swing.JTextField();
@@ -115,10 +116,10 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
 
         LabelFuncao.setText("Função:");
 
-        cadastrar.setText("Cadastrar");
-        cadastrar.addActionListener(new java.awt.event.ActionListener() {
+        Cadastrar.setText("Cadastrar");
+        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cadastrarActionPerformed(evt);
+                CadastrarActionPerformed(evt);
             }
         });
 
@@ -184,11 +185,11 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(cadastrar)))
+                        .addComponent(Cadastrar)))
                 .addGap(30, 30, 30))
         );
 
-        painelBotoesLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cadastrar, cancelar});
+        painelBotoesLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Cadastrar, cancelar});
 
         painelBotoesLayout.setVerticalGroup(
             painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -235,11 +236,11 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
                     .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(cancelar)
                         .addComponent(Automatico))
-                    .addComponent(cadastrar))
+                    .addComponent(Cadastrar))
                 .addGap(73, 73, 73))
         );
 
-        painelBotoesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {cadastrar, cancelar});
+        painelBotoesLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {Cadastrar, cancelar});
 
         jScrollPane1.setViewportView(painelBotoes);
 
@@ -262,7 +263,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
+    private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
 
         if (nomeCT.getText().length() > 0 && cpfCT.getText().length() > 0 && ruaCT.getText().length() > 0 && numeroCT.getText().length() > 0
                 && complementoCT.getText().length() > 0 && bairroCT.getText().length() > 0 && cidadeCT.getText().length() > 0) {
@@ -338,7 +339,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
         }
         JOptionPane.showMessageDialog(null, "Funcionário" + nomeCT.getText() + " Cadastrado com sucesso!");
         dispose();
-    }//GEN-LAST:event_cadastrarActionPerformed
+    }//GEN-LAST:event_CadastrarActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         dispose();
@@ -404,6 +405,7 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Automatico;
+    private javax.swing.JButton Cadastrar;
     private javax.swing.JLabel LabelBairro;
     private javax.swing.JLabel LabelCPF;
     private javax.swing.JLabel LabelCidade;
@@ -415,7 +417,6 @@ public class TesteCadastroFuncionario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel LabelTelefone;
     private javax.swing.JLabel LabemComplemento;
     private javax.swing.JTextField bairroCT;
-    private javax.swing.JButton cadastrar;
     private com.toedter.calendar.JCalendar calendarioJC;
     private javax.swing.JButton cancelar;
     private javax.swing.JTextField cidadeCT;
