@@ -13,8 +13,6 @@ import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -441,9 +439,9 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         String busca;
-        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario:", 0);
         if (busca == null) {
-            JOptionPane.showInputDialog(null, "Campo vazio!");
+            JOptionPane.showMessageDialog(null, "Campo Vazio");
             return;
         }
 
@@ -498,9 +496,9 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         String busca;
-        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario:", 0);
         if (busca == null) {
-            JOptionPane.showInputDialog(null, "Campo vazio!");
+            JOptionPane.showMessageDialog(null, "Campo vazio!");
             return;
         }
 
@@ -542,7 +540,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         } catch (SQLException e) {
             // Erro se não consegue conexão com o database
-            System.out.printf("nao2");
+            System.out.printf("Remover/erro conexao");
         }
 
     }//GEN-LAST:event_jMenuItem9ActionPerformed
@@ -674,9 +672,9 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         String busca;
-        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario:", 0);
         if (busca == null) {
-            JOptionPane.showInputDialog(null, "Campo vazio!");
+            JOptionPane.showMessageDialog(null, "Campo vazio!");
             return;
         }
 

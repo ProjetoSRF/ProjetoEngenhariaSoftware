@@ -6,22 +6,16 @@
 package es;
 
 import es.funcoes.Conexao;
-import es.funcoes.ValidaCPF;
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import javax.swing.text.MaskFormatter;
 
 /**
