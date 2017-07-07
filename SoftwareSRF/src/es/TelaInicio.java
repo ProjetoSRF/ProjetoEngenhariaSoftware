@@ -5,6 +5,7 @@
  */
 package es;
 
+import es.funcoes.Conexao;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,10 @@ import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -171,6 +176,11 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem3.setText("Editar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.CTRL_MASK));
@@ -210,6 +220,11 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F8, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem8.setText("Editar");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem8);
 
         jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F9, java.awt.event.InputEvent.CTRL_MASK));
@@ -327,7 +342,65 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+        String busca;
+        busca = JOptionPane.showInputDialog("Digite o documento do Paciente.", 0);
+        if (busca == null) {
+            JOptionPane.showInputDialog(null, "Campo vazio!");
+            return;
+        }
+
+        PreparedStatement ps = null;
+        try {
+
+            String sql = "select * from projetosrf.paciente";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+                        
+                        TesteCadastroPacienteConsulta obj = null;
+
+                        try {
+                            obj = new TesteCadastroPacienteConsulta(rs);
+                        } catch (ParseException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (SQLException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (InterruptedException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (IOException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        jdbInicio.add(obj);
+                        obj.setVisible(true);
+                        try {
+                            obj.setSelected(true);
+                            //diz que a janela interna é maximizável   
+                            obj.setMaximizable(true);
+                            //set o tamanho máximo dela, que depende da janela pai   
+                            obj.setMaximum(true);
+                        } catch (java.beans.PropertyVetoException e) {
+                        }
+                        
+                    } else {
+
+                    }
+
+                }
+            }
+
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Cliente não encontrado.");
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
+
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -372,7 +445,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    
+
     private void GerarBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerarBackupActionPerformed
         FileWriter arq = null;
 
@@ -408,7 +481,7 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_GerarBackupActionPerformed
 
     private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .bat", "bat");
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .sql", "sql");
         jFileChooser1.setFileFilter(filtro);
         int returnVal = jFileChooser1.showOpenDialog(this);
         String Caminho;
@@ -447,8 +520,82 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_RestauraBackupActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        // TODO add your handling code here:
+        TelaCadastroConsulta obj = null;
+        obj = new TelaCadastroConsulta();
+
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+
+        try {
+            obj.setSelected(true);
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        String busca;
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        if (busca == null) {
+            JOptionPane.showInputDialog(null, "Campo vazio!");
+            return;
+        }
+
+        PreparedStatement ps = null;
+        try {
+
+            String sql = "select * from projetosrf.funcionario";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+                        
+                        TesteCadastroFuncionarioAlterar obj = null;
+
+                        try {
+                            obj = new TesteCadastroFuncionarioAlterar(rs);
+                        } catch (ParseException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (SQLException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        jdbInicio.add(obj);
+                        obj.setVisible(true);
+                        try {
+                            obj.setSelected(true);
+                            //diz que a janela interna é maximizável   
+                            obj.setMaximizable(true);
+                            //set o tamanho máximo dela, que depende da janela pai   
+                            obj.setMaximum(true);
+                        } catch (java.beans.PropertyVetoException e) {
+                        }
+                        
+                    } else {
+
+                    }
+
+                }
+            }
+
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
