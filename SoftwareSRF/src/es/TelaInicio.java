@@ -359,7 +359,7 @@ public class TelaInicio extends javax.swing.JFrame {
                 while (rs.next()) {
 
                     if (busca.equals(rs.getString("cpf"))) {
-                        
+
                         TesteCadastroPacienteConsulta obj = null;
 
                         try {
@@ -383,7 +383,7 @@ public class TelaInicio extends javax.swing.JFrame {
                             obj.setMaximum(true);
                         } catch (java.beans.PropertyVetoException e) {
                         }
-                        
+
                     } else {
 
                     }
@@ -404,7 +404,39 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
+        String busca;
+        busca = JOptionPane.showInputDialog("Digite o documento do Paciente.", 0);
+        if (busca == null) {
+            JOptionPane.showInputDialog(null, "Campo vazio!");
+            return;
+        }
+
+        PreparedStatement ps = null;
+        try {
+
+            String sql = "select * from projetosrf.paciente";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+
+                    } else {
+
+                    }
+
+                }
+            }
+
+            ps.close();
+
+            JOptionPane.showMessageDialog(null, "Paciente não encontrado.");
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
@@ -425,7 +457,7 @@ public class TelaInicio extends javax.swing.JFrame {
                 while (rs.next()) {
 
                     if (busca.equals(rs.getString("cpf"))) {
-                        
+
                         TesteCadastroFuncionarioConsultar obj = null;
 
                         try {
@@ -446,7 +478,7 @@ public class TelaInicio extends javax.swing.JFrame {
                         } catch (java.beans.PropertyVetoException e) {
                         }
                         return;
-                        
+
                     } else {
 
                     }
@@ -465,7 +497,54 @@ public class TelaInicio extends javax.swing.JFrame {
 
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
+        String busca;
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        if (busca == null) {
+            JOptionPane.showInputDialog(null, "Campo vazio!");
+            return;
+        }
+
+        PreparedStatement ps = null;
+        try {
+
+            String sql = "select * from projetosrf.funcionario";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+                        switch (JOptionPane.showConfirmDialog(null, "Deseja remover o funcionario: " + rs.getString("nome") + "?")) {
+                            case 0:
+                                sql = "DELETE FROM `funcionario` WHERE cpf = " + busca + " ";
+                                ps = Conexao.con.prepareStatement(sql);
+                                ps.executeUpdate();
+                                ps.close();
+                                JOptionPane.showMessageDialog(null, "Funcionario Removido.");
+                                return;
+
+                            case 1:
+                                JOptionPane.showMessageDialog(null, "Funcionario não removido!");
+                                return;
+
+                            case 2:
+                                JOptionPane.showMessageDialog(null, "Funcionario não removido!");
+                                return;
+
+                        }
+                    } else {
+
+                    }
+
+                }
+                JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
+            }
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
+
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
@@ -590,7 +669,7 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
@@ -611,7 +690,7 @@ public class TelaInicio extends javax.swing.JFrame {
                 while (rs.next()) {
 
                     if (busca.equals(rs.getString("cpf"))) {
-                        
+
                         TesteCadastroFuncionarioAlterar obj = null;
 
                         try {
@@ -632,7 +711,7 @@ public class TelaInicio extends javax.swing.JFrame {
                         } catch (java.beans.PropertyVetoException e) {
                         }
                         return;
-                        
+
                     } else {
 
                     }
