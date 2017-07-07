@@ -106,7 +106,6 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
         LabelNumero = new javax.swing.JLabel();
         telefoneCT = new javax.swing.JFormattedTextField();
         cancelar = new javax.swing.JButton();
-        Automatico = new javax.swing.JButton();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -152,13 +151,6 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
             }
         });
 
-        Automatico.setText("Auto-Preencher");
-        Automatico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AutomaticoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout painelBotoesLayout = new javax.swing.GroupLayout(painelBotoes);
         painelBotoes.setLayout(painelBotoesLayout);
         painelBotoesLayout.setHorizontalGroup(
@@ -199,8 +191,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
                                 .addGap(18, 18, 18)
                                 .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 315, Short.MAX_VALUE))))
                     .addGroup(painelBotoesLayout.createSequentialGroup()
-                        .addComponent(Automatico)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(Cadastrar)))
@@ -251,9 +242,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
                     .addComponent(calendarioJC, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cancelar)
-                        .addComponent(Automatico))
+                    .addComponent(cancelar)
                     .addComponent(Cadastrar))
                 .addGap(73, 73, 73))
         );
@@ -355,7 +344,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
             return;
         }
 
-        JOptionPane.showMessageDialog(null, "Funcionário" + nomeCT.getText() + " Cadastrado com sucesso!");
+        JOptionPane.showMessageDialog(null, "Funcionário" + nomeCT.getText() + " Alterado com sucesso!");
 
         dispose();
     }//GEN-LAST:event_CadastrarActionPerformed
@@ -363,28 +352,6 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         dispose();
     }//GEN-LAST:event_cancelarActionPerformed
-
-    private void AutomaticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AutomaticoActionPerformed
-        nomeCT.setText("Teobaldo");
-        cpfCT.setText(geraCPF());
-        ruaCT.setText("presidente vargas");
-        numeroCT.setText("2850");
-        complementoCT.setText("casa");
-        cidadeCT.setText("Bagé");
-        bairroCT.setText("Centro");
-        telefoneCT.setText("53999999999");
-
-        String data = "02/07/1990";
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = null;
-        try {
-            date = (java.util.Date) formatter.parse(data);
-        } catch (ParseException ex) {
-            Logger.getLogger(TesteCadastroFuncionarioAlterar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        calendarioJC.setDate(date);
-
-    }//GEN-LAST:event_AutomaticoActionPerformed
 
     private static String calcDigVerif(String num) {
         Integer primDig, segDig;
@@ -423,7 +390,6 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Automatico;
     private javax.swing.JButton Cadastrar;
     private javax.swing.JLabel LabelBairro;
     private javax.swing.JLabel LabelCPF;
