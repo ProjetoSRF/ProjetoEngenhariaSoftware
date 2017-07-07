@@ -48,11 +48,11 @@ public class TelaInicio extends javax.swing.JFrame {
         timer.start();
         
         
-        /*try {
-        Runtime.getRuntime().exec("\"C:\\Users\\jeansb\\Documents\\MEGA\\Engenharia de software\\Banco de Dados\\BACKUPBD\\backup.bat\"");
+        try {
+        Runtime.getRuntime().exec("\"backup.bat");
         } catch (IOException ex) {
         Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
         
 
     }
