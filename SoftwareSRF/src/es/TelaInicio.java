@@ -422,7 +422,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         String busca;
-        busca = JOptionPane.showInputDialog("Digite o documento do Paciente.", 0);
+        busca = JOptionPane.showInputDialog("Digite o numero de prontuario do Paciente.", 0);
         if (busca == null) {
             JOptionPane.showInputDialog(null, "Campo vazio!");
             return;
@@ -431,13 +431,36 @@ public class TelaInicio extends javax.swing.JFrame {
         PreparedStatement ps = null;
         try {
 
-            String sql = "select * from projetosrf.paciente";
+            String sql = "select * from projetosrf.paciente INNER JOIN neurologico ON paciente.numeroprontuario = neurologico.numeroprontuario";
             ps = Conexao.con.prepareStatement(sql);
             ps.executeQuery();
             try (ResultSet rs = ps.getResultSet()) {
                 while (rs.next()) {
 
                     if (busca.equals(rs.getString("cpf"))) {
+
+                        switch (JOptionPane.showConfirmDialog(null, "Deseja remover o Paciente: " + rs.getString("nome") + "?")) {
+                            case 0:
+                                sql = "DELETE FROM `neurologico` WHERE numeroprontuario = " + busca + " ";
+                                ps = Conexao.con.prepareStatement(sql);
+                                ps.executeUpdate();
+
+                                sql = "DELETE FROM `paciente` WHERE numeroprontuario = " + busca + " ";
+                                ps = Conexao.con.prepareStatement(sql);
+                                ps.executeUpdate();
+                                ps.close();
+                                JOptionPane.showMessageDialog(null, "Paciente Removido.");
+                                return;
+
+                            case 1:
+                                JOptionPane.showMessageDialog(null, "Paciente não removido!");
+                                return;
+
+                            case 2:
+                                JOptionPane.showMessageDialog(null, "Paciente não removido!");
+                                return;
+
+                        }
 
                     } else {
 
