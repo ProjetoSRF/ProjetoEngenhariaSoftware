@@ -5,14 +5,25 @@
  */
 package es;
 
+import com.toedter.calendar.JCalendar;
 import es.funcoes.Conexao;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author flavi
  */
 public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
+
+    String docfuncionario, docpaciente;
 
     /**
      * Creates new form NewJInternalFrame
@@ -38,30 +49,58 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         LabelNome = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        LabelDocumento = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        CadastraConsulta = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        LabelNome1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        LabelDocumento1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setTitle("Cadastro de Consulta");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RG", "CPF", "Certidão de Nascimento" }));
 
         jButton1.setText("Procurar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         LabelNome.setText("Nome");
 
-        jLabel1.setText("Documento");
+        LabelDocumento.setText("Documento");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton2.setText("Salvar");
+        CadastraConsulta.setText("Cadastrar");
+        CadastraConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastraConsultaActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Cancelar");
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CPF" }));
+
+        LabelNome1.setText("Nome");
+
+        LabelDocumento1.setText("Documento");
+
+        jButton2.setText("Procurar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -73,7 +112,7 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CadastraConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jScrollPane1)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -86,9 +125,21 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(LabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(LabelDocumento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGap(18, 18, 18)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(LabelNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(LabelDocumento1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(18, 18, 18)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -102,16 +153,25 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelNome)
-                    .addComponent(jLabel1))
+                    .addComponent(LabelDocumento))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelNome1)
+                    .addComponent(LabelDocumento1))
                 .addGap(18, 18, 18)
                 .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(CadastraConsulta)
                     .addComponent(jButton3))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -130,18 +190,229 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int verifica = jComboBox1.getSelectedIndex() + 1;
+        String busca;
+        int cont = 0;
+        PreparedStatement ps = null;
+
+        switch (verifica) {
+
+            case 1:
+                busca = jTextField1.getText();
+                if (busca == null) {
+                    JOptionPane.showMessageDialog(null, "Campo vazio!");
+                    return;
+                }
+
+                try {
+
+                    String sql = "select * from projetosrf.paciente";
+                    ps = Conexao.con.prepareStatement(sql);
+                    ps.executeQuery();
+
+                    try (ResultSet rs = ps.getResultSet()) {
+                        while (rs.next()) {
+
+                            if (busca.equals(rs.getString("rg"))) {
+
+                                LabelNome.setText(rs.getString("nome"));
+                                LabelDocumento.setText(rs.getString("rg"));
+                                docpaciente = rs.getString("rg");
+                                cont++;
+                                break;
+                            } else {
+
+                            }
+
+                        }
+                    }
+
+                    ps.close();
+
+                } catch (SQLException e) {
+                    // Erro se não consegue conexão com o database
+                    System.out.printf("nao2");
+                }
+
+                break;
+
+            case 2:
+                busca = jTextField1.getText();
+                if (busca == null) {
+                    JOptionPane.showMessageDialog(null, "Campo vazio!");
+                    return;
+                }
+
+                try {
+
+                    String sql = "select * from projetosrf.paciente";
+                    ps = Conexao.con.prepareStatement(sql);
+                    ps.executeQuery();
+
+                    try (ResultSet rs = ps.getResultSet()) {
+                        while (rs.next()) {
+
+                            if (busca.equals(rs.getString("cpf"))) {
+
+                                LabelNome.setText(rs.getString("nome"));
+                                LabelDocumento.setText(rs.getString("cpf"));
+                                docpaciente = rs.getString("cpf");
+                                cont++;
+                                break;
+
+                            } else {
+
+                            }
+
+                        }
+                    }
+
+                    ps.close();
+
+                } catch (SQLException e) {
+                    // Erro se não consegue conexão com o database
+                    System.out.printf("nao2");
+                }
+
+                break;
+            case 3:
+
+                busca = jTextField1.getText();
+                if (busca == null) {
+                    JOptionPane.showMessageDialog(null, "Campo vazio!");
+                    return;
+                }
+
+                try {
+
+                    String sql = "select * from projetosrf.paciente";
+                    ps = Conexao.con.prepareStatement(sql);
+                    ps.executeQuery();
+
+                    try (ResultSet rs = ps.getResultSet()) {
+                        while (rs.next()) {
+
+                            if (busca.equals(rs.getString("certidaonascimento"))) {
+
+                                LabelNome.setText(rs.getString("nome"));
+                                LabelDocumento.setText(rs.getString("certidaonascimento"));
+                                docpaciente = rs.getString("certidaonascimento");
+                                cont++;
+                                break;
+
+                            } else {
+
+                            }
+
+                        }
+                    }
+
+                    ps.close();
+
+                } catch (SQLException e) {
+                    // Erro se não consegue conexão com o database
+                    System.out.printf("nao2");
+                }
+                break;
+
+        }
+        
+        if (cont != 0) {
+            JOptionPane.showMessageDialog(null, "Paciente não encontrado.");
+        }
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        String busca;
+        PreparedStatement ps = null;
+        int cont=0;
+
+        busca = jTextField1.getText();
+        if (busca == null) {
+            JOptionPane.showMessageDialog(null, "Campo vazio!");
+            return;
+        }
+
+        try {
+
+            String sql = "select * from projetosrf.funcionario";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+
+                        LabelNome1.setText(rs.getString("nome"));
+                        LabelDocumento1.setText(rs.getString("cpf"));
+                        docfuncionario = rs.getString("cpf");
+                        cont++;
+                        break;
+                    } else {
+
+                    }
+
+                }
+            }
+
+            ps.close();
+            
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
+        
+        if (cont != 0) {
+            JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
+        }
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void CadastraConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastraConsultaActionPerformed
+        if (docfuncionario != null && docpaciente != null) {
+
+            SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+            String Data = formatador.format(jDateChooser1.getDate());
+
+            String sql = "INSERT INTO projetosrf.agenda(data, descricao, doc_funcionario, doc_paciente) VALUES ('" + Data + "','" + jTextArea1.getText() + "','" + docfuncionario + "','" + docpaciente + "')";
+
+            PreparedStatement ps;
+            try {
+                ps = Conexao.con.prepareStatement(sql);
+                ps.executeUpdate();
+                ps.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+
+    }//GEN-LAST:event_CadastraConsultaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CadastraConsulta;
+    private javax.swing.JLabel LabelDocumento;
+    private javax.swing.JLabel LabelDocumento1;
     private javax.swing.JLabel LabelNome;
+    private javax.swing.JLabel LabelNome1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
