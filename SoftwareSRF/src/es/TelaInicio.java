@@ -347,47 +347,47 @@ public class TelaInicio extends javax.swing.JFrame {
             return;
         }
 
-        PreparedStatement ps = null;
+        /*PreparedStatement ps = null;
         try {
-
-            String sql = "select * from projetosrf.paciente";
-            ps = Conexao.con.prepareStatement(sql);
-            ps.executeQuery();
-            try (ResultSet rs = ps.getResultSet()) {
-                while (rs.next()) {
-
-                    if (busca.equals(rs.getString("cpf"))) {
-
-                        TesteCadastroPacienteConsulta obj = null;
-
-                        try {
-                            obj = new TesteCadastroPacienteConsulta(rs);
-                        } catch (ParseException ex) {
-                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-                        } catch (SQLException ex) {
-                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-                        } catch (InterruptedException ex) {
-                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-                        } catch (IOException ex) {
-                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                        jdbInicio.add(obj);
-                        obj.setVisible(true);
-                        try {
-                            obj.setSelected(true);
-                            //diz que a janela interna é maximizável   
-                            obj.setMaximizable(true);
-                            //set o tamanho máximo dela, que depende da janela pai   
-                            obj.setMaximum(true);
-                        } catch (java.beans.PropertyVetoException e) {
-                        }
-
-                    } else {
-
-                    }
-
-                }
-            }
+        
+        String sql = "select * from projetosrf.paciente";
+        ps = Conexao.con.prepareStatement(sql);
+        ps.executeQuery();
+        try (ResultSet rs = ps.getResultSet()) {
+        while (rs.next()) {
+        
+        if (busca.equals(rs.getString("cpf"))) {
+        
+        TesteCadastroPacienteConsulta obj = null;
+        
+        try {
+        obj = new TesteCadastroPacienteConsulta(rs);
+        } catch (ParseException ex) {
+        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {
+        obj.setSelected(true);
+        //diz que a janela interna é maximizável
+        obj.setMaximizable(true);
+        //set o tamanho máximo dela, que depende da janela pai
+        obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+        
+        } else {
+        
+        }
+        
+        }
+        }
 
             ps.close();
 
@@ -396,7 +396,7 @@ public class TelaInicio extends javax.swing.JFrame {
         } catch (SQLException e) {
             // Erro se não consegue conexão com o database
             System.out.printf("nao2");
-        }
+        }*/
 
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
