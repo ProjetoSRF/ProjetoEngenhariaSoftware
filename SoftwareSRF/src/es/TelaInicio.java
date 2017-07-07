@@ -605,11 +605,12 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\backup.bat");
+        JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\"+data+".sql");
 
     }//GEN-LAST:event_GerarBackupActionPerformed
 
     private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
+        JOptionPane.showMessageDialog(null, "Para restaurar um backup selecione um arquivo 'data'.sql, com a data que pretende restaurar seu banco de dados");
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .sql", "sql");
         jFileChooser1.setFileFilter(filtro);
         int returnVal = jFileChooser1.showOpenDialog(this);
