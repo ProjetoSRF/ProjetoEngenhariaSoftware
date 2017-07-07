@@ -208,7 +208,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_AcessarActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-
+        
         // Cria campo onde o usuario entra com a senha
         JPasswordField password = new JPasswordField(10);
         password.setEchoChar('*');
@@ -226,7 +226,6 @@ public class Login extends javax.swing.JFrame {
         System.out.println(valor);
 
         if (valor.equals("admin")) {
-
             FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .sql", "sql");
             jFileChooser1.setFileFilter(filtro);
             int returnVal = jFileChooser1.showOpenDialog(this);
