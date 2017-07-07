@@ -363,45 +363,24 @@ public class TelaInicio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .bat", "bat");
-        jFileChooser1.setFileFilter(filtro);
-
-        int returnVal = jFileChooser1.showOpenDialog(this);
-        String Caminho;
-
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            Caminho = jFileChooser1.getSelectedFile().getPath();
-            try {
-                Runtime.getRuntime().exec("\"" + Caminho + "\"");
-            } catch (IOException ex) {
-                Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            JOptionPane.showMessageDialog(null, "Backup restaurado");
-        } else {
-
-        }
-
-
-    }//GEN-LAST:event_RestauraBackupActionPerformed
-
     private void GerarBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerarBackupActionPerformed
-        FileWriter arq=null;
+        FileWriter arq = null;
+
         try {
             arq = new FileWriter("C:\\BACKUPBD\\backup.bat");
         } catch (IOException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         PrintWriter gravarArq = new PrintWriter(arq);
-        
+
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Date date = new Date();
-        String data = dateFormat.format(date); 
-        
-        
+        String data = dateFormat.format(date);
+
         gravarArq.printf("@echo off%n echo Realizando backup do MySQL... %n"
-                + "\"C:\\xampp\\mysql\\bin\\mysqldump.exe\" -u root --databases projetosrf > \"C:\\BACKUPBD\\"+data+".sql%n\""
-                        + "echo concluido com sucesso");
+                + "\"C:\\xampp\\mysql\\bin\\mysqldump.exe\" -u root --databases projetosrf > \"C:\\BACKUPBD\\" + data + ".sql%n\""
+                + "echo concluido com sucesso");
         try {
             arq.close();
         } catch (IOException ex) {
@@ -417,6 +396,45 @@ public class TelaInicio extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\backup.bat");
 
     }//GEN-LAST:event_GerarBackupActionPerformed
+
+    private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .bat", "bat");
+        jFileChooser1.setFileFilter(filtro);
+        int returnVal = jFileChooser1.showOpenDialog(this);
+        String Caminho;
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            Caminho = jFileChooser1.getSelectedFile().getPath();
+            try {
+                FileWriter arq = null;
+                try {
+                    arq = new FileWriter("C:\\BACKUPBD\\restaurabackup.bat");
+                } catch (IOException ex) {
+                    Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                PrintWriter gravarArq = new PrintWriter(arq);
+
+                gravarArq.printf("@echo off%n echo Realizando backup do MySQL... %n"
+                        + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root -e \"CREATE DATABASE projetosrf\"%n"
+                        + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root projetosrf < \"" + Caminho + "\"%n"
+                        + "echo");
+                try {
+                    arq.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                Runtime.getRuntime().exec("\"C:\\BACKUPBD\\restaurabackup.bat\"");
+
+            } catch (IOException ex) {
+                Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            JOptionPane.showMessageDialog(null, "Backup restaurado");
+        } else {
+
+        }
+    }//GEN-LAST:event_RestauraBackupActionPerformed
 
     /**
      * @param args the command line arguments
@@ -435,7 +453,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem GerarBackup;
-    private javax.swing.JMenuItem RestauraBackup;
+    public javax.swing.JMenuItem RestauraBackup;
     private javax.swing.JLabel dataLabel;
     private javax.swing.JLabel horaLabel;
     private javax.swing.JFileChooser jFileChooser1;
