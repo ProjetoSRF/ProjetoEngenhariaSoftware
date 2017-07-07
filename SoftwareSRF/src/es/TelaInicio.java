@@ -106,6 +106,8 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         GerarBackup = new javax.swing.JMenuItem();
         RestauraBackup = new javax.swing.JMenuItem();
@@ -258,13 +260,31 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F10, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/gerarel.png"))); // NOI18N
-        jMenuItem10.setText("Gerar");
+        jMenuItem10.setText("Realat Agenda");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
             }
         });
         jMenu3.add(jMenuItem10);
+
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/gerarel.png"))); // NOI18N
+        jMenuItem5.setText("Relat Paciente");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem5);
+
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/gerarel.png"))); // NOI18N
+        jMenuItem13.setText("Relat Funcionario");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem13);
 
         jMenuBar1.add(jMenu3);
 
@@ -397,7 +417,6 @@ public class TelaInicio extends javax.swing.JFrame {
             // Erro se não consegue conexão com o database
             System.out.printf("nao2");
         }*/
-
 
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -546,8 +565,20 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-        TelaGerarRelatorio GR = new TelaGerarRelatorio();
-        GR.setVisible(true);
+        TelaGerarRelatorioAgenda obj = null;
+
+        obj = new TelaGerarRelatorioAgenda();
+
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {
+            obj.setSelected(true);
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -605,7 +636,7 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\"+data+".sql");
+        JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\" + data + ".sql");
 
     }//GEN-LAST:event_GerarBackupActionPerformed
 
@@ -727,6 +758,40 @@ public class TelaInicio extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        TelaGerarRelatorioPaciente obj = null;
+
+        obj = new TelaGerarRelatorioPaciente();
+
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {
+            obj.setSelected(true);
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        TelaGerarRelatorioFuncionario obj = null;
+
+        obj = new TelaGerarRelatorioFuncionario();
+
+        jdbInicio.add(obj);
+        obj.setVisible(true);
+        try {
+            obj.setSelected(true);
+            //diz que a janela interna é maximizável   
+            obj.setMaximizable(true);
+            //set o tamanho máximo dela, que depende da janela pai   
+            obj.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+        }
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -758,9 +823,11 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;

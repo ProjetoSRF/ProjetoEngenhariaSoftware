@@ -318,7 +318,7 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
 
         }
         
-        if (cont != 0) {
+        if (cont == 0) {
             JOptionPane.showMessageDialog(null, "Paciente não encontrado.");
         }
 
@@ -331,7 +331,7 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
         PreparedStatement ps = null;
         int cont=0;
 
-        busca = jTextField1.getText();
+        busca = jTextField2.getText();
         if (busca == null) {
             JOptionPane.showMessageDialog(null, "Campo vazio!");
             return;
@@ -368,7 +368,7 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
             System.out.printf("nao2");
         }
         
-        if (cont != 0) {
+        if (cont == 0) {
             JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
         }
 
@@ -380,7 +380,7 @@ public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
 
             SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
             String Data = formatador.format(jDateChooser1.getDate());
-
+            
             String sql = "INSERT INTO projetosrf.agenda(data, descricao, doc_funcionario, doc_paciente) VALUES ('" + Data + "','" + jTextArea1.getText() + "','" + docfuncionario + "','" + docpaciente + "')";
 
             PreparedStatement ps;
