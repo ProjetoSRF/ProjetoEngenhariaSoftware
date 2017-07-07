@@ -9,8 +9,9 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import static java.lang.Compiler.command;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +20,10 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -38,7 +42,6 @@ public class TelaInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null); //projela tela centralizada
         setIconImage(new ImageIcon(getClass().getResource("/es/imagens/logomtbranco2.png")).getImage()); //icone da empresa 
         this.setExtendedState(MAXIMIZED_BOTH);
-        
 
         //DATA
         Date dataSistema = new Date();
@@ -46,17 +49,9 @@ public class TelaInicio extends javax.swing.JFrame {
         dataLabel.setText(formato.format(dataSistema));
         Timer timer = new Timer(1000, new hora());
         timer.start();
-        
-        
-        try {
-        Runtime.getRuntime().exec("\"backup.bat");
-        } catch (IOException ex) {
-        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
 
     }
-    
+
     class hora implements ActionListener {
 
         @Override
@@ -76,6 +71,7 @@ public class TelaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFileChooser1 = new javax.swing.JFileChooser();
         jdbInicio = new javax.swing.JDesktopPane(){
 
             Image image = new ImageIcon(getClass().getResource("/es/imagens/fundo2.jpg")).getImage();
@@ -104,6 +100,9 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        GerarBackup = new javax.swing.JMenuItem();
+        RestauraBackup = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SRF");
@@ -244,6 +243,26 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setText("Ferramentas");
+
+        GerarBackup.setText("Efetuar Backup do Banco de Dados");
+        GerarBackup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GerarBackupActionPerformed(evt);
+            }
+        });
+        jMenu4.add(GerarBackup);
+
+        RestauraBackup.setText("Restaura Backup do Banco de Dados");
+        RestauraBackup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RestauraBackupActionPerformed(evt);
+            }
+        });
+        jMenu4.add(RestauraBackup);
+
+        jMenuBar1.add(jMenu4);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -268,6 +287,7 @@ public class TelaInicio extends javax.swing.JFrame {
         //this.setEnabled(false);
         //new CadastrarPaciente(this).setVisible(true);
         TesteCadastroPaciente obj = null;
+
         try {
             obj = new TesteCadastroPaciente();
         } catch (ParseException ex) {
@@ -320,7 +340,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         TesteCadastroFuncionario obj = null;
-        
+
         try {
             obj = new TesteCadastroFuncionario();
         } catch (ParseException ex) {
@@ -328,7 +348,7 @@ public class TelaInicio extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         jdbInicio.add(obj);
         obj.setVisible(true);
         try {
@@ -342,11 +362,53 @@ public class TelaInicio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+    private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .bat", "bat");
+        jFileChooser1.setFileFilter(filtro);
+        
+        int returnVal = jFileChooser1.showOpenDialog(this);
+        String Caminho;
+        
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            Caminho = jFileChooser1.getSelectedFile().getPath();
+            try {
+                Runtime.getRuntime().exec("\""+Caminho+"\"");
+            } catch (IOException ex) {
+                Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            JOptionPane.showMessageDialog(null, "Backup restaurado");
+        } else {
+
+        }
+
+
+    }//GEN-LAST:event_RestauraBackupActionPerformed
+
+    private void GerarBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerarBackupActionPerformed
+        /*JFileChooser arquivo = new JFileChooser();
+        FileNameExtensionFilter filtroPDF = new FileNameExtensionFilter("Arquivos PDF", "pdf");
+        arquivo.addChoosableFileFilter(filtroPDF);
+        arquivo.setAcceptAllFileFilterUsed(false);
+        if (arquivo.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+        seuTextField.setText(arquivo.getSelectedFile().getAbsolutePath());
+        }*/
+
+        try {
+            Runtime.getRuntime().exec("\"C:\\BACKUPBD\\backup.bat\"");
+        } catch (IOException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        JOptionPane.showMessageDialog(null, "Backup gerado em C:\\BACKUPBD\\backup.bat");
+
+    }//GEN-LAST:event_GerarBackupActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -358,11 +420,15 @@ public class TelaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem GerarBackup;
+    private javax.swing.JMenuItem RestauraBackup;
     private javax.swing.JLabel dataLabel;
     private javax.swing.JLabel horaLabel;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
