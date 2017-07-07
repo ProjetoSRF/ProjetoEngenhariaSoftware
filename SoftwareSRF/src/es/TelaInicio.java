@@ -448,7 +448,7 @@ public class TelaInicio extends javax.swing.JFrame {
         PreparedStatement ps = null;
         try {
 
-            String sql = "select * from projetosrf.funcionario";
+            String sql = "select * from projetosrf.funcionario INNER JOIN funcao ON funcionario.id_func = funcao.id_func";
             ps = Conexao.con.prepareStatement(sql);
             ps.executeQuery();
             try (ResultSet rs = ps.getResultSet()) {
@@ -682,7 +682,7 @@ public class TelaInicio extends javax.swing.JFrame {
         PreparedStatement ps = null;
         try {
 
-            String sql = "select * from projetosrf.funcionario";
+            String sql = "select * from projetosrf.funcionario INNER JOIN funcao ON funcionario.id_func = funcao.id_func";
             ps = Conexao.con.prepareStatement(sql);
             ps.executeQuery();
             try (ResultSet rs = ps.getResultSet()) {

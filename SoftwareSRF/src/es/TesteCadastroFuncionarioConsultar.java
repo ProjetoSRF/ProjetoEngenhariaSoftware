@@ -6,7 +6,6 @@
 package es;
 
 import es.funcoes.Conexao;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -24,8 +23,8 @@ import javax.swing.text.MaskFormatter;
  */
 public class TesteCadastroFuncionarioConsultar extends javax.swing.JInternalFrame {
 
-    String CPF;
-    ResultSet aux;
+    
+    
 
     /**
      * Creates new form TesteCadastroFuncionario
@@ -60,6 +59,8 @@ public class TesteCadastroFuncionarioConsultar extends javax.swing.JInternalFram
         bairroCT.setEditable(false);
         telefoneCT.setEditable(false);
         funcaoCB.setEditable(false);
+        funcaoCB.addItem(rs.getString("descricao"));
+        
 
         String data = rs.getString("nascimento");
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -70,26 +71,6 @@ public class TesteCadastroFuncionarioConsultar extends javax.swing.JInternalFram
             Logger.getLogger(TesteCadastroFuncionarioConsultar.class.getName()).log(Level.SEVERE, null, ex);
         }
         calendarioJC.setDate(date);
-        
-        
-        CPF = rs.getString("cpf");
-        int id = rs.getInt("id_func");
-
-        PreparedStatement ps = null;
-        String sql = "select * from projetosrf.funcao";
-        ps = Conexao.con.prepareStatement(sql);
-        ps.executeQuery();
-        rs = ps.getResultSet();
-        while (rs.next()) {
-            if (id == rs.getInt("id_func")) {
-                funcaoCB.addItem(rs.getString("descricao"));
-                
-            } else {
-
-            }
-
-        }
-        ps.close();
 
         getRootPane().setDefaultButton(cancelar1);
 

@@ -53,6 +53,9 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
         cidadeCT.setText(rs.getString("cidade"));
         bairroCT.setText(rs.getString("bairro"));
         telefoneCT.setText(rs.getString("telefone"));
+        funcaoCB.addItem(rs.getString("descricao"));
+        
+        CPF = rs.getString("cpf");
 
         String data = rs.getString("nascimento");
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -63,26 +66,6 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
             Logger.getLogger(TesteCadastroFuncionarioAlterar.class.getName()).log(Level.SEVERE, null, ex);
         }
         calendarioJC.setDate(date);
-
-        CPF = rs.getString("cpf");
-        int id = rs.getInt("id_func");
-
-        PreparedStatement ps = null;
-        String sql = "select * from projetosrf.funcao";
-        ps = Conexao.con.prepareStatement(sql);
-        ps.executeQuery();
-        rs = ps.getResultSet();
-        while (rs.next()) {
-            if (id == rs.getInt("id_func")) {
-
-                funcaoCB.addItem(rs.getString("descricao"));
-
-            } else {
-
-            }
-
-        }
-        ps.close();
 
         getRootPane().setDefaultButton(Cadastrar);
 
@@ -290,12 +273,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
 
         if (nomeCT.getText().length() > 0 && cpfCT.getText().length() > 0 && ruaCT.getText().length() > 0 && numeroCT.getText().length() > 0
                 && complementoCT.getText().length() > 0 && bairroCT.getText().length() > 0 && cidadeCT.getText().length() > 0) {
-            boolean validacpf = ValidaCPF.isCPF(cpfCT.getText());
-            if (validacpf == false) {
-                JOptionPane.showMessageDialog(null, "CPF Inválido!");
-                return;
-            }
-
+            
             Pattern pattern = Pattern.compile("\\([0-9]{2}?\\)[0-9]{5}?\\-[0-9]{4}?");
             Matcher matcher = pattern.matcher(telefoneCT.getText());
             if (matcher.find()) {
@@ -344,7 +322,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
             SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
             String Data = formatador.format(calendarioJC.getDate());
 
-            String sql = "UPDATE `funcionario` SET `nome` = '" + nomeCT.getText() + "', `endereco` = '" + ruaCT.getText() + "', `numerocasa` = '" + numeroCT.getText() + "', `complemento` = '" + complementoCT.getText() + "', `bairro` = '" + bairroCT.getText() + "', `cidade` = '" + cidadeCT.getText() + "', `telefone` = '" + telefoneCT.getText() + "' WHERE cpf = '" + CPF + "' ";
+            String sql = "UPDATE `funcionario` SET `nome` = '" + nomeCT.getText() + "', `endereco` = '" + ruaCT.getText() + "', `numerocasa` = '" + numeroCT.getText() + "', `complemento` = '" + complementoCT.getText() + "', `bairro` = '" + bairroCT.getText() + "', `cidade` = '" + cidadeCT.getText() + "', `nascimento` = '"+Data+"', `telefone` = '" + telefoneCT.getText() + "' WHERE cpf = '" + CPF + "' ";
 
             PreparedStatement ps;
             try {
