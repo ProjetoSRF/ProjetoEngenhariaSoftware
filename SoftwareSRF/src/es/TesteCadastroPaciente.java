@@ -116,7 +116,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel161 = new javax.swing.JLabel();
         textcid = new javax.swing.JTextField();
         jLabel162 = new javax.swing.JLabel();
-        textprontuario = new javax.swing.JTextField();
         jLabel163 = new javax.swing.JLabel();
         jLabel164 = new javax.swing.JLabel();
         textavaliador = new javax.swing.JTextField();
@@ -293,6 +292,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         BoxRPAquileu = new javax.swing.JComboBox<>();
         ButtonPreencherNeuropediatrico = new javax.swing.JButton();
         textsexo = new javax.swing.JComboBox<>();
+        textprontuario = new javax.swing.JFormattedTextField();
         jScrollPaneAmputado = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
@@ -334,7 +334,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel50 = new javax.swing.JLabel();
         TextCid2 = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
-        TextProntuario2 = new javax.swing.JTextField();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         TextAvaliador2 = new javax.swing.JTextField();
@@ -452,6 +451,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TextCpf2 = new javax.swing.JFormattedTextField();
         BoxSexo2 = new javax.swing.JComboBox<>();
         ButtonPreencherAmputado = new javax.swing.JButton();
+        TextProntuario2 = new javax.swing.JFormattedTextField();
         jScrollPaneNeurologico = new javax.swing.JScrollPane();
         jPanel6 = new javax.swing.JPanel();
         jLabel83 = new javax.swing.JLabel();
@@ -493,7 +493,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel105 = new javax.swing.JLabel();
         textcid3 = new javax.swing.JTextField();
         jLabel106 = new javax.swing.JLabel();
-        textprontuario3 = new javax.swing.JTextField();
         jLabel107 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
         textavaliador3 = new javax.swing.JTextField();
@@ -828,6 +827,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcep3 = new javax.swing.JFormattedTextField();
         ComboBoxSexo = new javax.swing.JComboBox<>();
         ButtonPreencherNeurologico = new javax.swing.JButton();
+        textprontuario3 = new javax.swing.JFormattedTextField();
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setClosable(true);
@@ -1238,6 +1238,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         textsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feminino", "Masculino" }));
 
+        try {
+            textprontuario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####################")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -1637,13 +1643,13 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addComponent(jLabel162)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textprontuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
                                                 .addComponent(jLabel158)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(textrg, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                                .addComponent(textrg, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                                .addComponent(jLabel162)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(textprontuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                         .addGap(33, 33, 33))))
         );
         jPanel4Layout.setVerticalGroup(
@@ -2272,6 +2278,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 ButtonPreencherAmputadoActionPerformed(evt);
             }
         });
+
+        try {
+            TextProntuario2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####################")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -3548,6 +3560,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             }
         });
 
+        try {
+            textprontuario3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####################")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -3941,7 +3959,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                 .addComponent(jLabel106)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textprontuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(textprontuario3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                 .addComponent(jLabel102)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -4923,7 +4941,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         String dataA = formatador2.format(dataAva);
 
         String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
-                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textmunicipio.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + textsexo.getSelectedItem() + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','" + textcomplemento.getText() + "','" + textcn.getText() + "','" + novaData + "','" + dataA + "')";
+                + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textmunicipio.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + textsexo.getSelectedItem() + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + Integer.parseInt(textprontuario.getText())+ "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','" + textcomplemento.getText() + "','" + textcn.getText() + "','" + novaData + "','" + dataA + "')";
         
         PreparedStatement ps;
         try {
@@ -4934,8 +4952,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
        
-        sql = "INSERT INTO `neuropediatrico`(`TempoGestacao`, `PreNatal`, `Apgar`, `InGestacao`, `QuaisG`, `TipodeParto`, `InParto`, `QuaisP`, `InternHospitalar`, `Exames`, `HistoricoF`, `HistoricoC`, `Queixa`, `TonusNormal`, `TonusHipotonia`, `TonusHipertonia`, `NSegmento`, `HipoSegmento`, `HipeSegmento`, `Hipertonia`, `CondicaoFala`, `ObsCondicaoFala`, `FazEntender`, `OuveBem`, `EntendeFala`, `Le`, `LeObs`, `Escreve`, `EscreveObs`, `Oculos`, `ApDentario`, `ApAudicao`, `DMastigar`, `DEngolir`, `DManusear`, `AlimentaSozinho`, `HigieneBucal`, `ControleEsfincteres`, `ObsHigiene`, `PalpacaoDor`, `DorOnde`, `PalpacaoEdema`, `EdemaOnde`, `MControleCervical`, `MControleTronco`, `MControleMembros`, `MembrosOnde`, `MRolaLeito`, `MEngatinhar`, `EquilibrioESentado`, `EquilibrioEmPe`, `EquilibrioDSentado`, `EquilibrioDEmPe`, `EquilibrioDAndando`, `Orteses`, `OrtesesEs`, `RSCutaneoPatelar`, `RSCutaneoAbdominal`, `RSRetificacao`, `RSEquilibrio`, `RSParaQuedas`, `RPBicipital`, `RPTricipital`, `RPPatelar`, `RPAquileu`, `CIndex`, `CDisdiadocinesia`, `InspecaoFisica`) "
-                + "VALUES('"+TxtTempoGestacao.getText()+"','"+BoxPreNatal.getSelectedItem()+"','"+TxtApgar.getText()+"','"+BoxInGestacao.getSelectedItem()+"','"+TxtQuaisG.getText()+"','"+BoxTipodeParto.getSelectedItem()+"','"+BoxInParto.getSelectedItem()+"','"+TxtQuaisP.getText()+"', '"+TxtInternHospitalar.getText()+"','"+TxtExames.getText()+"','"+TxtHistoricoF.getText()+"','"+TxtHistoricoC.getText()+"','"+TxtQueixa.getText()+"','"+ButtonTonusNormal.getText()+"','"+ButtonTonusHipotonia.getText()+"','"+ButtonTonusHipertonia.getText()+"','"+TxtNSegmento.getText()+"','"+TxtHipoSegmento.getText()+"','"+TxtHipeSegmento.getText()+"','"+BoxHipertonia.getSelectedItem()+"','"+BoxCondicaoFala.getSelectedItem()+"','"+TxtObsCondicaoFala.getText()+"','"+BoxFazEntender.getSelectedItem()+"','"+BoxOuveBem.getSelectedItem()+"','"+BoxEntendeFala.getSelectedItem()+"','"+BoxLe.getSelectedItem()+"','"+TxtLeObs.getText()+"','"+BoxEscreve.getSelectedItem()+"','"+TxtEscreveObs.getText()+"','"+BoxOculos.getSelectedItem()+"','"+BoxApDentario.getSelectedItem()+"','"+BoxApAudicao.getSelectedItem()+"','"+BoxDMastigar.getSelectedItem()+"','"+BoxDEngolir.getSelectedItem()+"','"+BoxDManusear.getSelectedItem()+"','"+BoxAlimentaSozinho.getSelectedItem()+"','"+BoxHigieneBucal.getSelectedItem()+"','"+BoxControleEsfincteres.getSelectedItem()+"','"+TxtObsHigiene.getText()+"','"+BoxPalpacaoDor.getSelectedItem()+"','"+TxtDorOnde.getText()+"','"+BoxPalpacaoEdema.getSelectedItem()+"', '"+TxtEdemaOnde.getText()+"','"+BoxMControleCervical.getSelectedItem()+"','"+BoxMControleTronco.getSelectedItem()+"', '"+BoxControleMembros.getSelectedItem()+"','"+TxtMembrosOnde.getText()+"','"+BoxMRolaLeito.getSelectedItem()+"','"+BoxMEngatinhar.getSelectedItem()+"','"+BoxEquilibrioESentado.getSelectedItem()+"','"+BoxEquilibrioEmPe.getSelectedItem()+"','"+BoxEquilibrioDSentado.getSelectedItem()+"','"+BoxEquilibrioDEmPe.getSelectedItem()+"','"+BoxEquilibrioDAndando.getSelectedItem()+"','"+BoxOrteses.getSelectedItem()+"','"+TxtOrtesesEs.getText()+"','"+RSCutaneoPatelar.getSelectedItem()+"','"+RSCutaneoAbdominal.getSelectedItem()+"', '"+RSRetificacao.getSelectedItem()+"','"+RSEquilibrio.getSelectedItem()+"','"+RSParaQuedas.getSelectedItem()+"', '"+BoxRPBicipital.getSelectedItem()+"','"+BoxRPTricipital.getSelectedItem()+"','"+BoxRPPatelar.getSelectedItem()+"','"+BoxRPAquileu.getSelectedItem()+"', '"+BoxCIndex.getSelectedItem()+"','"+BoxCDisdiadocinesia.getSelectedItem()+"','"+TxtInspecaoFisica.getText()+"')";              
+        sql = "INSERT INTO `neuropediatrico`(`numeroprontuario`,`TempoGestacao`, `PreNatal`, `Apgar`, `InGestacao`, `QuaisG`, `TipodeParto`, `InParto`, `QuaisP`, `InternHospitalar`, `Exames`, `HistoricoF`, `HistoricoC`, `Queixa`, `TonusNormal`, `TonusHipotonia`, `TonusHipertonia`, `NSegmento`, `HipoSegmento`, `HipeSegmento`, `Hipertonia`, `CondicaoFala`, `ObsCondicaoFala`, `FazEntender`, `OuveBem`, `EntendeFala`, `Le`, `LeObs`, `Escreve`, `EscreveObs`, `Oculos`, `ApDentario`, `ApAudicao`, `DMastigar`, `DEngolir`, `DManusear`, `AlimentaSozinho`, `HigieneBucal`, `ControleEsfincteres`, `ObsHigiene`, `PalpacaoDor`, `DorOnde`, `PalpacaoEdema`, `EdemaOnde`, `MControleCervical`, `MControleTronco`, `MControleMembros`, `MembrosOnde`, `MRolaLeito`, `MEngatinhar`, `EquilibrioESentado`, `EquilibrioEmPe`, `EquilibrioDSentado`, `EquilibrioDEmPe`, `EquilibrioDAndando`, `Orteses`, `OrtesesEs`, `RSCutaneoPatelar`, `RSCutaneoAbdominal`, `RSRetificacao`, `RSEquilibrio`, `RSParaQuedas`, `RPBicipital`, `RPTricipital`, `RPPatelar`, `RPAquileu`, `CIndex`, `CDisdiadocinesia`, `InspecaoFisica`) "
+                + "VALUES('"+Integer.parseInt(textprontuario.getText())+"',"+TxtTempoGestacao.getText()+"','"+BoxPreNatal.getSelectedItem()+"','"+TxtApgar.getText()+"','"+BoxInGestacao.getSelectedItem()+"','"+TxtQuaisG.getText()+"','"+BoxTipodeParto.getSelectedItem()+"','"+BoxInParto.getSelectedItem()+"','"+TxtQuaisP.getText()+"', '"+TxtInternHospitalar.getText()+"','"+TxtExames.getText()+"','"+TxtHistoricoF.getText()+"','"+TxtHistoricoC.getText()+"','"+TxtQueixa.getText()+"','"+ButtonTonusNormal.getText()+"','"+ButtonTonusHipotonia.getText()+"','"+ButtonTonusHipertonia.getText()+"','"+TxtNSegmento.getText()+"','"+TxtHipoSegmento.getText()+"','"+TxtHipeSegmento.getText()+"','"+BoxHipertonia.getSelectedItem()+"','"+BoxCondicaoFala.getSelectedItem()+"','"+TxtObsCondicaoFala.getText()+"','"+BoxFazEntender.getSelectedItem()+"','"+BoxOuveBem.getSelectedItem()+"','"+BoxEntendeFala.getSelectedItem()+"','"+BoxLe.getSelectedItem()+"','"+TxtLeObs.getText()+"','"+BoxEscreve.getSelectedItem()+"','"+TxtEscreveObs.getText()+"','"+BoxOculos.getSelectedItem()+"','"+BoxApDentario.getSelectedItem()+"','"+BoxApAudicao.getSelectedItem()+"','"+BoxDMastigar.getSelectedItem()+"','"+BoxDEngolir.getSelectedItem()+"','"+BoxDManusear.getSelectedItem()+"','"+BoxAlimentaSozinho.getSelectedItem()+"','"+BoxHigieneBucal.getSelectedItem()+"','"+BoxControleEsfincteres.getSelectedItem()+"','"+TxtObsHigiene.getText()+"','"+BoxPalpacaoDor.getSelectedItem()+"','"+TxtDorOnde.getText()+"','"+BoxPalpacaoEdema.getSelectedItem()+"', '"+TxtEdemaOnde.getText()+"','"+BoxMControleCervical.getSelectedItem()+"','"+BoxMControleTronco.getSelectedItem()+"', '"+BoxControleMembros.getSelectedItem()+"','"+TxtMembrosOnde.getText()+"','"+BoxMRolaLeito.getSelectedItem()+"','"+BoxMEngatinhar.getSelectedItem()+"','"+BoxEquilibrioESentado.getSelectedItem()+"','"+BoxEquilibrioEmPe.getSelectedItem()+"','"+BoxEquilibrioDSentado.getSelectedItem()+"','"+BoxEquilibrioDEmPe.getSelectedItem()+"','"+BoxEquilibrioDAndando.getSelectedItem()+"','"+BoxOrteses.getSelectedItem()+"','"+TxtOrtesesEs.getText()+"','"+RSCutaneoPatelar.getSelectedItem()+"','"+RSCutaneoAbdominal.getSelectedItem()+"', '"+RSRetificacao.getSelectedItem()+"','"+RSEquilibrio.getSelectedItem()+"','"+RSParaQuedas.getSelectedItem()+"', '"+BoxRPBicipital.getSelectedItem()+"','"+BoxRPTricipital.getSelectedItem()+"','"+BoxRPPatelar.getSelectedItem()+"','"+BoxRPAquileu.getSelectedItem()+"', '"+BoxCIndex.getSelectedItem()+"','"+BoxCDisdiadocinesia.getSelectedItem()+"','"+TxtInspecaoFisica.getText()+"')";              
         
         try {
         ps = Conexao.con.prepareStatement(sql);
@@ -5423,7 +5441,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField TextPresencaHipersensibilidade;
     private javax.swing.JTextArea TextProblemasAnteriores;
     private javax.swing.JTextField TextProfissao2;
-    private javax.swing.JTextField TextProntuario2;
+    private javax.swing.JFormattedTextField TextProntuario2;
     private javax.swing.JTextField TextPropioceptiva;
     private javax.swing.JTextField TextQuaisCasos;
     private javax.swing.JTextField TextQualAtividade;
@@ -5971,8 +5989,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JTextField textpeso3;
     private javax.swing.JTextField textprofissao;
     private javax.swing.JTextField textprofissao3;
-    private javax.swing.JTextField textprontuario;
-    private javax.swing.JTextField textprontuario3;
+    private javax.swing.JFormattedTextField textprontuario;
+    private javax.swing.JFormattedTextField textprontuario3;
     private javax.swing.JTextField textresp;
     private javax.swing.JTextField textresp3;
     private javax.swing.JFormattedTextField textrg;
