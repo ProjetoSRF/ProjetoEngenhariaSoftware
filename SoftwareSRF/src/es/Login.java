@@ -15,7 +15,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -80,7 +83,9 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         Acessar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -102,20 +107,12 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Restaurar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jTextField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jPasswordField1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jDesktopPane1.setLayer(Acessar, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -124,8 +121,6 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addGap(257, 257, 257)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Acessar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -133,7 +128,8 @@ public class Login extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(Acessar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDesktopPane1Layout.createSequentialGroup()
@@ -149,7 +145,7 @@ public class Login extends javax.swing.JFrame {
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
+                .addContainerGap(97, Short.MAX_VALUE)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -161,15 +157,27 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(29, 29, 29)
                 .addComponent(Acessar)
-                .addGap(47, 47, 47)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addGap(83, 83, 83))
             .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDesktopPane1Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(24, Short.MAX_VALUE)))
         );
+
+        jMenu1.setText("Ferramentas");
+
+        jMenuItem1.setText("Restaurar Backup do Banco de Dados");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,44 +207,68 @@ public class Login extends javax.swing.JFrame {
 
     }//GEN-LAST:event_AcessarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .sql", "sql");
-        jFileChooser1.setFileFilter(filtro);
-        int returnVal = jFileChooser1.showOpenDialog(this);
-        String Caminho;
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
 
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            Caminho = jFileChooser1.getSelectedFile().getPath();
-            try {
-                FileWriter arq = null;
+        // Cria campo onde o usuario entra com a senha
+        JPasswordField password = new JPasswordField(10);
+        password.setEchoChar('*');
+        // Cria um rótulo para o campo
+        JLabel rotulo = new JLabel("Entre com a senha:");
+        // Coloca o rótulo e a caixa de entrada numa JPanel:
+        JPanel entUsuario = new JPanel();
+        entUsuario.add(rotulo);
+        entUsuario.add(password);
+        // Mostra o rótulo e a caixa de entrada de password para o usuario fornecer a senha:
+        JOptionPane.showMessageDialog(null, entUsuario, "Acesso restrito", JOptionPane.PLAIN_MESSAGE);
+        // O programa só prossegue quando o usuário clicar o botao de OK do showMessageDialog. 
+        // Captura a senha:
+        String valor = new String(password.getPassword());
+        System.out.println(valor);
+
+        if (valor.equals("admin")) {
+
+            FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .sql", "sql");
+            jFileChooser1.setFileFilter(filtro);
+            int returnVal = jFileChooser1.showOpenDialog(this);
+            String Caminho;
+
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                Caminho = jFileChooser1.getSelectedFile().getPath();
                 try {
-                    arq = new FileWriter("C:\\BACKUPBD\\restaurabackup.bat");
+                    FileWriter arq = null;
+                    try {
+                        arq = new FileWriter("C:\\BACKUPBD\\restaurabackup.bat");
+                    } catch (IOException ex) {
+                        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                    PrintWriter gravarArq = new PrintWriter(arq);
+
+                    gravarArq.printf("@echo off%n echo Realizando backup do MySQL... %n"
+                            + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root -e \"CREATE DATABASE projetosrf\"%n"
+                            + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root projetosrf < \"" + Caminho + "\"%n"
+                            + "echo");
+                    try {
+                        arq.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                    Runtime.getRuntime().exec("\"C:\\BACKUPBD\\restaurabackup.bat\"");
+
                 } catch (IOException ex) {
                     Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                JOptionPane.showMessageDialog(null, "Backup restaurado");
+            } else {
 
-                PrintWriter gravarArq = new PrintWriter(arq);
-
-                gravarArq.printf("@echo off%n echo Realizando backup do MySQL... %n"
-                        + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root -e \"CREATE DATABASE projetosrf\"%n"
-                        + "\"C:\\xampp\\mysql\\bin\\mysql.exe\" -u root projetosrf < \"" + Caminho + "\"%n"
-                        + "echo");
-                try {
-                    arq.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-                Runtime.getRuntime().exec("\"C:\\BACKUPBD\\restaurabackup.bat\"");
-
-            } catch (IOException ex) {
-                Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
             }
-            JOptionPane.showMessageDialog(null, "Backup restaurado");
-        } else {
-
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+        else{
+            JOptionPane.showMessageDialog(null, "Acesso negado!");
+        }
+
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     public boolean consultar(String login, String senha) {
         boolean autenticado = false;
@@ -280,12 +312,14 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Acessar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
