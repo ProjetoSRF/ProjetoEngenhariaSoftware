@@ -408,7 +408,59 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        String busca;
+        busca = JOptionPane.showInputDialog("Digite o documento do Funcionario.", 0);
+        if (busca == null) {
+            JOptionPane.showInputDialog(null, "Campo vazio!");
+            return;
+        }
 
+        PreparedStatement ps = null;
+        try {
+
+            String sql = "select * from projetosrf.funcionario";
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeQuery();
+            try (ResultSet rs = ps.getResultSet()) {
+                while (rs.next()) {
+
+                    if (busca.equals(rs.getString("cpf"))) {
+                        
+                        TesteCadastroFuncionarioConsultar obj = null;
+
+                        try {
+                            obj = new TesteCadastroFuncionarioConsultar(rs);
+                        } catch (ParseException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (SQLException ex) {
+                            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        jdbInicio.add(obj);
+                        obj.setVisible(true);
+                        try {
+                            obj.setSelected(true);
+                            //diz que a janela interna é maximizável   
+                            obj.setMaximizable(true);
+                            //set o tamanho máximo dela, que depende da janela pai   
+                            obj.setMaximum(true);
+                        } catch (java.beans.PropertyVetoException e) {
+                        }
+                        return;
+                        
+                    } else {
+
+                    }
+
+                }
+            }
+
+            ps.close();
+            JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
+
+        } catch (SQLException e) {
+            // Erro se não consegue conexão com o database
+            System.out.printf("nao2");
+        }
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
 
@@ -636,6 +688,6 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JDesktopPane jdbInicio;
+    public javax.swing.JDesktopPane jdbInicio;
     // End of variables declaration//GEN-END:variables
 }

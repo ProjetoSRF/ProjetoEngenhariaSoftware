@@ -11,7 +11,7 @@
     <Property name="iconifiable" type="boolean" value="true"/>
     <Property name="maximizable" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="true"/>
-    <Property name="title" type="java.lang.String" value="Alterar Funcion&#xe1;rio"/>
+    <Property name="title" type="java.lang.String" value="Consulta de Funcion&#xe1;rio"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -74,49 +74,46 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="LabelCPF" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelRua" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelFuncao" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelCidade" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelTelefone" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelBairro" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelNumero" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="numeroCT" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="LabemComplemento" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="complementoCT" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="bairroCT" max="32767" attributes="0"/>
+                              <Component id="nomeCT" max="32767" attributes="0"/>
+                              <Component id="cpfCT" max="32767" attributes="0"/>
+                              <Component id="ruaCT" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cidadeCT" alignment="1" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="LabelCPF" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelRua" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelFuncao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelCidade" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelTelefone" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelBairro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LabelNumero" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="numeroCT" min="-2" pref="89" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Component id="LabemComplemento" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="complementoCT" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="bairroCT" max="32767" attributes="0"/>
-                                      <Component id="nomeCT" max="32767" attributes="0"/>
-                                      <Component id="cpfCT" max="32767" attributes="0"/>
-                                      <Component id="ruaCT" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="cidadeCT" alignment="1" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="funcaoCB" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="telefoneCT" min="-2" pref="155" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="LabelNascimento" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="calendarioJC" pref="315" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="funcaoCB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="cancelar" linkSize="3" min="-2" pref="111" max="-2" attributes="0"/>
+                                  <Component id="telefoneCT" min="-2" pref="155" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="Cadastrar" linkSize="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="LabelNascimento" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="calendarioJC" pref="315" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="cancelar1" min="-2" pref="111" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -173,10 +170,7 @@
                               <Component id="calendarioJC" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cancelar" linkSize="4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="Cadastrar" linkSize="4" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="cancelar1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -245,14 +239,6 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="Cadastrar">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Cadastrar"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastrarActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JFormattedTextField" name="cpfCT">
                 </Component>
                 <Component class="javax.swing.JLabel" name="LabelBairro">
@@ -269,12 +255,12 @@
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="telefoneCT">
                 </Component>
-                <Component class="javax.swing.JButton" name="cancelar">
+                <Component class="javax.swing.JButton" name="cancelar1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cancelar"/>
+                    <Property name="text" type="java.lang.String" value="Fechar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelar1ActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
