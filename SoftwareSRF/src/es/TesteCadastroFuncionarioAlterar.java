@@ -54,6 +54,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
         cidadeCT.setText(rs.getString("cidade"));
         bairroCT.setText(rs.getString("bairro"));
         telefoneCT.setText(rs.getString("telefone"));
+        funcaoCB.setSelectedItem(rs.getString("id_func"));
 
         String data = rs.getString("nascimento");
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -338,8 +339,7 @@ public class TesteCadastroFuncionarioAlterar extends javax.swing.JInternalFrame 
             SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
             String Data = formatador.format(calendarioJC.getDate());
 
-            String sql = "UPDATE INTO `funcionario` SET (`id_func`, `nome`, `endereco`, `numerocasa`, `complemento`, `bairro`, `cidade`, `telefone`, `nascimento`) "
-                    + "VALUES ('" + funcaoCB.getSelectedIndex() + 1 + "','" + nomeCT.getText() + "','" + ruaCT.getText() + "','" + numeroCT.getText() + "','" + complementoCT.getText() + "','" + bairroCT.getText() + "','" + cidadeCT.getText() + "','" + telefoneCT.getText() + "','" + Data + "') WHERE cpf = '" + CPF + "' ";
+            String sql = "UPDATE `funcionario` SET `nome` = '" + nomeCT.getText() + "', `endereco` = '" + ruaCT.getText() + "', `numerocasa` = '" + numeroCT.getText() + "', `complemento` = '" + complementoCT.getText() + "', `bairro` = '" + bairroCT.getText() + "', `cidade` = '" + cidadeCT.getText() + "', `telefone` = '" + telefoneCT.getText() + "' WHERE cpf = '" + CPF + "' ";
 
             PreparedStatement ps;
             try {

@@ -579,6 +579,7 @@ public class TelaInicio extends javax.swing.JFrame {
                             obj.setMaximum(true);
                         } catch (java.beans.PropertyVetoException e) {
                         }
+                        return;
                         
                     } else {
 
@@ -588,7 +589,6 @@ public class TelaInicio extends javax.swing.JFrame {
             }
 
             ps.close();
-
             JOptionPane.showMessageDialog(null, "Funcionario não encontrado.");
 
         } catch (SQLException e) {
