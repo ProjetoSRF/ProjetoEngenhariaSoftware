@@ -64,17 +64,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem4ActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
-              <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Ctrl+F5"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Acompanhamento"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem5ActionPerformed"/>
-              </Events>
-            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
@@ -144,6 +133,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/es/icones/consulta.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar Consulta"/>
               </Properties>
               <Events>
@@ -152,6 +144,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/es/icones/edit.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alterar Consulta"/>
               </Properties>
             </MenuItem>
@@ -166,6 +161,9 @@
               <Properties>
                 <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                   <KeyStroke key="Ctrl+F10"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/es/icones/gerarel.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gerar"/>
               </Properties>
@@ -182,6 +180,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="GerarBackup">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/es/icones/backup.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Efetuar Backup do Banco de Dados"/>
               </Properties>
               <Events>
@@ -190,6 +191,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="RestauraBackup">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/es/icones/resbackup.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Restaura Backup do Banco de Dados"/>
               </Properties>
               <Events>

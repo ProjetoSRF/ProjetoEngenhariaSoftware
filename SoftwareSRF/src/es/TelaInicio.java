@@ -93,7 +93,6 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -184,15 +183,6 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem4);
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem5.setText("Acompanhamento");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem5);
-
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Funcionário(a)");
@@ -236,6 +226,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu5.setText("Consulta");
 
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/consulta.png"))); // NOI18N
         jMenuItem11.setText("Cadastrar Consulta");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,6 +235,7 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem11);
 
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/edit.png"))); // NOI18N
         jMenuItem12.setText("Alterar Consulta");
         jMenu5.add(jMenuItem12);
 
@@ -252,6 +244,7 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenu3.setText("Gerar Relatório");
 
         jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F10, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/gerarel.png"))); // NOI18N
         jMenuItem10.setText("Gerar");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,6 +257,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenu4.setText("Ferramentas");
 
+        GerarBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/backup.png"))); // NOI18N
         GerarBackup.setText("Efetuar Backup do Banco de Dados");
         GerarBackup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,6 +266,7 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenu4.add(GerarBackup);
 
+        RestauraBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/es/icones/resbackup.png"))); // NOI18N
         RestauraBackup.setText("Restaura Backup do Banco de Dados");
         RestauraBackup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,10 +333,6 @@ public class TelaInicio extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
 
@@ -493,7 +484,6 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
