@@ -8,6 +8,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -4970,7 +4971,38 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_CadastraNeupediatricoActionPerformed
 
     private void CadastraNeurologicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastraNeurologicoActionPerformed
+        Date datanascimento = datenascimento3.getDate();
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        String novaData = formatador.format(datanascimento);
+        Date dataAva = dateavaliacao3.getDate();
+        String dataA = formatador.format(dataAva);
 
+        int numeroprontuario = Integer.parseInt(textprontuario3.getText());
+
+        String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
+                + "VALUES ('" + textnome3.getText() + "','" + textend3.getText() + "','" + textnum3.getText() + "','" + textbairro3.getText() + "','" + textmunicipio3.getText() + "','" + textcep3.getText() + "','" + textfone3.getText() + "','" + textescolaridade3.getText() + "','" + boxestadocivil3.getSelectedItem() + "',"
+                + "'" + textprofissao3.getText() + "','" + ComboBoxSexo.getSelectedItem() + "','" + ComboBoxCorPele.getSelectedItem() + "','" + textaltura3.getText() + "','" + textpeso3.getText() + "','" + textmae3.getText() + "','" + textresp3.getText() + "','" + textgrau3.getText() + "','" + textsus3.getText() + "','" + textrg3.getText() + "',"
+                + "'" + textcpf3.getText() + "','" + textcid3.getText() + "','" + numeroprontuario + "','" + textdiagnostico3.getText() + "','" + textavaliador3.getText() + "','" + textcomplemento3.getText() + "','" + textcn3.getText() + "','" + novaData + "','" + dataA + "')";
+
+        PreparedStatement ps;
+        try {
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        sql = "INSERT INTO projetosrf.neuropediatrico (numeroprontuario,QueixaPrincipal, HistoriaDoenca, UsaMedicamento, QualMedicamento, Fisioterapia, MotivoFisioterapia) "
+                + "VALUES('" + numeroprontuario + "','" + TextQueixaPrincipal.getText() + "','" + TextHistoriaDoenca.getText()+ "','" + ComboBoxUsaMedicamento.getSelectedItem()+ "','" + TextQualMedicamento.getText()+ "','" + ComboBoxFisioterapia.getSelectedItem()+ "','" + TextMotivoFisioterapia.getText()+ "')";
+
+        try {
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_CadastraNeurologicoActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -5019,7 +5051,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         dateavaliacao.setDate(date2);
-        textprontuario.setText("556");
+        Random geranpront = new Random();
+        textprontuario.setText(String.valueOf(geranpront.nextInt()*10000));
         textdiagnostico.setText("Dores de cabeça constantes");
         textavaliador.setText("Beltrano");
         TxtTempoGestacao.setText("nove meses");
@@ -5081,7 +5114,8 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TextCpf2.setText("12345678");
         TextCn2.setText("44556678");
         TextCid2.setText("6697");
-        TextProntuario2.setText("556");
+        Random geranpront = new Random();
+        TextProntuario2.setText(String.valueOf(geranpront.nextInt()*10000));
         TextDiagnostico2.setText("Dores de cabeça constantes");
         TextAvaliador2.setText("Beltrano");
         String data2 = "06/07/2016";
@@ -5141,7 +5175,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         datenascimento3.setDate(date);
-
+        
+        Random geranpront = new Random();
+        textprontuario3.setText(String.valueOf(geranpront.nextInt()*10000));
+        
         textidade3.setText("16");
         textprofissao3.setText("aluno");
         textaltura3.setText("1,68");
@@ -5162,7 +5199,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
-        dateavaliacao.setDate(date2);
+        dateavaliacao3.setDate(date2);
 
         TextQueixaPrincipal.setText("Dores");
         TextHistoriaDoenca.setText("Sempre");
