@@ -1153,6 +1153,11 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel271.setText("Complemento:");
 
         jButton4.setText("Cancelar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         BoxCondicaoFala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não", "Sim" }));
 
@@ -2006,7 +2011,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonCadastrarPaciente)
                     .addComponent(jButton4))
-                .addGap(0, 2331, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         jScrollPaneNeuropediatrico.setViewportView(jPanel4);
@@ -2322,7 +2327,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField29, javax.swing.GroupLayout.DEFAULT_SIZE, 760, Short.MAX_VALUE)
+                                            .addComponent(jTextField29, javax.swing.GroupLayout.DEFAULT_SIZE, 925, Short.MAX_VALUE)
                                             .addComponent(jTextField33))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2339,7 +2344,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel49)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE))
+                                        .addComponent(jTextField32, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE))
                                     .addComponent(jTextField26)
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2541,7 +2546,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(BoxCaracteristicasCicatriz, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(jLabel344))
-                                        .addGap(0, 164, Short.MAX_VALUE))
+                                        .addGap(0, 329, Short.MAX_VALUE))
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addComponent(jLabel350)
                                         .addGap(18, 18, 18)
@@ -3628,7 +3633,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                                 .addComponent(jLabel226)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(ComboBoxIngereAlcool, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 130, Short.MAX_VALUE))
+                                                .addGap(0, 241, Short.MAX_VALUE))
                                             .addGroup(jPanel6Layout.createSequentialGroup()
                                                 .addComponent(jLabel229)
                                                 .addGap(18, 18, 18)
@@ -4892,7 +4897,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1109, Short.MAX_VALUE)
+            .addComponent(jTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1305, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4923,7 +4928,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
                 + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textcidade.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + sexo + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + textprontuario.getText() + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','" + textcomplemento.getText() + "','" + textcn.getText() + "','" + novaData + "','" + dataA + "')";
-
+        
         PreparedStatement ps;
         try {
             ps = Conexao.con.prepareStatement(sql);
@@ -4932,8 +4937,18 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        System.out.println("oi");
+        sql = "INSERT INTO projetosrt.neuropediatrico (TempoGestacao,PreNatal,Apgar,InGestacao,QuaisG,TipoParto,InParto,QuaisP,InternHospitalar,Exames,HistoricoF,HistoricoC) VALUES('"+TxtTempoGestacao.getText()+"','"+BoxPreNatal.getSelectedItem()+"','"+TextApgar.getText()+"','"+BoxInGestacao.getSelectedItem()+"','"+TxtQuaisG.getText()+"','"+BoxTipodeParto.getSelectedItem()+"','"+BoxInParto.getSelectedItem()+"','"+TxtQuaisP.getText()+"',,'"+TxtInternHospitalar.getText()+"','"+TxtExames.getText()+"','"+TxtHistoricoF.getText()+"','"+TxtHistoricoC.getText()+"')";
+        
+        /*PreparedStatement ps;
+        try {
+        ps = Conexao.con.prepareStatement(sql);
+        ps.executeUpdate();
+        ps.close();
+        } catch (SQLException ex) {
+        Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+       
+        
         
         
 
@@ -4943,6 +4958,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
