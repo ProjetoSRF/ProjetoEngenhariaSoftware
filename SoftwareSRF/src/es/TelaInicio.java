@@ -9,10 +9,11 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -365,18 +366,17 @@ public class TelaInicio extends javax.swing.JFrame {
     private void RestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestauraBackupActionPerformed
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Filtro .bat", "bat");
         jFileChooser1.setFileFilter(filtro);
-        
+
         int returnVal = jFileChooser1.showOpenDialog(this);
         String Caminho;
-        
+
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             Caminho = jFileChooser1.getSelectedFile().getPath();
             try {
-                Runtime.getRuntime().exec("\""+Caminho+"\"");
+                Runtime.getRuntime().exec("\"" + Caminho + "\"");
             } catch (IOException ex) {
                 Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
             }
-
             JOptionPane.showMessageDialog(null, "Backup restaurado");
         } else {
 
@@ -386,13 +386,27 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_RestauraBackupActionPerformed
 
     private void GerarBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GerarBackupActionPerformed
-        /*JFileChooser arquivo = new JFileChooser();
-        FileNameExtensionFilter filtroPDF = new FileNameExtensionFilter("Arquivos PDF", "pdf");
-        arquivo.addChoosableFileFilter(filtroPDF);
-        arquivo.setAcceptAllFileFilterUsed(false);
-        if (arquivo.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-        seuTextField.setText(arquivo.getSelectedFile().getAbsolutePath());
-        }*/
+        FileWriter arq=null;
+        try {
+            arq = new FileWriter("C:\\BACKUPBD\\backup.bat");
+        } catch (IOException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        PrintWriter gravarArq = new PrintWriter(arq);
+        
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = new Date();
+        String data = dateFormat.format(date); 
+        
+        
+        gravarArq.printf("@echo off%n echo Realizando backup do MySQL... %n"
+                + "\"C:\\xampp\\mysql\\bin\\mysqldump.exe\" -u root --databases projetosrf > \"C:\\BACKUPBD\\"+data+".sql%n\""
+                        + "echo concluido com sucesso");
+        try {
+            arq.close();
+        } catch (IOException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         try {
             Runtime.getRuntime().exec("\"C:\\BACKUPBD\\backup.bat\"");
