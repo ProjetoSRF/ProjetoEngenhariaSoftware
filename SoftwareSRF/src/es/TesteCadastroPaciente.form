@@ -560,7 +560,7 @@
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="jButton4" min="-2" pref="120" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="ButtonCadastrarPaciente" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <Component id="CadastraNeupediatrico" min="-2" pref="120" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="ButtonTonusHipertonia" min="-2" max="-2" attributes="0"/>
@@ -1105,7 +1105,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="ButtonCadastrarPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CadastraNeupediatrico" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ButtonPreencherNeuropediatrico" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2007,12 +2007,12 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="ButtonCadastrarPaciente">
+                <Component class="javax.swing.JButton" name="CadastraNeupediatrico">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cadastrar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonCadastrarPacienteActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastraNeupediatricoActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="textfone">
@@ -3021,7 +3021,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jButton3" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton2" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="CadastraAmputado" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -3325,7 +3325,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CadastraAmputado" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ButtonPreencherAmputado" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -4085,15 +4085,21 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="TxtAvaliador">
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="CadastraAmputado">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cadastrar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastraAmputadoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel361">
                   <Properties>
@@ -4183,11 +4189,6 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="TextProntuario2">
-                  <Properties>
-                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
-                      <Format format="####################" subtype="-1" type="5"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -4224,7 +4225,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jButton5" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="120" max="-2" attributes="0"/>
+                                  <Component id="CadastraNeurologico" min="-2" pref="120" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -5868,7 +5869,7 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="CadastraNeurologico" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ButtonPreencherNeurologico" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -7881,18 +7882,21 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="CadastraNeurologico">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cadastrar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastraNeurologicoActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton5">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="ComboBoxDificuldadeMastigar">
                   <Properties>

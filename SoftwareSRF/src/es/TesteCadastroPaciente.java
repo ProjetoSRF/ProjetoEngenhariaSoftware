@@ -242,7 +242,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         jLabel133 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
         TxtInspecaoFisica = new javax.swing.JTextArea();
-        ButtonCadastrarPaciente = new javax.swing.JButton();
+        CadastraNeupediatrico = new javax.swing.JButton();
         textfone = new javax.swing.JFormattedTextField();
         textcpf = new javax.swing.JFormattedTextField();
         textrg = new javax.swing.JFormattedTextField();
@@ -439,7 +439,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TxtConsideracoesFinais = new javax.swing.JTextArea();
         jLabel360 = new javax.swing.JLabel();
         TxtAvaliador = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        CadastraAmputado = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel361 = new javax.swing.JLabel();
         BoxQueda = new javax.swing.JComboBox<>();
@@ -770,7 +770,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         ComboBoxMIEAuxilioMarcha = new javax.swing.JComboBox<>();
         ComboBoxMIEUsaMuleta = new javax.swing.JComboBox<>();
         ComboBoxMIEPosicaoTronco = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        CadastraNeurologico = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         ComboBoxDificuldadeMastigar = new javax.swing.JComboBox<>();
         ComboBoxDificuldadeEngolir = new javax.swing.JComboBox<>();
@@ -1123,10 +1123,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TxtInspecaoFisica.setRows(5);
         jScrollPane10.setViewportView(TxtInspecaoFisica);
 
-        ButtonCadastrarPaciente.setText("Cadastrar");
-        ButtonCadastrarPaciente.addActionListener(new java.awt.event.ActionListener() {
+        CadastraNeupediatrico.setText("Cadastrar");
+        CadastraNeupediatrico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonCadastrarPacienteActionPerformed(evt);
+                CadastraNeupediatricoActionPerformed(evt);
             }
         });
 
@@ -1570,7 +1570,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(ButtonCadastrarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(CadastraNeupediatrico, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                                 .addComponent(ButtonTonusHipertonia)
                                 .addGap(18, 18, 18)
@@ -2010,7 +2010,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonCadastrarPaciente)
+                    .addComponent(CadastraNeupediatrico)
                     .addComponent(jButton4)
                     .addComponent(ButtonPreencherNeuropediatrico))
                 .addGap(0, 0, 0))
@@ -2240,9 +2240,19 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         jLabel360.setText("Avaliador:");
 
-        jButton2.setText("Cadastrar");
+        CadastraAmputado.setText("Cadastrar");
+        CadastraAmputado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastraAmputadoActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Cancelar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel361.setText("Onde?");
 
@@ -2272,12 +2282,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                 ButtonPreencherAmputadoActionPerformed(evt);
             }
         });
-
-        try {
-            TextProntuario2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####################")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -2615,7 +2619,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CadastraAmputado, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
         jPanel5Layout.setVerticalGroup(
@@ -2866,7 +2870,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(TxtAvaliador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(CadastraAmputado)
                     .addComponent(jButton3)
                     .addComponent(ButtonPreencherAmputado))
                 .addContainerGap())
@@ -3426,14 +3430,19 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
 
         ComboBoxMIEPosicaoTronco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não", "Sim" }));
 
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        CadastraNeurologico.setText("Cadastrar");
+        CadastraNeurologico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CadastraNeurologicoActionPerformed(evt);
             }
         });
 
         jButton5.setText("Cancelar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         ComboBoxDificuldadeMastigar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não", "Sim" }));
 
@@ -3572,7 +3581,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CadastraNeurologico, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(107, 107, 107))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4897,7 +4906,7 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
                     .addComponent(ComboBoxMIEPosicaoTronco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(CadastraNeurologico)
                     .addComponent(jButton5)
                     .addComponent(ButtonPreencherNeurologico))
                 .addContainerGap())
@@ -4924,21 +4933,19 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void ButtonCadastrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCadastrarPacienteActionPerformed
+    private void CadastraNeupediatricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastraNeupediatricoActionPerformed
 
-        
         Date datanascimento = datenascimento.getDate();
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         String novaData = formatador.format(datanascimento);
         Date dataAva = dateavaliacao.getDate();
-        SimpleDateFormat formatador2 = new SimpleDateFormat("dd/MM/yyyy");
-        String dataA = formatador2.format(dataAva);
-        
+        String dataA = formatador.format(dataAva);
+
         int numeroprontuario = Integer.parseInt(textprontuario.getText());
-        
+
         String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
                 + "VALUES ('" + textnome.getText() + "','" + textend.getText() + "','" + textnum.getText() + "','" + textbairro.getText() + "','" + textmunicipio.getText() + "','" + textcep.getText() + "','" + textfone.getText() + "','" + textescolaridade.getText() + "','" + estadocivil.getSelectedItem() + "','" + textprofissao.getText() + "','" + textsexo.getSelectedItem() + "','" + corpele.getSelectedItem() + "','" + textaltura.getText() + "','" + textpeso.getText() + "','" + textmae.getText() + "','" + textresp.getText() + "','" + textgrau.getText() + "','" + textsus.getText() + "','" + textrg.getText() + "','" + textcpf.getText() + "','" + textcid.getText() + "','" + numeroprontuario + "','" + textdiagnostico.getText() + "','" + textavaliador.getText() + "','" + textcomplemento.getText() + "','" + textcn.getText() + "','" + novaData + "','" + dataA + "')";
-        
+
         PreparedStatement ps;
         try {
             ps = Conexao.con.prepareStatement(sql);
@@ -4947,36 +4954,27 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-        //sql = "INSERT INTO projetosrf.neuropediatrico (numeroprontuario,TempoGestacao, PreNatal, Apgar, InGestacao, QuaisG, TipodeParto, InParto, QuaisP, InternHospitalar, Exames, HistoricoF, HistoricoC, Queixa, TonusNormal, TonusHipotonia, TonusHipertonia, NSegmento, HipoSegmento, HipeSegmento, Hipertonia, CondicaoFala, ObsCondicaoFala, FazEntender, OuveBem, EntendeFala, Le, LeObs, Escreve, EscreveObs, Oculos, ApDentario, ApAudicao, DMastigar, DEngolir, DManusear, AlimentaSozinho, HigieneBucal, ControleEsfincteres, ObsHigiene, PalpacaoDor, DorOnde, PalpacaoEdema, EdemaOnde, MControleCervical, MControleTronco, MControleMembros, MembrosOnde, MRolaLeito, MEngatinhar, EquilibrioESentado, EquilibrioEmPe, EquilibrioDSentado, EquilibrioDEmPe, EquilibrioDAndando, Orteses, OrtesesEs, RSCutaneoPatelar, RSCutaneoAbdominal, RSRetificacao, RSEquilibrio, RSParaQuedas, RPBicipital, RPTricipital, RPPatelar, RPAquileu, CIndex, CDisdiadocinesia, InspecaoFisica) "
-        //        + "VALUES('"+numeroprontuario+"',"+TxtTempoGestacao.getText()+"','"+BoxPreNatal.getSelectedItem()+"','"+TxtApgar.getText()+"','"+BoxInGestacao.getSelectedItem()+"','"+TxtQuaisG.getText()+"','"+BoxTipodeParto.getSelectedItem()+"','"+BoxInParto.getSelectedItem()+"','"+TxtQuaisP.getText()+"', '"+TxtInternHospitalar.getText()+"','"+TxtExames.getText()+"','"+TxtHistoricoF.getText()+"','"+TxtHistoricoC.getText()+"','"+TxtQueixa.getText()+"','"+ButtonTonusNormal.getText()+"','"+ButtonTonusHipotonia.getText()+"','"+ButtonTonusHipertonia.getText()+"','"+TxtNSegmento.getText()+"','"+TxtHipoSegmento.getText()+"','"+TxtHipeSegmento.getText()+"','"+BoxHipertonia.getSelectedItem()+"','"+BoxCondicaoFala.getSelectedItem()+"','"+TxtObsCondicaoFala.getText()+"','"+BoxFazEntender.getSelectedItem()+"','"+BoxOuveBem.getSelectedItem()+"','"+BoxEntendeFala.getSelectedItem()+"','"+BoxLe.getSelectedItem()+"','"+TxtLeObs.getText()+"','"+BoxEscreve.getSelectedItem()+"','"+TxtEscreveObs.getText()+"','"+BoxOculos.getSelectedItem()+"','"+BoxApDentario.getSelectedItem()+"','"+BoxApAudicao.getSelectedItem()+"','"+BoxDMastigar.getSelectedItem()+"','"+BoxDEngolir.getSelectedItem()+"','"+BoxDManusear.getSelectedItem()+"','"+BoxAlimentaSozinho.getSelectedItem()+"','"+BoxHigieneBucal.getSelectedItem()+"','"+BoxControleEsfincteres.getSelectedItem()+"','"+TxtObsHigiene.getText()+"','"+BoxPalpacaoDor.getSelectedItem()+"','"+TxtDorOnde.getText()+"','"+BoxPalpacaoEdema.getSelectedItem()+"', '"+TxtEdemaOnde.getText()+"','"+BoxMControleCervical.getSelectedItem()+"','"+BoxMControleTronco.getSelectedItem()+"', '"+BoxControleMembros.getSelectedItem()+"','"+TxtMembrosOnde.getText()+"','"+BoxMRolaLeito.getSelectedItem()+"','"+BoxMEngatinhar.getSelectedItem()+"','"+BoxEquilibrioESentado.getSelectedItem()+"','"+BoxEquilibrioEmPe.getSelectedItem()+"','"+BoxEquilibrioDSentado.getSelectedItem()+"','"+BoxEquilibrioDEmPe.getSelectedItem()+"','"+BoxEquilibrioDAndando.getSelectedItem()+"','"+BoxOrteses.getSelectedItem()+"','"+TxtOrtesesEs.getText()+"','"+RSCutaneoPatelar.getSelectedItem()+"','"+RSCutaneoAbdominal.getSelectedItem()+"', '"+RSRetificacao.getSelectedItem()+"','"+RSEquilibrio.getSelectedItem()+"','"+RSParaQuedas.getSelectedItem()+"', '"+BoxRPBicipital.getSelectedItem()+"','"+BoxRPTricipital.getSelectedItem()+"','"+BoxRPPatelar.getSelectedItem()+"','"+BoxRPAquileu.getSelectedItem()+"', '"+BoxCIndex.getSelectedItem()+"','"+BoxCDisdiadocinesia.getSelectedItem()+"','"+TxtInspecaoFisica.getText()+"')";              
-        
+
         sql = "INSERT INTO projetosrf.neuropediatrico (numeroprontuario,TempoGestacao, PreNatal, Apgar, InGestacao, QuaisG, TipodeParto, InParto, QuaisP, InternHospitalar, Exames, HistoricoF, HistoricoC, Queixa, TonusNormal, TonusHipotonia, TonusHipertonia, NSegmento, HipoSegmento, HipeSegmento, Hipertonia, CondicaoFala, ObsCondicaoFala, FazEntender, OuveBem, EntendeFala, Le, LeObs, Escreve, EscreveObs, Oculos, ApDentario, ApAudicao, DMastigar, DEngolir, DManusear, AlimentaSozinho, HigieneBucal, ControleEsfincteres, ObsHigiene, PalpacaoDor, DorOnde, PalpacaoEdema, EdemaOnde, MControleCervical, MControleTronco, MControleMembros, MembrosOnde, MRolaLeito, MEngatinhar, EquilibrioESentado, EquilibrioEmPe, EquilibrioDSentado, EquilibrioDEmPe, EquilibrioDAndando, Orteses, OrtesesEs, RSCutaneoPatelar, RSCutaneoAbdominal, RSRetificacao, RSEquilibrio, RSParaQuedas, RPBicipital, RPTricipital, RPPatelar, RPAquileu, CIndex, CDisdiadocinesia, InspecaoFisica) "
-                + "VALUES('"+numeroprontuario+"','"+TxtTempoGestacao.getText()+"','"+BoxPreNatal.getSelectedItem()+"','"+TxtApgar.getText()+"','"+BoxInGestacao.getSelectedItem()+"','"+TxtQuaisG.getText()+"','"+BoxTipodeParto.getSelectedItem()+"','"+BoxInParto.getSelectedItem()+"','"+TxtQuaisP.getText()+"', '"+TxtInternHospitalar.getText()+"','"+TxtExames.getText()+"','"+TxtHistoricoF.getText()+"','"+TxtHistoricoC.getText()+"','"+TxtQueixa.getText()+"','"+ButtonTonusNormal.getText()+"','"+ButtonTonusHipotonia.getText()+"','"+ButtonTonusHipertonia.getText()+"','"+TxtNSegmento.getText()+"','"+TxtHipoSegmento.getText()+"','"+TxtHipeSegmento.getText()+"','"+BoxHipertonia.getSelectedItem()+"','"+BoxCondicaoFala.getSelectedItem()+"','"+TxtObsCondicaoFala.getText()+"','"+BoxFazEntender.getSelectedItem()+"','"+BoxOuveBem.getSelectedItem()+"','"+BoxEntendeFala.getSelectedItem()+"','"+BoxLe.getSelectedItem()+"','"+TxtLeObs.getText()+"','"+BoxEscreve.getSelectedItem()+"','"+TxtEscreveObs.getText()+"','"+BoxOculos.getSelectedItem()+"','"+BoxApDentario.getSelectedItem()+"','"+BoxApAudicao.getSelectedItem()+"','"+BoxDMastigar.getSelectedItem()+"','"+BoxDEngolir.getSelectedItem()+"','"+BoxDManusear.getSelectedItem()+"','"+BoxAlimentaSozinho.getSelectedItem()+"','"+BoxHigieneBucal.getSelectedItem()+"','"+BoxControleEsfincteres.getSelectedItem()+"','"+TxtObsHigiene.getText()+"','"+BoxPalpacaoDor.getSelectedItem()+"','"+TxtDorOnde.getText()+"','"+BoxPalpacaoEdema.getSelectedItem()+"', '"+TxtEdemaOnde.getText()+"','"+BoxMControleCervical.getSelectedItem()+"','"+BoxMControleTronco.getSelectedItem()+"', '"+BoxControleMembros.getSelectedItem()+"','"+TxtMembrosOnde.getText()+"','"+BoxMRolaLeito.getSelectedItem()+"','"+BoxMEngatinhar.getSelectedItem()+"','"+BoxEquilibrioESentado.getSelectedItem()+"','"+BoxEquilibrioEmPe.getSelectedItem()+"','"+BoxEquilibrioDSentado.getSelectedItem()+"','"+BoxEquilibrioDEmPe.getSelectedItem()+"','"+BoxEquilibrioDAndando.getSelectedItem()+"','"+BoxOrteses.getSelectedItem()+"','"+TxtOrtesesEs.getText()+"','"+RSCutaneoPatelar.getSelectedItem()+"','"+RSCutaneoAbdominal.getSelectedItem()+"', '"+RSRetificacao.getSelectedItem()+"','"+RSEquilibrio.getSelectedItem()+"','"+RSParaQuedas.getSelectedItem()+"', '"+BoxRPBicipital.getSelectedItem()+"','"+BoxRPTricipital.getSelectedItem()+"','"+BoxRPPatelar.getSelectedItem()+"','"+BoxRPAquileu.getSelectedItem()+"', '"+BoxCIndex.getSelectedItem()+"','"+BoxCDisdiadocinesia.getSelectedItem()+"','"+TxtInspecaoFisica.getText()+"')";              
-        
-        
-        
+                + "VALUES('" + numeroprontuario + "','" + TxtTempoGestacao.getText() + "','" + BoxPreNatal.getSelectedItem() + "','" + TxtApgar.getText() + "','" + BoxInGestacao.getSelectedItem() + "','" + TxtQuaisG.getText() + "','" + BoxTipodeParto.getSelectedItem() + "','" + BoxInParto.getSelectedItem() + "','" + TxtQuaisP.getText() + "', '" + TxtInternHospitalar.getText() + "','" + TxtExames.getText() + "','" + TxtHistoricoF.getText() + "','" + TxtHistoricoC.getText() + "','" + TxtQueixa.getText() + "','" + ButtonTonusNormal.getText() + "','" + ButtonTonusHipotonia.getText() + "','" + ButtonTonusHipertonia.getText() + "','" + TxtNSegmento.getText() + "','" + TxtHipoSegmento.getText() + "','" + TxtHipeSegmento.getText() + "','" + BoxHipertonia.getSelectedItem() + "','" + BoxCondicaoFala.getSelectedItem() + "','" + TxtObsCondicaoFala.getText() + "','" + BoxFazEntender.getSelectedItem() + "','" + BoxOuveBem.getSelectedItem() + "','" + BoxEntendeFala.getSelectedItem() + "','" + BoxLe.getSelectedItem() + "','" + TxtLeObs.getText() + "','" + BoxEscreve.getSelectedItem() + "','" + TxtEscreveObs.getText() + "','" + BoxOculos.getSelectedItem() + "','" + BoxApDentario.getSelectedItem() + "','" + BoxApAudicao.getSelectedItem() + "','" + BoxDMastigar.getSelectedItem() + "','" + BoxDEngolir.getSelectedItem() + "','" + BoxDManusear.getSelectedItem() + "','" + BoxAlimentaSozinho.getSelectedItem() + "','" + BoxHigieneBucal.getSelectedItem() + "','" + BoxControleEsfincteres.getSelectedItem() + "','" + TxtObsHigiene.getText() + "','" + BoxPalpacaoDor.getSelectedItem() + "','" + TxtDorOnde.getText() + "','" + BoxPalpacaoEdema.getSelectedItem() + "', '" + TxtEdemaOnde.getText() + "','" + BoxMControleCervical.getSelectedItem() + "','" + BoxMControleTronco.getSelectedItem() + "', '" + BoxControleMembros.getSelectedItem() + "','" + TxtMembrosOnde.getText() + "','" + BoxMRolaLeito.getSelectedItem() + "','" + BoxMEngatinhar.getSelectedItem() + "','" + BoxEquilibrioESentado.getSelectedItem() + "','" + BoxEquilibrioEmPe.getSelectedItem() + "','" + BoxEquilibrioDSentado.getSelectedItem() + "','" + BoxEquilibrioDEmPe.getSelectedItem() + "','" + BoxEquilibrioDAndando.getSelectedItem() + "','" + BoxOrteses.getSelectedItem() + "','" + TxtOrtesesEs.getText() + "','" + RSCutaneoPatelar.getSelectedItem() + "','" + RSCutaneoAbdominal.getSelectedItem() + "', '" + RSRetificacao.getSelectedItem() + "','" + RSEquilibrio.getSelectedItem() + "','" + RSParaQuedas.getSelectedItem() + "', '" + BoxRPBicipital.getSelectedItem() + "','" + BoxRPTricipital.getSelectedItem() + "','" + BoxRPPatelar.getSelectedItem() + "','" + BoxRPAquileu.getSelectedItem() + "', '" + BoxCIndex.getSelectedItem() + "','" + BoxCDisdiadocinesia.getSelectedItem() + "','" + TxtInspecaoFisica.getText() + "')";
+
         try {
-        ps = Conexao.con.prepareStatement(sql);
-        ps.executeUpdate();
-        ps.close();
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
         } catch (SQLException ex) {
-        Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-        
-        
-        
 
 
-    }//GEN-LAST:event_ButtonCadastrarPacienteActionPerformed
+    }//GEN-LAST:event_CadastraNeupediatricoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CadastraNeurologicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastraNeurologicoActionPerformed
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_CadastraNeurologicoActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void ButtonPreencherNeuropediatricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPreencherNeuropediatricoActionPerformed
@@ -4989,17 +4987,17 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcep.setText("99999000");
         textfone.setText("5399999-9999");
         textescolaridade.setText("nenhuma");
-        
-        String data= "05/09/2001";
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); 
-        Date date = null; 
+
+        String data = "05/09/2001";
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = null;
         try {
-            date = (java.util.Date)formatter.parse(data);
+            date = (java.util.Date) formatter.parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         datenascimento.setDate(date);
-        
+
         textidade.setText("16");
         textprofissao.setText("aluno");
         textaltura.setText("1,68");
@@ -5013,10 +5011,10 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcn.setText("44556678");
         textmunicipio.setText("Bage");
         textcid.setText("6697");
-        String data2= "06/07/2016";
-        Date date2 = null; 
+        String data2 = "06/07/2016";
+        Date date2 = null;
         try {
-            date2 = (java.util.Date)formatter.parse(data2);
+            date2 = (java.util.Date) formatter.parse(data2);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -5045,13 +5043,12 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TxtMembrosOnde.setText("esse");
         TxtOrtesesEs.setText("aaaaaaaaa");
         TxtInspecaoFisica.setText("blablablablablablablalba");
-        
-        
-        
+
+
     }//GEN-LAST:event_ButtonPreencherNeuropediatricoActionPerformed
 
     private void ButtonPreencherAmputadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPreencherAmputadoActionPerformed
-     textnome2.setText("Fulano de Tal");
+        textnome2.setText("Fulano de Tal");
         TextEnd2.setText("ali");
         TextCpf2.setText("123456789");
         TextBairro2.setText("arvorezinha");
@@ -5061,17 +5058,17 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TextFone2.setText("5399999-9999");
         TextEscolaridade2.setText("nenhuma");
         TextMunicipio2.setText("Bage");
-        
-        String data= "05/09/2001";
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); 
-        Date date = null; 
+
+        String data = "05/09/2001";
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = null;
         try {
-            date = (java.util.Date)formatter.parse(data);
+            date = (java.util.Date) formatter.parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         datenascimento2.setDate(date);
-        
+
         TextIdade2.setText("16");
         TextProfissao2.setText("aluno");
         TextAltura2.setText("1,68");
@@ -5087,15 +5084,15 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TextProntuario2.setText("556");
         TextDiagnostico2.setText("Dores de cabeça constantes");
         TextAvaliador2.setText("Beltrano");
-        String data2= "06/07/2016";
-        Date date2 = null; 
+        String data2 = "06/07/2016";
+        Date date2 = null;
         try {
-            date2 = (java.util.Date)formatter.parse(data2);
+            date2 = (java.util.Date) formatter.parse(data2);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         dateavaliacao2.setDate(date2);
-        
+
         TxtHistoricoSocial.setText("lalalalalal");
         TxtQueixaPrincipal.setText("mimimimi");
         TxtHistoricoDoenca.setText("nenhum");
@@ -5134,17 +5131,17 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcep3.setText("99999000");
         textfone3.setText("5399999-9999");
         textescolaridade3.setText("nenhuma");
-        
-        String data= "05/09/2001";
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); 
-        Date date = null; 
+
+        String data = "05/09/2001";
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = null;
         try {
-            date = (java.util.Date)formatter.parse(data);
+            date = (java.util.Date) formatter.parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         datenascimento3.setDate(date);
-        
+
         textidade3.setText("16");
         textprofissao3.setText("aluno");
         textaltura3.setText("1,68");
@@ -5158,15 +5155,15 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         textcn3.setText("44556678");
         textmunicipio3.setText("Bage");
         textcid3.setText("6697");
-        String data2= "06/07/2016";
-        Date date2 = null; 
+        String data2 = "06/07/2016";
+        Date date2 = null;
         try {
-            date2 = (java.util.Date)formatter.parse(data2);
+            date2 = (java.util.Date) formatter.parse(data2);
         } catch (ParseException ex) {
             Logger.getLogger(TesteCadastroFuncionario.class.getName()).log(Level.SEVERE, null, ex);
         }
         dateavaliacao.setDate(date2);
-        
+
         TextQueixaPrincipal.setText("Dores");
         TextHistoriaDoenca.setText("Sempre");
         TextQualMedicamento.setText("Paracetamol");
@@ -5209,6 +5206,55 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
         TextMobilidadeEspecifique.setText("lalala");
         TextFMSegmento.setText("lalala");
     }//GEN-LAST:event_ButtonPreencherNeurologicoActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void CadastraAmputadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastraAmputadoActionPerformed
+        
+        Date datanascimento = datenascimento2.getDate();
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        String novaData = formatador.format(datanascimento);
+        Date dataAva = dateavaliacao2.getDate();
+        String dataA = formatador.format(dataAva);
+        
+        int numeroprontuario = Integer.parseInt(TextProntuario2.getText());
+
+        String sql = "INSERT INTO projetosrf.paciente (nome,endereco,numerocasa,bairro,cidade,cep,telefone,escolaridade,estadocivil,profissao,sexo,cor,altura,peso,nomemae,nomeresponsavel,grauparentesco,cartaosus,rg,cpf,cid,numeroprontuario,diagnostico,avaliador,complemento,certidaonascimento,nascimento,dataavaliacao) "
+                + "VALUES ('" + textnome2.getText() + "','" + TextEnd2.getText() + "','" + TextNum2.getText() + "','" + TextBairro2.getText() + "','" + TextMunicipio2.getText() + "','" + TextCep2.getText() + "','" + TextFone2.getText() + "','" + TextEscolaridade2.getText() + "','" + jComboBox1.getSelectedItem() + "',"
+                + "'" + TextProfissao2.getText() + "','" + BoxSexo2.getSelectedItem() + "','" + BoxCorPele2.getSelectedItem() + "','" + TextAltura2.getText() + "','" + TextPeso2.getText() + "','" + TextMae2.getText() + "','" + TextResp2.getText() + "','" + TextGrau2.getText() + "','" + TextSus2.getText() + "',"
+                + "'" + TextRg2.getText() + "','" + TextCpf2.getText() + "','" + TextCid2.getText() + "','" + numeroprontuario + "','" + TextDiagnostico2.getText() + "','" + TextAvaliador2.getText() + "','" + TextComplemento2.getText() + "','" + TextCn2.getText() + "','" + novaData + "','" + dataA + "')";
+
+        PreparedStatement ps;
+        try {
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+ 
+        sql = "INSERT INTO projetosrf.amputado(`numeroprontuario`, `HistoricoSocial`, `QueixaPrincipal`, `HistoricoDoenca`, `Hipertensao`, `Tabagista`, `NumeroCigarro`, `Diabetes`, `TipoDiabete`, `Etilista`, `Inspecao`, `DorFantasma`, `FormaDor`, `TipoDor`, `HorarioManha`, `HorarioTarde`, `HorarioNoite`, `SensacaoFantasma`, `SensacaoCoceira`, `Queda`, `EstadoEmocional`, `TipoCicatriz`, `CaracteristicasCicatriz`, `PontosDolorosos`, `PDOnde`, `Calosidade`, `CalosidadeOnde`, `ProeminenciaOssea`, `POOnde`, `SensacaoParteAmputada`, `CoximGorduroso`, `PeleDoCoto`, `PDCCor`, `PDCTemperatura`, `APFemoral1`, `APFemoral2`, `APPoplitea1`, `APPoplitea2`, `APPediosaEsquerda`, `APPediosaDireita`, `MembrosSadios`, `MSDescricao`, `MembrosAfetados`, `MADescricao`, `AmplitudeMembrosSadios`, `AmplitudeMembrosAfetados`, `ConsideracoesFinais`, `Avaliador`) "
+                + "VALUES ('"+numeroprontuario+"','"+TxtHistoricoSocial.getText()+"','"+TxtQueixaPrincipal.getText()+"','"+TxtHistoricoDoenca.getText()+"','"+TxtHipertensao.getText()+"','"+TxtTabagista.getText()+"','"+TxtNumeroCigarro.getText()+"','"+TxtDiabetes.getText()+"','"+TxtTipoDiabete.getText()+"','"+TxtEtilista.getText()+"','"+TxtInspecao.getText()+"','"+TxtDorFantasma.getText()+"','"+BoxFormaDor.getSelectedItem()+"','"+BoxTipoDor.getSelectedItem()+"','"+ButtonHorarioManha.getText()+"','"+ButtonHorarioTarde.getText()+"','"+ButtonHorarioNoite.getText()+"','"+TxtSensacaoFantasma.getText()+"','"+ButtonSensacaoCoceira.getText()+"','"+BoxQueda.getSelectedItem()+"','"+BoxEstadoEmocional.getSelectedItem()+"','"+BoxTipoCicatriz.getSelectedItem()+"','"+BoxCaracteristicasCicatriz.getSelectedItem()+"','"+TxtPontosDolorosos.getText()+"',"
+                + "'"+TxtPDOnde.getText()+"','"+TxtCalosidade.getText()+"','"+TxtCalosidadeOnde.getText()+"','"+TxtProeminenciaOssea.getText()+"','"+TxtPOOnde.getText()+"','"+ButtonSensacaoParteAmputada.getText()+"','"+BoxCoximGorduroso.getSelectedItem()+"','"+BoxPeleDoCoto.getSelectedItem()+"','"+TxtPDCCor.getText()+"','"+TxtPDCTemperatura.getText()+"',"
+                + "'"+ButtonAPFemoral1.getText()+"','"+ButtonAPFemoral2.getText()+"','"+ButtonAPPolpitea1.getText()+"','"+ButtonAPPolpitea2.getText()+"','"+ButtonAPPediosaEsquerda.getText()+"','"+ButtonAPPediosaDireita.getText()+"','"+BoxMembrosSadios.getSelectedItem()+"','"+TxtMSDescricao.getText()+"','"+BoxMembrosAfetados.getSelectedItem()+"','"+TxtMADescricao.getText()+"','"+TxtAmplitudeMembrosSadios.getText()+"','"+TxtAmplitudeMembrosAfetados.getText()+"','"+TxtConsideracoesFinais.getText()+"', '"+TxtAvaliador.getText()+"')";
+        
+        
+        
+        try {
+            ps = Conexao.con.prepareStatement(sql);
+            ps.executeUpdate();
+            ps.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(TesteCadastroPaciente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_CadastraAmputadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -5269,7 +5315,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton ButtonAPPediosaEsquerda;
     private javax.swing.JRadioButton ButtonAPPolpitea1;
     private javax.swing.JRadioButton ButtonAPPolpitea2;
-    private javax.swing.JButton ButtonCadastrarPaciente;
     private javax.swing.JRadioButton ButtonDLAfasia;
     private javax.swing.JRadioButton ButtonDLDisartria;
     private javax.swing.JRadioButton ButtonDLDisfonia;
@@ -5285,6 +5330,9 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton ButtonTonusHipertonia;
     private javax.swing.JRadioButton ButtonTonusHipotonia;
     private javax.swing.JRadioButton ButtonTonusNormal;
+    private javax.swing.JButton CadastraAmputado;
+    private javax.swing.JButton CadastraNeupediatrico;
+    private javax.swing.JButton CadastraNeurologico;
     private javax.swing.JComboBox<String> ComboBoxAjudaHigiene;
     private javax.swing.JComboBox<String> ComboBoxAlimentaSozinho;
     private javax.swing.JComboBox<String> ComboBoxAlteracaoFala;
@@ -5552,8 +5600,6 @@ public class TesteCadastroPaciente extends javax.swing.JInternalFrame {
     private com.toedter.calendar.JDateChooser datenascimento2;
     private com.toedter.calendar.JDateChooser datenascimento3;
     private javax.swing.JComboBox<String> estadocivil;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
