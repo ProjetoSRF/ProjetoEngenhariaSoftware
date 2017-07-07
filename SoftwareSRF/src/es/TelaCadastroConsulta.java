@@ -12,12 +12,12 @@ import javax.swing.ImageIcon;
  *
  * @author flavi
  */
-public class TelaAcompanhamento extends javax.swing.JInternalFrame {
+public class TelaCadastroConsulta extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form NewJInternalFrame
      */
-    public TelaAcompanhamento() {
+    public TelaCadastroConsulta() {
         initComponents();
         setFrameIcon(new ImageIcon(this.getClass().getResource("/es/imagens/logomt16.png")));
 
@@ -44,6 +44,8 @@ public class TelaAcompanhamento extends javax.swing.JInternalFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+
+        setTitle("Cadastro de Consulta");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RG", "CPF", "Certidão de Nascimento" }));
 
